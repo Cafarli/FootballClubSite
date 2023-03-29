@@ -1,0 +1,92 @@
+.ShopCard {
+    border: 1px solid rgb(223, 222, 222);
+    margin: 2% 1.5% 2% 1.5%;
+    display: inline-block;
+}
+
+/* SHOP CARD */
+
+.shop-card-image {
+    width: 100%;
+    margin: 0 auto;
+    transition: transform 0.8s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shop-card-image:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.shop-card-image img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.value-info { 
+    display: flex;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    background-color: #ffc800;
+    background-image: -webkit-linear-gradient(
+      -50deg,
+      #ffc800 0%,
+      #ffc800 50%,
+      #292423 50%,
+      #292423 50%
+    );
+    background-image: linear-gradient(
+      -50deg,
+      #ffc800 0%,
+      #ffc800 50%,
+      #292423 50%,
+      #292423 50%
+    );
+}
+
+.value-info:hover { 
+    background-color: #292423;
+    background-image: -webkit-linear-gradient(
+      -50deg,
+      #292423 0%,
+      #292423 50%,
+      #ffc800 50%,
+      #ffc800 50%
+    );
+    background-image: linear-gradient(
+      -50deg,
+      #292423 0%,
+      #292423 50%,
+      #ffc800 50%,
+      #ffc800 50%
+    );
+}
+
+.value-info:hover .price {
+    color: #292423;
+}
+
+.value-info:hover .buy {
+    color: white;
+}
+
+.price {
+    color: white;
+    margin-left: 15%;
+    margin-right: 50%;
+}
+
+.buy {
+    color: #292423;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.8s;
+}
+
+.buy:hover {
+    color: white;
+}
+

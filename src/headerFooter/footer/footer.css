@@ -1,0 +1,93 @@
+.Footer {
+    background-image: linear-gradient(rgba(0,0,0, .95), rgba(0,0,0, 0.95)) ,url('./footer-background.jpg');
+    padding: 3% 3%;
+    color: rgb(169, 166, 166);
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    font-family: Oswald;
+}
+
+ul{
+    list-style: none;
+}
+
+.medias-li, .policies-li {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.social-medias {
+    width: 95%;
+    padding: 0% 3%;
+}
+
+.medias {
+    width: 70%;
+    text-align: right;
+}
+
+.medias-li {
+    padding-left: 5%;
+}
+
+.medias-li:hover {
+    color: #FFB700;
+}
+
+.home-link, .medias {
+    display: inline-block;
+}
+
+.home-link {
+    width: 30%
+}
+
+.home-link p {
+    font-size: 25px;
+}
+
+
+/* CLUB INFO */
+.club-info {
+    text-align: center;
+    margin: 0 auto;
+    padding: 3% 0%;
+}
+
+
+.policies {
+    width: 65%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.policies-li {
+    padding-left: 3%;
+}
+
+.policies-li:hover {
+    color: #FFB700;
+}
+
+/* COPY-RIGHTS */
+
+.copy-rights {
+    text-align: center;
+    font-size: 12px;
+    padding-top: 3%;
+}
+
+.copy-rights p{
+    display: inline-block;
+}
+
+.copyright {
+    padding-right: 1%;
+}
+
+/* @media screen and (min-width: 950px) {
+    .Footer{
+        padding: 0% 5%;
+    }
+} */

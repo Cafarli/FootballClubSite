@@ -1,0 +1,8 @@
+.swiper-backface-hidden .swiper-slide {
+    width: 400px !important;
+}
+
+.slideImage {
+    width: 100%;
+    height: 250px;
+}

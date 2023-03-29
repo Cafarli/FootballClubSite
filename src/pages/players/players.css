@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&family=Work+Sans:wght@200;300;400;500&display=swap');
+html, body {
+    margin: 0;
+}
+
+.Players {
+    background-image: linear-gradient(rgba(0,0,0,0,5),rgba(0,0,0,0,5)),url('./images/background.png');
+    color: black;
+    font-family: Oswald, sans-serif;
+    padding-top: 5%;
+    margin: 0 auto;
+}
+
+.coache-head {
+    padding-bottom: 5%;
+}
+
+.Players>h1{
+    text-align: center;
+    padding-top: 7%;
+}
+
+.Players>h1::before {
+    content: ' ';
+    position: absolute;
+    height: 1px;
+    background: #ffc722;
+    top: 31%;
+    right: 5%;
+    width: 35%;
+}
+
+.Players>h1::after {
+    content: ' ';
+    position: absolute;
+    height: 1px;
+    background: #ffc722;
+    top: 31%;
+    left: 5%;
+    width: 35%;
+}
+
+.team-heading {
+    padding-left: 3%;
+    padding-top: 3%;
+    color: #ffc800;
+}

@@ -1,0 +1,20 @@
+.Standings {
+  padding-top: 10%;
+  background-image: url("../standings/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.leagues {
+  margin: 0% 10% 5% 10%;
+}
+
+.leagues-select {
+  width: 15%;
+  padding-left: 1%;
+  outline: none;
+}
+
+.standing-all {
+  padding: 5% 0% 15% 0%;
+}

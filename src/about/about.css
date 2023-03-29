@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&family=Work+Sans:wght@200;300;400;500&display=swap');
+
+.about {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 20%;
+}
+
+.section {
+    padding: 5% 0%;
+}
+
+.part-title {
+    font-family: Oswald, Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+}
+/* CONTENT */
+.about-team {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+}
+
+
+
+.about-text > h1 {
+    font-family: Oswald, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 35px;
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+h1 span {
+    color: #ffc722;
+}
+
+
+.about-text p {
+    font-family: Work Sans, Arial, Helvetica, sans-serif;
+}
+
+@media screen and (max-width: 948px) {
+
+    .about-team {
+        width: 94%;
+    }
+    .about-text, .about-image {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .about-text {
+        width: 100% !important;
+        margin-bottom: 5%;
+    }
+
+    .about-image {
+        width: 100% !important;
+        height: 20% !important;
+        margin: 0 !important;
+    }
+
+    .about-text p {
+        width: 100%;
+    }
+}
+
+.about-text {
+    width: 50%;
+}
+
+.about-image {
+    margin-left: 5%;
+}
+
+/* HISTORY */
+.about-history-h1 {
+    text-align: center;
+}
+
+.about-history {
+    background-color: rgba(233, 232, 232, 0.605);
+    padding: 5% 10%;
+    font-family: Oswald, Arial, Helvetica, sans-serif;
+}
+
+.statistics-table {
+    font-size: 23px;
+    font-weight: 200;
+}
+
+.statistics-table .row-num {
+    color: #ffc722;
+}
+

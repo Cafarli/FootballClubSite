@@ -1,0 +1,42 @@
+/* AWARDS */
+.about-awards {
+    background-color: rgba(233, 232, 232, 0.605);
+    overflow: hidden;
+    max-width: 1300px;
+    padding: 3% 5%;
+}
+
+.about-awards-text {
+    font-family: Work Sans, Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    color: rgb(176, 175, 175);
+}
+
+.about-awards > h1 {
+    font-family: Oswald, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 35px;
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+.about-awards-photos {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.awards-photo {
+    height: auto;
+}
+
+.awards-photo img{
+    width: 100%;
+    height: auto;
+}
+
+.awards {
+    display: inline-block;
+    width: 20%;
+}

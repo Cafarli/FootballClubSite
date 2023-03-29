@@ -1,0 +1,41 @@
+.stnd {
+    margin-bottom: 10%;
+}
+
+.stnd-table {
+  width: 100%;
+  opacity: 0.95;
+  margin: 0 auto;
+  background-color: rgb(45, 45, 45);
+  color: white;
+}
+
+.stnd-table th {
+  color: #ffd027;
+}
+.logo {
+  width: 55%;
+  margin-right: 1%;
+}
+
+.pos-col {
+  width: 5%;
+}
+.logo-col {
+  width: 10%;
+}
+
+.table td,
+.table thead th {
+    vertical-align: middle;
+    border-bottom: 1px solid #ffc800;
+}
+
+.table thead th {
+    border-top: transparent;
+}
+
+
+.table tbody tr:hover {
+    background-color: #292423;
+}

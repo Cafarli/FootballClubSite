@@ -1,0 +1,65 @@
+.OpenedNewsCard {
+    margin-top: 10%;
+}
+
+.opened-card-image {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.opened-card-image img {
+    width: 100%;
+}
+
+.opened-card-content {
+    padding: 5% 0%;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.opened-card-date {
+    color: rgb(150, 148, 148);
+}
+
+.opened-card-info {
+    font-family: WorkSans;
+    font-size: 17px;
+    color: rgb(94, 93, 93);
+}
+
+.share {
+    margin-left: 10%;
+    width: 50%;
+    color: white;
+    line-height: 30px;
+}
+
+.share ul {
+    padding: 1% 0% 1% 10%;
+    background: linear-gradient(135deg, #292423 0%, #292423 100%);
+    transform: skewX(-15deg);
+}
+
+.share-li {
+    display: inline-block;
+    margin-right: 12%;
+    font-style: normal;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+.share-li:hover{
+    color: #ffc400;
+}
+
+/* OTHER POST CARDS */
+
+.other-post-cards {
+    padding: 5% 3%;
+}
+
+.other-post-cards > h1 {
+    text-align: left !important;
+    padding-left: 2%;
+}

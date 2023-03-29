@@ -1,0 +1,103 @@
+.ply {
+    border: 1px solid black;
+    width: 22%;
+    display: inline-block;
+    margin: 2% 0% 3% 2.3%;
+    transition: visibility 0.8s;
+}
+/* HOVER */
+.ply:hover .bio {
+    visibility: visible;
+}
+
+.ply:hover {
+    border-color: #FFB700;
+}
+.ply:hover .ply-num {
+    color: #363533;
+    background: linear-gradient(to left top,
+     rgb(255,255,255, 0.00001) 0%,
+     rgb(255,255,255, 0.000001) 50%,
+      #ffc800 50%, #ffc800 100%);
+}
+
+.ply-num-photo {
+    width: 100%;
+    height: 250px;
+    display: flex;
+}
+
+.ply-num-photo img {
+    width: 100%;
+    height: 250px;
+}
+
+.ply-img {
+    display: flex;
+    width: 100%;
+}
+
+.ply-num {
+    color: #ffc800;
+    background: linear-gradient(to left top,
+     rgb(255,255,255, 0.00001) 0%,
+     rgb(255,255,255, 0.000001) 50%,
+      #363533 50%, #363533 100%);
+    display: flex;
+    padding: 5%;
+    width: 30%;
+    height: 13vh;
+}
+
+
+.ply-info {
+    text-align: left;
+    display: flex;
+}
+
+.bio {
+    background: linear-gradient(to right bottom,
+    rgb(255,255,255, 0.00001) 0%,
+    rgb(255,255,255, 0.000001) 50%,
+    #ffc800 50%, #ffc800 100%);
+    cursor: pointer;
+    width: 8vh;
+    height: 13vh;
+    visibility: hidden; 
+    line-height: 22vh;
+    text-align: right;
+    right: 0;
+    top: 70%;
+    padding-right: 5%;
+    vertical-align: top;
+    position: relative;
+    transition: color 0.6s;
+    color: #363533;
+}
+
+.bio:hover {
+    color: white;
+}
+
+.ply-name {
+    color: #727272;
+}
+
+.ply-name:hover {
+    color: #ffc800;
+}
+
+.ply-name-pos {
+    width: 77%;
+    padding-left: 6%;
+    padding-top: 5%;
+}
+
+.ply-info p {
+    display: block;
+    line-height: 1.5;
+}
+
+.position {
+    color: rgb(169, 166, 166);
+}

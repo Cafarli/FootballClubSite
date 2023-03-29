@@ -1,0 +1,26 @@
+body {
+    width: 100%;
+    padding-top: 5%;
+    margin: 0 auto;
+}
+
+@media (min-width:1000px) {
+    .container {
+        min-width: 100%;
+    }
+}
+
+.row {
+    margin: 0;
+    padding: 0;
+}
+
+.news-title {
+    width: 100%;
+    padding: 10% 0% 3% 3%;
+    text-align: left;
+    background-image: url("../images/backgroundImages/photo7.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}

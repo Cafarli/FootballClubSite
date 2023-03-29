@@ -1,0 +1,125 @@
+.NewsCard {
+  margin: 0% 1% 5% 2%;
+  border: 1px solid rgb(231, 230, 230);
+  /* padding: 0; */
+  width: 20%;
+  display: inline-block;
+}
+
+.card-image {
+  width: 100%;
+  transition: opacity 0.6s;
+}
+
+.card-image:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.card-image img {
+  width: 100%;
+}
+
+.card-content {
+  padding: 4% 5%;
+}
+
+.card-content .card-date {
+    margin-bottom: 1%;
+}
+
+.card-content .card-title {
+    margin-bottom: 5%;
+    color: rgb(113, 113, 113);
+}
+
+.card-content .card-title:hover {
+  color: #ffc800;
+}
+
+.card-date,
+.card-info {
+  color: gray;
+}
+
+.card-more {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: #ffc800;
+  background-image: -webkit-linear-gradient(
+    -50deg,
+    #ffc800 0%,
+    #ffc800 45%,
+    #292423 45%,
+    #292423 45%
+  );
+  background-image: linear-gradient(
+    -50deg,
+    #ffc800 0%,
+    #ffc800 45%,
+    #292423 45%,
+    #292423 45%
+  );
+  height: 30px;
+  line-height: 30px;
+}
+
+.card-more:hover {
+  background-image: -webkit-linear-gradient(
+    -50deg,
+    #292423 0%,
+    #292423 50%,
+    #ffc800 50%,
+    #ffc800 50%
+  );
+  background-image: linear-gradient(
+    -50deg,
+    #292423 0%,
+    #292423 50%,
+    #ffc800 50%,
+    #ffc800 50%
+  );
+  cursor: pointer;
+}
+
+.card-more:hover .card-read-more-text {
+  color: #292423;
+}
+
+.card-more:hover .card-read-more-arrow   {
+  color: white;
+}
+
+.card-read-more-text ,
+.card-read-more-arrow  {
+  width: 50%; 
+}
+
+.card-read-more-text {
+  color: white;
+  flex: 1;
+  padding-left: 10%;
+}
+
+.card-read-more-arrow  {
+    cursor: pointer;
+    flex: 1;
+    color: #292423;
+    transition: color 0.6s;
+    padding-left: 30%;
+    margin: 0;
+}
+
+.card-read-more:hover {
+    color: white;
+}
+
+AiOutlineRight {
+  font-weight: 400;
+}
+
+.card-read-more:hover AiOutlineRight {
+    color: white;
+}
+

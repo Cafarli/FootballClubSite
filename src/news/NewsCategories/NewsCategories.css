@@ -1,0 +1,34 @@
+.NewsCategories {
+    background-color: rgb(53, 53, 53);
+    color: white;
+    margin-left: 5%;
+    padding: 5% 5%;
+    width: 90%;
+}
+
+.NewsCategories>h2 {
+    margin-bottom: 7%;
+}
+
+.NewsCategories>h2:after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    background: #ffc722;
+    margin-top: 5%;
+    right: 15%;
+    width: 35%;
+}
+
+.categories p {
+    cursor: pointer;
+}
+
+.categories p:hover {
+    color: #ffc722;
+}
+
+.open-icon {
+    margin-right: 1%;
+}
+

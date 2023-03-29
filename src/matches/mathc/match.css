@@ -1,0 +1,58 @@
+.Match {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 3%;
+    /* min-height: 113vh; */
+    background-image: url("../../images/backgroundImages/matchFans.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.Match>h1 {
+    padding: 10% 0% 4% 3%;
+    color: #FFB700;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.table th, td {
+    vertical-align: inherit;
+}
+
+.table tr {
+    border: 2px solid #FFB700;
+}
+
+.games {
+    width: 95%;
+    margin: 0 auto;
+    background-color: rgb(45, 45, 45);
+    color: white;
+    backdrop-filter: blur(2px);
+    margin-bottom: 7%;
+}
+
+.date{
+    width: 20%;
+    padding: 0% 5%;
+    margin: 0 auto;
+}
+ .score , .location {
+    width: 30%;
+}
+
+.games tr:hover {
+    background-color: #454545;
+}
+
+.games span{
+    color: #ffd027;
+}
+
+.day {
+    display: block;
+}
+
+.icon {
+    color: #ffd027;
+}

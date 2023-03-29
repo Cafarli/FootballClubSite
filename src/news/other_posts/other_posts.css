@@ -1,0 +1,40 @@
+.OtherPosts {
+    padding: 3% 1.5% 0% 1.5%;
+    width: 25%;
+    display: inline-block;
+}
+
+.posts {
+    border: 1px solid rgb(231, 230, 230);
+}
+
+
+.other-posts-image {
+    width: 100%;
+    transition: opacity 0.6s;
+}
+
+.other-posts-image:hover {
+    opacity: 0.8;;
+}
+
+.other-posts-image img{
+    width: 100%;
+}
+
+.other-posts-content {
+    padding: 7%;
+}
+
+.other-posts-date {
+  color: gray;
+}
+
+.other-posts-title {
+    transition: color 0.6s;
+}
+
+.other-posts-title:hover {
+    color: #ffc800;
+    cursor: pointer;
+}

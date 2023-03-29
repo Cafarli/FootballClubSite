@@ -1,0 +1,14 @@
+{"players" : [
+    {"photo" : "../players/images/Şahruddin_Məhəmmədəliyev1-203x265.png", "number":1, "firstname":"Şahruddin", "surname": "Məhəmmədəliyev", "position":"Goalkeeper"},
+    {"photo" : "../players/images/Şahruddin_Məhəmmədəliyev1-203x265.png", "number":13, "firstname":"Şahruddin", "surname": "Məhəmmədəliyev", "position":"Goalkeeper"},
+    {"photo" : "../players/images/Şahruddin_Məhəmmədəliyev1-203x265.png", "number":23, "firstname":"Şahruddin", "surname": "Məhəmmədəliyev", "position":"Goalkeeper"},
+    {"photo" : "../players/images/Qara_Qarayev1-203x265.png", "number":2, "firstname":"Qara", "surname":"Qarayev", "position":"Defender"},
+    {"photo" : "../players/images/Qara_Qarayev1-203x265.png", "number":4, "firstname":"Qara", "surname":"Qarayev", "position":"Defender"},
+    {"photo" : "../players/images/Qara_Qarayev1-203x265.png", "number":5, "firstname":"Qara", "surname":"Qarayev", "position":"Defender"},
+    {"photo" : "../players/images/Bədavi_Hüseynov-203x265.png", "number":8, "firstname":"Bədavi", "surname":"Hüseynov", "position":"Midfielder"},
+    {"photo" : "../players/images/Bədavi_Hüseynov-203x265.png", "number":7, "firstname":"Bədavi", "surname":"Hüseynov", "position":"Midfielder"},
+    {"photo" : "../players/images/Bədavi_Hüseynov-203x265.png", "number":12, "firstname": "Bədavi", "surname":"Hüseynov", "position":"Midfielder"},
+    {"photo" : "../players/images/Ramil_Şeydayev1-203x265.png", "number":9, "firstname":"Ramil", "surname":"Şeydayev", "position":"Attacker"},
+    {"photo" : "../players/images/Ramil_Şeydayev1-203x265.png", "number":10, "firstname":"Ramil", "surname":"Şeydayev", "position":"Attacker"},
+    {"photo" : "../players/images/Ramil_Şeydayev1-203x265.png", "number":11, "firstname":"Ramil", "surname":"Şeydayev", "position":"Attacker"}
+] }

@@ -1,0 +1,69 @@
+.formLogin {
+    background-color: white;
+    width: 35%;
+    margin: 0 auto;
+    padding: 3%;
+}
+
+.formLogin>h2 {
+    color: #191970;
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+.form-input {
+    display: block;
+    width: 100%;
+    padding-left: 2%;
+    border-radius: 5px;
+    background-color: transparent;
+    margin-bottom: 3%;
+    border: 1px solid #191970;
+}
+
+.remember-forgot>p>a{
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+}
+
+.remember-forgot>p:last-child>a{
+    color: rgb(0, 0, 0, 0.5);
+}
+
+.remember-forgot>p>a:hover{
+    color: #ffc400;
+}
+
+input[type=checkbox] {
+    vertical-align: middle;
+    margin-right: 2%;
+}
+
+.signup {
+    margin: 5% 0% 3% 0%;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #191970;
+    color: #191970;
+    height: 35px;
+    font-weight: bold;
+    background-color: white;
+}
+
+.signup:hover {
+    background-color: #191970;
+    color: white;
+}
+
+.log-in{
+    font-size: 13px;
+}
+
+.log-in>p>a{
+    color: #0000ff;
+}
+
+.log-in>p>a:hover{
+    color: #ffc400;
+}
