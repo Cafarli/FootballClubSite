@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
 
@@ -16,35 +15,55 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+    <style>
+      .ball-loader {
+        position: relative;
+        min-height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .ball-icon {
+        position: absolute;
+        animation: spin 3s linear infinite;
+        filter: drop-shadow(2px 2px 10px rgba(0, 0, 0, 0.5));
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
     <title>FK Jabrayil</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <div class="ball-loader">
+      <svg class="ball-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100" height="100" viewBox="0 0 256 256" xml:space="preserve">
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+        <defs>
+        </defs>
+        <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+          <circle cx="45" cy="45" r="44" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
+          <path d="M 77.803 15.685 C 78.58 19.267 79 22.982 79 26.797 C 79 55.628 55.628 79 26.797 79 c -3.815 0 -7.53 -0.42 -11.113 -1.197 C 23.468 84.763 33.737 89 45 89 c 24.301 0 44 -19.699 44 -44 C 89 33.737 84.763 23.468 77.803 15.685 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(249,249,249); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+          <path d="M 89.668 50.376 C 89.879 48.612 90 46.82 90 45 c 0 -8.977 -2.653 -17.342 -7.201 -24.371 c -0.052 -0.15 -0.136 -0.284 -0.253 -0.395 C 74.485 8.054 60.668 0 45 0 C 29.331 0 15.514 8.055 7.453 20.236 c -0.115 0.11 -0.199 0.243 -0.251 0.39 C 2.654 27.656 0 36.022 0 45 c 0 1.822 0.121 3.614 0.333 5.38 c -0.01 0.131 0.007 0.264 0.05 0.391 c 1.009 7.843 4.032 15.064 8.551 21.111 c 0.065 0.146 0.164 0.267 0.286 0.366 c 6.268 8.211 15.292 14.203 25.681 16.595 c 0.086 0.034 0.175 0.053 0.268 0.062 C 38.336 89.614 41.623 90 45 90 c 3.378 0 6.665 -0.386 9.833 -1.095 c 0.092 -0.009 0.181 -0.028 0.266 -0.062 c 10.392 -2.393 19.419 -8.387 25.688 -16.603 c 0.116 -0.096 0.211 -0.213 0.276 -0.352 c 4.521 -6.048 7.545 -13.27 8.555 -21.114 C 89.661 50.645 89.678 50.51 89.668 50.376 z M 79.636 70.444 l -17.597 -0.952 l -5.409 -8.426 l 6.19 -19.05 l 11.464 -2.745 l 13.309 11.57 C 86.601 58.106 83.794 64.799 79.636 70.444 z M 27.961 69.492 l -17.597 0.952 c -4.158 -5.645 -6.965 -12.338 -7.957 -19.603 l 13.31 -11.571 l 11.462 2.745 l 6.19 19.051 L 27.961 69.492 z M 80.719 21.088 l -6.891 16.235 l -11.571 2.771 L 46 28.282 v -13.1 l 14.273 -10.37 C 68.653 8.008 75.788 13.746 80.719 21.088 z M 29.727 4.812 L 44 15.182 v 13.1 L 27.742 40.094 l -11.57 -2.771 L 9.281 21.087 C 14.212 13.746 21.347 8.008 29.727 4.812 z M 35.995 87.044 l -6.354 -16.467 l 5.372 -8.369 h 19.972 l 5.372 8.37 l -6.353 16.466 C 51.1 87.666 48.089 88 45 88 C 41.911 88 38.9 87.666 35.995 87.044 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+        </g>
+        </svg>
+    </div>
+    <script>
+      document.onreadystatechange = function () {
+        if (document.readyState !== "complete") {
+          document.querySelector("body").style.visibility = "hidden";
+          document.querySelector(".ball-loader").style.visibility = "visible";
+        } else {
+          document.querySelector(".ball-loader").style.display = "none";
+          document.querySelector("body").style.visibility = "visible";
+        }
+      };
+    </script>
   </body>
 </html>
