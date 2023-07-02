@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./players.css";
 import data from "../players.json";
 import gk1 from "../players/images/Şahruddin_Məhəmmədəliyev1-203x265.png";
@@ -13,9 +13,7 @@ import mid3 from "../players/images/Bədavi_Hüseynov-203x265.png";
 import atc1 from "../players/images/Ramil_Şeydayev1-203x265.png";
 import atc2 from "../players/images/Ramil_Şeydayev1-203x265.png";
 import atc3 from "../players/images/Ramil_Şeydayev1-203x265.png";
-
 import { PlayerCard } from "../playerCard/playerCard";
-import axios from "axios";
 
 export function Players() {
   const players = [
@@ -105,38 +103,27 @@ export function Players() {
     },
   ];
 
-  const [squad, setSquad] = useState([]);
-  useEffect(()=>{
-    const fetchAllSquad = async()=>{
-      try{
-        const res = await axios.get("http://localhost:3000/squad")
-        console.log(res)
-      }
-      catch(err){
-        console.log("err")
-        console.log(err)
-      }
-    }
-    fetchAllSquad()
-  }, [])
-
   return (
     <div className="Players">
       <h1>TEAM</h1>
       <div className="player-head">
         <h3 className="team-heading">PLAYERS</h3>
+        <div className="players-list">
+
+        
         {players.map((player, index) => {
           return <PlayerCard props={player} key={index} />;
-        })}
+        })}</div>
       </div>
 
       <div className="coache-head">
         <h3 className="team-heading">COACHES</h3>
-        {players
+        
+        <div className="coache-list">{players
           .filter((pl, ind) => ind < 4)
           .map((player, index) => {
             return <PlayerCard props={player} key={index} />;
-          })}
+          })}</div>
       </div>
     </div>
   );
