@@ -1,175 +1,176 @@
 .openShopcard {
-    font-family: "Assistant";
-    width: 100%;
-    padding: 0;
-    margin-bottom: 3%;
+  font-family: "Assistant";
+  width: 100%;
+  padding: 0;
+  margin-bottom: 3%;
 }
 
 body {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .shopBgImg {
-    width: 100%;
-    height: 70vh;
-    background-image: url("../../images/backgroundImages/teamKits.png");
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-position: top;
+  width: 100%;
+  height: 70vh;
+  background-image: url("../../images/backgroundImages/teamKits.png");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: top;
 }
 
 .swiper {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .swiper-slide {
-    height: auto;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-
-.swiper-wrapper {
-    height: 350px;
+.productMiniPhotos .swiper-wrapper {
+  height: 350px;
 }
 
 #photos {
-    display: flex;
+  display: flex;
 }
-    
+
 .two {
-    width: 50%;
-    /* margin-left: 10%; */
+  width: 50%;
+  /* margin-left: 10%; */
 }
 
 .product-info {
-width: 90%;
+  width: 90%;
 }
 
 .product-title {
-    color: #ffae00;
+  color: #ffae00;
 }
 
 .product-name {
-    font-size: 30px;
-    font-weight: 500;
+  font-size: 30px;
+  font-weight: 500;
 }
 
 .product-price {
-    font-size: 20px;
+  font-size: 20px;
 }
 
-.productPhotos, .productPhoto {
-    padding: 0;
-    margin: 0;
+.productPhotos,
+.productPhoto {
+  padding: 0;
+  margin: 0;
 }
 
 .productMiniPhotos {
-    overflow: hidden;
-    max-height: 400px;
+  overflow: hidden;
+  max-height: 400px;
 }
 
 .one {
-    width: 42%;
-    text-align: center;
+  width: 42%;
+  text-align: center;
 }
 
 .productPhotos {
-    width: 100%;
-    max-height: 100%;
-    margin-bottom: 5%;
-    display: flex;
-    justify-content: center;
-    object-fit: cover;
-    overflow: hidden;
+  width: 100%;
+  max-height: 100%;
+  margin-bottom: 5%;
+  display: flex;
+  justify-content: center;
+  object-fit: cover;
+  overflow: hidden;
 }
 
-.swiper-backface-hidden .swiper-slide {
-    width: 250px!important;
+.productMiniPhotos .swiper-backface-hidden .swiper-slide {
+  width: 250px !important;
 }
 
-.productPhotos > img{
-    flex-shrink: 0;
-    max-width: 90%;
-    min-height: 100%
+.productPhotos > img {
+  flex-shrink: 0;
+  max-width: 90%;
+  min-height: 100%;
 }
 
-.productPhoto > img{
-    object-fit: cover;
-    width: 100%;
-    margin: 0 auto;
-    vertical-align: middle;
-    /* display: block; */
+.productPhoto > img {
+  object-fit: cover;
+  width: 100%;
+  margin: 0 auto;
+  vertical-align: middle;
+  /* display: block; */
 }
 
 .productPhoto {
-    text-align: center;
-    /* vertical-align: bottom; */
+  text-align: center;
 }
 
 /* SIZES */
-.selectable{
-    display: inline-block;
-    padding: 2% 4%;
-    margin-right: 3%;
-    margin-bottom: 2%;
-    border: 2px solid #000;
-    cursor: pointer;
+.selectable {
+  display: inline-block;
+  padding: 2% 4%;
+  margin-right: 3%;
+  margin-bottom: 2%;
+  border: 2px solid #000;
+  cursor: pointer;
 }
 
-.selectable:focus{
-    background-color: #ffae00;
+.selectable:focus {
+  background-color: #ffae00;
 }
 
 /* QUANTITY */
 .quantity-num {
-    border: 2px solid black;
-    width: 30%;
+  border: 2px solid black;
+  width: 30%;
 }
 
-.quantity>p, .product-size>p{
-    font-size: 15px;
-    color: #ffae00;
-    font-weight: bold;
-    margin-top: 3%;
-    margin-bottom: 1%;
+.quantity > p,
+.product-size > p {
+  font-size: 15px;
+  color: #ffae00;
+  font-weight: bold;
+  margin-top: 3%;
+  margin-bottom: 1%;
 }
 
-.quantity-num>input{
-    width: 48%;
-    text-align: center;
+.quantity-num > input {
+  width: 48%;
+  text-align: center;
 }
-.quantity-num>button{
-    width: 26%;
-    background-color: white;
+.quantity-num > button {
+  width: 26%;
+  background-color: white;
 }
 
-.quantity-num > button, input {
-    border: none;
-    outline: none;
-    padding: 1% 0%;
+.quantity-num > button,
+input {
+  border: none;
+  outline: none;
+  padding: 1% 0%;
 }
 
 /* ADD TO CART */
 .add-cart {
-    margin: 7% 0%;
-    width: 90%;
+  margin: 7% 0%;
+  width: 90%;
 }
 
 .addToCart {
-    width: 100%;
-    padding: 2% 0%;
-    border: 2px solid #ffae00;
-    background-color: #fff;
+  width: 100%;
+  padding: 2% 0%;
+  border: 2px solid #ffae00;
+  background-color: #fff;
 }
 
 .addToCart:focus {
-    outline: none;
+  outline: none;
 }
 
 .addToCart:hover {
-    background-color: #ffae00;
+  background-color: #ffae00;
 }

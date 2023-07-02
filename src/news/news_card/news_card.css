@@ -22,15 +22,21 @@
 
 .card-content {
   padding: 4% 5%;
+  font: 18px "Oswald";
 }
 
 .card-content .card-date {
-    margin-bottom: 1%;
+  margin-bottom: 5%;
+  font: 16px "Oswald";
 }
 
 .card-content .card-title {
-    margin-bottom: 5%;
-    color: rgb(113, 113, 113);
+  margin-bottom: 5%;
+  color: rgb(113, 113, 113);
+  font: 22px "Oswald";
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card-content .card-title:hover {
@@ -40,6 +46,12 @@
 .card-date,
 .card-info {
   color: gray;
+}
+.card-info {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
 }
 
 .card-more {
@@ -87,13 +99,13 @@
   color: #292423;
 }
 
-.card-more:hover .card-read-more-arrow   {
+.card-more:hover .card-read-more-arrow {
   color: white;
 }
 
-.card-read-more-text ,
-.card-read-more-arrow  {
-  width: 50%; 
+.card-read-more-text,
+.card-read-more-arrow {
+  width: 50%;
 }
 
 .card-read-more-text {
@@ -102,17 +114,17 @@
   padding-left: 10%;
 }
 
-.card-read-more-arrow  {
-    cursor: pointer;
-    flex: 1;
-    color: #292423;
-    transition: color 0.6s;
-    padding-left: 30%;
-    margin: 0;
+.card-read-more-arrow {
+  cursor: pointer;
+  flex: 1;
+  color: #292423;
+  transition: color 0.6s;
+  padding-left: 30%;
+  margin: 0;
 }
 
 .card-read-more:hover {
-    color: white;
+  color: white;
 }
 
 AiOutlineRight {
@@ -120,6 +132,36 @@ AiOutlineRight {
 }
 
 .card-read-more:hover AiOutlineRight {
-    color: white;
+  color: white;
 }
 
+/* RESPOSIVENESS */
+
+@media screen and (min-width: 770px) and (max-width: 920px) {
+  .card-read-more-text {
+    font-size: 14px;
+    padding-left: 6%;
+  }
+}
+@media screen and (min-width: 648px) and (max-width: 770px)  {
+  .card-date {
+    font-size: 13px;
+  }
+  .card-title {
+    font-size: 14px;
+  }
+  .card-read-more-text {
+    font-size: 12px;
+    padding-left: 4%;
+  }
+}
+
+@media screen and (min-width: 370px) and (max-width: 648px)  {
+  .card-date {
+    font-size: 12px;
+  }
+  .card-read-more-text {
+    font-size: 10px;
+    padding-left: 4%;
+  }
+}

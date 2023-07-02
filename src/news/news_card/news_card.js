@@ -12,8 +12,8 @@ export function NewsCard(props) {
             </div>
             <div className="card-content">
                 <p className="card-date">November 25, 2015</p>
-                <Link to={`news/newsCardTitle/`}><p className="card-title">SUSPENDISSE PURUS ENIM, DICTUM SED LOREM AC</p></Link>
-                <p className="card-info">Vivamus hendrerit, tortor sed luctus maximus, nunc urna hendrerit nibh, sit amet efficitur libero ....</p>
+                <Link to={`news/newsCardTitle/`}><p className="card-title" title="Sed mi magna, malesuada sit amet ipsum">Sed mi magna, malesuada sit amet ipsum</p></Link>
+                <p className="card-info">Vivamus hendrerit, tortor sed luctus maximus, nunc urna hendrerit nibh, sit amet efficitur libero, nunc urna hendrerit nibh, sit amet efficitur libero</p>
             </div>
             <div className="card-more">
             <Link style={{display:"flex", width:"100%"}} to={`news/newsCardTitle/`}>

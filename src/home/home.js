@@ -1,5 +1,4 @@
 import "./home.css";
-import { Footer } from "../headerFooter/footer/footer";
 import { NewsCard } from "../news/news_card/news_card";
 import { StandingTable } from "../table/table";
 import { ShopCard } from "../shop/shopCard/shopCard";
@@ -9,7 +8,6 @@ import logo from "./logo.png";
 import { Container, Row, Col } from "react-bootstrap";
 import data from "../shopClothing.json";
 import galery from "../galeryPhotos/galeryPhotos.json";
-import { SlideSwiper } from "../SlideSwiper/slideSwiper";
 import { Link } from "react-router-dom";
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -17,7 +15,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css";
-import { height } from "@mui/system";
 
 export function Home() {
   return (
@@ -51,7 +48,7 @@ export function Home() {
                       src={logo}
                       alt="logo"
                     ></img>
-                    FC JABRAYIL
+                    <p>FC JABRAYIL</p>
                   </div>
                   <div className="club vs">vs</div>
                   <div className="club second">
@@ -79,26 +76,54 @@ export function Home() {
       </Row>
 
       <Row>
-        <div className="part-title" style={{ display: "block" }}>
-          <h1>NEWS</h1>
-        </div>
-        <div style={{ display: "block" }}>
-          <NewsCard width={"21.5%"} />
-          <NewsCard width={"21.5%"} />
-          <NewsCard width={"21.5%"} />
-          <NewsCard width={"21.5%"} />
+        <div className="homeNews">
+          <div className="Hpart-title" style={{ display: "block" }}>
+            <h1>NEWS</h1>
+          </div>
+          <Swiper
+            loop={true}
+            grabCursor={true}
+            modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+            autoplay={{ delay: 3000 }}
+            spaceBetween={30}
+            breakpoints={{
+              370: { slidesPerView: 2 },
+              450: { slidesPerView: 3 },
+              640: { slidesPerView: 3.5 },
+              980: { slidesPerView: 4.5 },
+            }}
+            slidesPerView={4.5}
+          >
+            {data.kits &&
+              data.kits.length > 0 &&
+              data.kits.map((filteredItem) => {
+                return (
+                  <SwiperSlide>
+                    <NewsCard width={"100%"} key={filteredItem.id} />
+                  </SwiperSlide>
+                );
+              })}
+          </Swiper>
         </div>
       </Row>
 
       <Row>
         <div className="homeShop">
-          <h1>SHOP</h1>
+          <div className="Hpart-title" style={{ display: "block" }}>
+            <h1>SHOP</h1>
+          </div>
           <Swiper
             loop={true}
             grabCursor={true}
             autoplay={{ delay: 3000 }}
             modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
             spaceBetween={50}
+            breakpoints={{
+              370: { slidesPerView: 2 },
+              450: { slidesPerView: 3 },
+              700: { slidesPerView: 3.5, spaceBetween: 30 },
+              980: { slidesPerView: 4 },
+            }}
             slidesPerView={4}
           >
             {data.kits &&
@@ -122,11 +147,41 @@ export function Home() {
 
       <Row>
         <div className="galery">
-          <h1>PHOTOS</h1>
-          <SlideSwiper props={galery} />
+          <div className="Hpart-title" style={{ display: "block" }}>
+            <h1>PHOTOS</h1>
+          </div>
+          <Swiper
+            loop={true}
+            grabCursor={true}
+            autoplay={{ delay: 3000 }}
+            modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+            spaceBetween={50}
+            breakpoints={{
+              370: { slidesPerView: 2 },
+              450: { slidesPerView: 3 },
+              700: { slidesPerView: 3.5, spaceBetween: 30 },
+              980: { slidesPerView: 4 },
+            }}
+            slidesPerView={4}
+          >
+            {galery.images &&
+              galery.images.length > 0 &&
+              galery.images
+                .filter((item, index) => index < 5)
+                .map((filteredItem) => {
+                  return (
+                    <SwiperSlide>
+                      <img
+                        className="slideImage"
+                        src={filteredItem.photo}
+                        alt="slides"
+                      ></img>
+                    </SwiperSlide>
+                  );
+                })}
+          </Swiper>
         </div>
       </Row>
-
     </Container>
   );
 }
