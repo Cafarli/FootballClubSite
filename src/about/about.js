@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./about.css";
 import "../App.css";
 import { Awards } from "./awards";
 import headingImage from "../images/about-background.jpg";
 import aboutImage from "../images/aboutimage.png";
-import { HashLoader } from "react-spinners";
 
 export function About() {
   return (
