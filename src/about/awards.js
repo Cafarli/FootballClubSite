@@ -1,6 +1,7 @@
 import React from "react";
 import "./awards.css";
-import { SlideSwiper } from "../SlideSwiper/slideSwiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
 
 export function Awards() {
   // const awards_title = [
@@ -50,7 +51,28 @@ export function Awards() {
         </p>
       </div>
       <div className="about-awards-photos">
-        <SlideSwiper props={awards} />
+        <Swiper
+        loop={true}
+        autoplay={{delay: 3000}}
+        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+        spaceBetween={30}
+        breakpoints={{
+          370: { slidesPerView: 2 },
+          450: { slidesPerView: 2.5 },
+          640: { slidesPerView: 3.5 },
+          980: { slidesPerView: 4.5 },
+        }}
+        slidesPerView={4.5}
+        >
+          {awards.images &&
+            !!awards.images.length &&
+            awards.images.map((item, index) => {
+              return (<SwiperSlide key={index}>
+                <img className="awardPhotos" src={item.photo} alt="awards" />
+              </SwiperSlide>)
+            })}
+        </Swiper>
+        {/* <SlideSwiper props={awards} /> */}
       </div>
     </div>
   );

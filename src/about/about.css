@@ -10,6 +10,12 @@
 .section {
     padding: 5% 0%;
 }
+.about-img {
+    float: right;
+    width: 40% !important;
+    margin: 0 0 2% 5%;
+    padding-top: 5%;
+}
 
 .part-title {
     font-family: Oswald, Arial, Helvetica, sans-serif;
@@ -19,18 +25,21 @@
 /* CONTENT */
 .about-team {
     margin: 0 auto;
+    font: 18px Work Sans;
     width: 80%;
     display: flex;
 }
-
+.about-h1 {
+    font: 400 35px Oswald, Arial, Helvetica, sans-serif;
+    width: 45%;
+    margin: 0 !important;
+    padding: 0 0 2% 0;
+}
 
 
 .about-text > h1 {
-    font-family: Oswald, Arial, Helvetica, sans-serif;
-    font-weight: 400;
-    font-size: 35px;
-    text-align: center;
-    padding-bottom: 3%;
+    text-align: left;
+    padding: 0 0 3% 20%;
 }
 
 h1 span {
@@ -38,42 +47,19 @@ h1 span {
 }
 
 
-.about-text p {
-    font-family: Work Sans, Arial, Helvetica, sans-serif;
-}
-
-@media screen and (max-width: 948px) {
-
-    .about-team {
-        width: 94%;
-    }
-    .about-text, .about-image {
-        display: block;
-        margin: 0 auto;
-    }
-
-    .about-text {
-        width: 100% !important;
-        margin-bottom: 5%;
-    }
-
-    .about-image {
-        width: 100% !important;
-        height: 20% !important;
-        margin: 0 !important;
-    }
-
-    .about-text p {
-        width: 100%;
-    }
-}
-
 .about-text {
     width: 50%;
 }
 
-.about-image {
-    margin-left: 5%;
+/* AWARDS */
+.about-awards-photos .swiper-slide {
+    width: 230px;
+    height: 230px;
+}
+.awardPhotos {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* HISTORY */
@@ -96,3 +82,49 @@ h1 span {
     color: #ffc722;
 }
 
+
+/* RESPONSIVNESS */
+@media screen and  (min-width:640px) and (max-width: 980px) {
+
+    .about-team {
+        width: 90%;
+    }
+    .about-img {
+        width: 50% !important;
+    }
+    .swiper-container {
+        width: 980px;
+    }
+
+}
+@media screen and  (min-width:450px) and (max-width: 640px) {
+    .swiper-container {
+        width: 640px;
+    }
+    .about-awards-photos .swiper-slide {
+        width: 200px;
+        height: 200px;
+    }
+    .about-img {
+        width: 55% !important;
+    }
+}
+@media screen and  (min-width:370px) and (max-width: 450px) {
+    .swiper-container {
+        width: 370px;
+    }
+    .about-awards-photos .swiper-slide {
+        /* width: 180px; */
+        height: 180px;
+    }
+    .about-img {
+        display: block;
+        float: none;
+        width: 90% !important;
+        margin: 0 auto;
+    }
+    .about-h1 {
+        width: 100%;
+        padding: 5% 0 3% 0;
+    }
+}
