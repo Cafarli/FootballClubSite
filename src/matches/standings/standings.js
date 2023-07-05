@@ -1,18 +1,20 @@
-import React from "react";
+import React, {  useState } from "react";
 import "./standings.css";
 import { StandingTable } from "../../table/table";
 
 export function Standings() {
+  const [league, setLeague] = useState('Premyer Liq')
+
   return (
     <div className="Standings">
       <div className="standing-all">
       <div className="leagues">
-        <select className="leagues-select">
-          <option>La Liga</option>
+        <select onChange={e=> setLeague(e.target.value)} className="leagues-select">
+          <option>Premyer Liq</option>
           <option>Champions League</option>
         </select>
       </div>
-      <StandingTable logoColWdt={'10%'} wdt={'55%'} width={'80%'}/>
+      <StandingTable teamSize={league==="Premyer Liq"?5:14}width={'80%'}/>
       </div>
 
     </div>

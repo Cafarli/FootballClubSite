@@ -10,9 +10,14 @@
 }
 
 .leagues-select {
-  width: 15%;
-  padding-left: 1%;
+  width: 20%;
+  padding: 1%;
+  font: 16px Assistant;
   outline: none;
+}
+.leagues-select option {
+  padding: 3% !important;
+
 }
 
 .standing-all {

@@ -3,7 +3,7 @@
 }
 
 .stnd-table {
-  width: 100%;
+  width: 70%;
   opacity: 0.95;
   margin: 0 auto;
   background-color: rgb(45, 45, 45);
@@ -12,17 +12,41 @@
 
 .stnd-table th {
   color: #ffd027;
+  font: 18px Oswald;
 }
+
+.pos {
+  width: 12%;
+}
+.pts, .p, .win, .draw, .los, .gd {
+  width:  11%;
+  text-align: center;
+}
+
 .logo {
   width: 55%;
   margin-right: 1%;
+  object-fit: cover;
 }
 
 .pos-col {
-  width: 5%;
+  width: 16px;
+  width: 3%;
+  text-align: center;
 }
 .logo-col {
-  width: 10%;
+  width: 14% !important;
+  text-align: center;
+}
+.name-col {
+  width: 12%;
+  font: 17px Assistant;
+}
+
+.pts-col, .p-col, .win-col, .draw-col, .los-col, .gd-col {
+  width:  11%;
+  text-align: center;
+  font: 16px Oswald;
 }
 
 .table td,
@@ -38,4 +62,77 @@
 
 .table tbody tr:hover {
     background-color: #292423;
+}
+
+@media screen and (max-width: 1000px) {
+  .stnd-table {
+    width: 90%;
+  }
+  .stnd-table th {
+    font-size: 16px;
+  }
+  .pos-col {
+    font-size: 14px;
+    width: 2%;
+  }
+  .name-col {
+    width: 16%;
+    font-size: 17px;
+  }
+  .logo-col {
+    width: 18% !important;
+  }
+  .logo {
+    width: 65%;
+  }
+  .pts-col, .p-col, .win-col, .draw-col, .los-col, .gd-col {
+    width: 10%; 
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width:700px) {
+  .stnd-table {
+    width: 70% !important;
+  }
+  .pos-col {
+    font-size: 12px; 
+  }
+  .name-col {
+    font-size: 13px;
+    width: 14%;
+  }
+  .logo-col {
+    width: 20% !important;
+  }
+  .logo {
+    width: 40px;
+  }
+  .pts-col, .p-col, .win-col, .draw-col, .los-col, .gd-col {
+    width:  9%; 
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width:450px) {
+  .stnd-table {
+    width: 70% !important;
+  }
+  .pos-col {
+    font-size: 10px; 
+    width: 3%;
+  }
+  .name-col {
+    font-size: 12px;
+  }
+  .logo-col {
+    width: 22% !important;
+  }
+  .logo {
+    width: 30px;
+  }
+  .pts-col, .p-col, .win-col, .draw-col, .los-col, .gd-col {
+    width: 8%; 
+    font-size: 11px;
+  }
 }

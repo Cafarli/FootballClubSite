@@ -69,7 +69,7 @@ export function Home() {
             </Col>
 
             <Col>
-              <StandingTable width={"100%"} wdt={"100%"} logoColWdt={"12%"} />
+              <StandingTable width={"100%"}teamSize={5} />
             </Col>
           </Row>
         </div>
