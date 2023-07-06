@@ -11,12 +11,12 @@ export function NewsCard(props) {
                 <img src={photo} alt='content'></img>
             </div>
             <div className="card-content">
-                <p className="card-date">November 25, 2015</p>
-                <Link to={`news/newsCardTitle/`}><p className="card-title" title="Sed mi magna, malesuada sit amet ipsum">Sed mi magna, malesuada sit amet ipsum</p></Link>
+                <p className="card-date">November 25, 2023</p>
+                <Link to={`newsCardTitle/`}><p className="card-title" title="Sed mi magna, malesuada sit amet ipsum">Sed mi magna, malesuada sit amet ipsum</p></Link>
                 <p className="card-info">Vivamus hendrerit, tortor sed luctus maximus, nunc urna hendrerit nibh, sit amet efficitur libero, nunc urna hendrerit nibh, sit amet efficitur libero</p>
             </div>
             <div className="card-more">
-            <Link style={{display:"flex", width:"100%"}} to={`news/newsCardTitle/`}>
+            <Link style={{display:"flex", width:"100%"}} to={`newsCardTitle/`}>
                 <div className="card-read-more-text">READ MORE</div>
                 <div className="card-read-more-arrow"> <AiOutlineRight /></div>
                 </Link>

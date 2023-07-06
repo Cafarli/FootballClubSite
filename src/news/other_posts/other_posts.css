@@ -20,18 +20,30 @@
 
 .other-posts-image img{
     width: 100%;
+    object-fit: cover;
 }
 
 .other-posts-content {
     padding: 7%;
+    width: 100%;
 }
 
 .other-posts-date {
   color: gray;
+  font: 15px Oswald;
 }
 
 .other-posts-title {
+    font: 18px Oswald;
     transition: color 0.6s;
+    color: rgb(113, 113, 113);
+}
+
+.other-posts-title p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
 }
 
 .other-posts-title:hover {

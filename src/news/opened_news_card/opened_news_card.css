@@ -1,22 +1,31 @@
 .OpenedNewsCard {
-    margin-top: 10%;
+    width: 100%;
+    padding: 0 3%;
+    margin-top: 6%;
 }
 
 .opened-card-image {
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
 }
 
 .opened-card-image img {
     width: 100%;
+    object-fit: cover;
 }
 
 .opened-card-content {
-    padding: 5% 0%;
+    padding: 5% 0% 7% 0%;
     width: 85%;
     margin: 0 auto;
 }
-
+.opened-card-title {
+    font: bold 30px Assistant;
+    color: rgb(85, 85, 85);
+    margin: 0 0 5% 0;
+    text-overflow: ellipsis;
+    line-height: 30px;
+}
 .opened-card-date {
     color: rgb(150, 148, 148);
 }
@@ -56,7 +65,8 @@
 /* OTHER POST CARDS */
 
 .other-post-cards {
-    padding: 5% 3%;
+    width: 100%;
+    padding: 10% 0% 5% 0%;
 }
 
 .other-post-cards > h1 {

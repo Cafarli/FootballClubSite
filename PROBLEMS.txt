@@ -1,0 +1,3 @@
+REDUX - xeberlere kecid
+Home - photos not shown correctly
+kit page - size seçildikden sonra say deyisile bilinmir

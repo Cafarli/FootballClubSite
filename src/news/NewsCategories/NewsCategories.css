@@ -10,15 +10,6 @@
     margin-bottom: 7%;
 }
 
-.NewsCategories>h2:after {
-    content: '';
-    position: absolute;
-    height: 1px;
-    background: #ffc722;
-    margin-top: 5%;
-    right: 15%;
-    width: 35%;
-}
 
 .categories p {
     cursor: pointer;

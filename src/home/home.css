@@ -1,5 +1,5 @@
 .Home {
-  width: 100%;
+  max-width: 100% !important;
   margin: 0;
   padding: 0;
 }
@@ -88,10 +88,14 @@
 .next-match-info {
   width: 100%;
   background-color: #ffc800;
-  padding: 7% 3%;
+  padding: 7% 4%;
+  display: flex;
+  justify-content: space-between;
 }
 
+
 .next-match {
+  width: 100%;
   background-color: white;
   padding: 10% 7% 5% 7%;
 }
@@ -99,18 +103,8 @@
 .next-match > h1 {
   font-size: 35px;
   margin-bottom: 11%;
+  margin-right: 5%;
   position: relative;
-}
-
-.next-match > h1:after {
-  content: "";
-  display: block;
-  width: 45%;
-  height: 1px;
-  background: #ffc800;
-  right: 5%;
-  top: 50%;
-  position: absolute;
 }
 
 .clubs {
@@ -201,6 +195,15 @@
   .container {
     max-width: 100%;
   }
+  .nmi-nextMatchPart {
+    width: 45%;
+  }
+  .nmi-standingPart {
+    width: 49%;
+  }
+  .nmi-standingPart div {
+    width: 100%;
+  }
   .swiper-container {
     width: 980px;
   }
@@ -208,12 +211,52 @@
     height: 400px;
   }
 }
-@media screen and (min-width: 900px) {
+
+@media screen and (max-width: 830px) {
+  .nmi-standingPart .logo-col {
+    width: 26% !important;
+  } 
+  
+  .nmi-standingPart .pos-col {
+    font-size: 13px;
+    width: 2%;
+  }
+  .nmi-standingPart .name-col {
+    width: 14%;
+    font-size: 14px;
+  }
+  .nmi-standingPart .pts-col, 
+  .nmi-standingPart .p-col, 
+  .nmi-standingPart .win-col, 
+  .nmi-standingPart .draw-col,
+  .nmi-standingPart .los-col, 
+  .nmi-standingPart .gd-col {
+    width: 8%; 
+    font-size: 14px;
+  }
+}
+@media screen and (max-width:700px) {
+  .next-match-info {
+    padding: 7% 5%;
+    flex-direction: column;
+  }
+  .nmi-nextMatchPart {
+    margin-bottom: 5%;
+  }
+  .nmi-standingPart .logo-col {
+    width: 14% !important;
+  } 
 }
 
 @media screen and (min-width: 700px) and (max-width: 980px) {
   .container {
-    max-width: 100%;
+   max-width: 100%;
+  }
+  .nmi-nextMatchPart {
+    width: 42%;
+  }
+  .nmi-standingPart {
+    width: 55%;
   }
   .swiper-container {
     width: 700px;
@@ -233,11 +276,11 @@
     padding: 7% 5%;
   }
   .club img {
-    width: 30% ;
+    width: 30%;
     display: inline-block;
   }
   .club p {
-    width: 50% ;
+    width: 50%;
     margin: 0;
     display: inline-block;
   }
@@ -258,5 +301,26 @@
   }
   .Home .row {
     padding: 0px 0 7% 0;
+  }
+  .nmi-standingPart .logo-col {
+    width: 50% !important;
+  } 
+  
+  .nmi-standingPart .pos-col {
+    font-size: 9px;
+    width: 2%;
+  }
+  .nmi-standingPart .name-col {
+    width: 13%;
+    font-size: 11px;
+  }
+  .nmi-standingPart .pts-col, 
+  .nmi-standingPart .p-col, 
+  .nmi-standingPart .win-col, 
+  .nmi-standingPart .draw-col,
+  .nmi-standingPart .los-col, 
+  .nmi-standingPart .gd-col {
+    width: 7%; 
+    font-size: 10px;
   }
 }

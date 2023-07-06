@@ -24,3 +24,16 @@ body {
     background-size: cover;
     color: white;
 }
+.all-news {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.all-news > a {
+    flex: 1 1 200px;
+    flex-grow: 0;
+    width: 23%;
+    margin: 0% 1% 5% 1%;
+}

@@ -5,7 +5,7 @@ import { ShopCard } from "../shop/shopCard/shopCard";
 import { AiOutlineRight } from "react-icons/ai";
 import photo from "./photo.jpg";
 import logo from "./logo.png";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import data from "../shopClothing.json";
 import galery from "../galeryPhotos/galeryPhotos.json";
 import { Link } from "react-router-dom";
@@ -35,8 +35,7 @@ export function Home() {
 
       <Row>
         <div className="next-match-info">
-          <Row>
-            <Col>
+            <div className="nmi-nextMatchPart">
               <div className="next-match">
                 <h1>
                   NEXT <span>MATCH</span>
@@ -66,12 +65,11 @@ export function Home() {
                 </div>
                 <div className="all-matches">See calendar</div>
               </div>
-            </Col>
+            </div>
 
-            <Col>
-              <StandingTable width={"100%"}teamSize={5} />
-            </Col>
-          </Row>
+            <div className="nmi-standingPart">
+              <StandingTable width={"100%"} teamSize={5}  wdt={"100%"} logoColWdt={"14%"}/>
+            </div>
         </div>
       </Row>
 
@@ -85,7 +83,7 @@ export function Home() {
             grabCursor={true}
             modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
             autoplay={{ delay: 3000 }}
-            spaceBetween={30}
+            spaceBetween={25}
             breakpoints={{
               370: { slidesPerView: 2 },
               450: { slidesPerView: 3 },

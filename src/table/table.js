@@ -7,7 +7,7 @@ import teams from "./liga.json";
 export function StandingTable(props) {
   return (
     <div>
-      <Table className="stnd-table">
+      <Table className="stnd-table" style={{width: props.width}}>
         <thead>
           <tr>
             <th className="pos" colSpan={3}>Pos.</th>
@@ -24,9 +24,9 @@ export function StandingTable(props) {
             return (
               <tr key={index}>
                 <td className="pos-col">{index+1}</td>
-                <td className="logo-col" >
+                <td className="logo-col" style={{width: props.logoColWdt}} >
                   <img
-                    className="logo"
+                    className="logo" style={{width: props.wdt }}
                     src={logo}
                     alt="logo"
                   ></img>

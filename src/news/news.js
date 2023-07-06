@@ -2,7 +2,6 @@ import React from "react";
 import './news.css'
 import { NewsCard } from "./news_card/news_card";
 import { NewsCategories } from "./NewsCategories/NewsCategories";
-import { Footer } from "../headerFooter/footer/footer";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
@@ -11,28 +10,28 @@ export function News() {
         <Container className="news" style={{margin:0 ,padding:0}}>
             <Row>
                 <div className="news-title">
-                    <h1>NEWS</h1>
+                    <h1>Xəbərlər</h1>
                 </div>
             </Row>
             <Row style={{paddingTop: "5%"}}>
-                <Col md={4}>
+                {/* <Col lg={4} md={3} ms={2}>
                     <NewsCategories />
-                </Col>
-                <Col md={8}>
+                </Col> */}
+                <Col className="all-news">
                     <Link to={`newsCardTitle/`}>
-                        <NewsCard width={"30%"}/>
+                        <NewsCard width={"100%"}/>
                     </Link>
                     <Link to={`newsCardTitle/`}>
-                        <NewsCard width={"30%"}/>
+                        <NewsCard width={"100%"}/>
                     </Link>
                     <Link to={`newsCardTitle/`}>
-                        <NewsCard width={"30%"}/>
+                        <NewsCard width={"100%"}/>
                     </Link>
                     <Link to={`newsCardTitle/`}>
-                        <NewsCard width={"30%"}/>
+                        <NewsCard width={"100%"}/>
                     </Link>
                     <Link to={`newsCardTitle/`}>     
-                        <NewsCard width={"30%"}/>
+                        <NewsCard width={"100%"}/>
                     </Link>
                 </Col>
             </Row>
