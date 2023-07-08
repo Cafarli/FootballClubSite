@@ -11,3 +11,18 @@
     background-repeat: no-repeat;
     background-position: top;
 }
+.shopcards {
+    width: 100%;
+    padding: 0 2% 5% 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1000px) {
+    .shopcards {
+        padding: 0 3% 5% 3%;
+        justify-content: space-around;
+    }
+}

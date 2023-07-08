@@ -1,5 +1,5 @@
 .Footer {
-    background-image: linear-gradient(rgba(0,0,0, .95), rgba(0,0,0, 0.95)) ,url('./footer-background.jpg');
+    background-image: linear-gradient(rgba(0,0,0, .90), rgba(0,0,0, 0.90)) ,url('./footer-background.jpg');
     padding: 3% 3%;
     color: rgb(169, 166, 166);
     bottom: 0;
@@ -18,8 +18,11 @@ ul{
 }
 
 .social-medias {
-    width: 95%;
+    width: 100%;
     padding: 0% 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .medias {
@@ -35,15 +38,23 @@ ul{
     color: #FFB700;
 }
 
-.home-link, .medias {
+.home-logo, .medias {
     display: inline-block;
 }
 
-.home-link {
-    width: 30%
+.home-logo {
+    width: 12%;
+}
+.home-logo a {
+    display: inline-block;
+    width: 100%;
+}
+.home-logo a img {
+    width: 100%;
+    object-fit: cover;
 }
 
-.home-link p {
+.home-logo p {
     font-size: 25px;
 }
 

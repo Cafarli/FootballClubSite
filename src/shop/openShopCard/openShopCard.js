@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./openShopCard.css";
 import { ShopCategories } from "../shopCategories/shopCategories";
 import { Container, Row, Col } from "react-bootstrap";
@@ -17,9 +17,45 @@ export function OpenedShopCard() {
   const [counter, setCounter] = useState(1);
   const incrementCounter = () => setCounter(counter + 1);
   let decrementCounter = () => setCounter(counter - 1);
-  if (counter <= 0) {
-    decrementCounter = () => setCounter(1);
+  if (counter === 0) {
+    setCounter(1);
   }
+
+  // Change sizes
+  const [size, setSize] = useState("XS");
+  const handleSizes = (e) => {
+    const sizes = document.querySelector(".sizes");
+    if (!e.target.classList.contains("selected")) {
+      for (let i = 0; i < sizes.childNodes.length; i++) {
+        sizes.childNodes[i].classList.remove("selected");
+      }
+      e.target.classList.add("selected");
+      setSize(e.target.innerText);
+    }
+  };
+
+  // Change image
+  const handleImg = (e) => {
+    document.querySelector(".selectedPhoto").src = e.target.src;
+  };
+
+  // Get width of screen
+  const [windowSize, setWindowSize] = useState([
+    window.innerWidth,
+    window.innerHeight,
+  ]);
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowSize([window.innerWidth, window.innerHeight]);
+    };
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
 
   return (
     <Container className="openShopcard">
@@ -29,11 +65,13 @@ export function OpenedShopCard() {
         <Col id="photos" md={7} style={{ paddingLeft: "2%" }}>
           <section className="section one">
             <Swiper
-              direction={"vertical"}
+              direction={windowSize[0] > 700 ? "vertical" : "horizontal"}
               loop={true}
               grabCursor={true}
               autoplay={{ delay: 3000 }}
               slidesPerView={2}
+              breakpoints={{ 450: { width: 450, slidesPerView: 2 } ,
+              700: { width: 700, slidesPerView: 2 }}}
               spaceBetween={20}
               mousewheel={true}
               modules={[
@@ -52,23 +90,16 @@ export function OpenedShopCard() {
                   return (
                     <SwiperSlide key={ind}>
                       <div className="productPhotos">
-                        <img src={i.photo} alt="product"></img>
+                        <img
+                          onClick={(e) => handleImg(e)}
+                          src={i.photo}
+                          alt="product"
+                        ></img>
                       </div>
                     </SwiperSlide>
                   );
                 })}
             </Swiper>
-            {/* <div className="productMiniPhotos">
-            {data.kits
-              .filter((item, index) => index < 5)
-              .map((i, ind) => {
-                return (
-                  <div className="productPhotos" key={ind}>
-                    <img src={i.photo} alt="product"></img>
-                  </div>
-                );
-              })}
-              </div> */}
           </section>
           <section className="section two">
             {data.kits
@@ -76,13 +107,17 @@ export function OpenedShopCard() {
               .map((i, ind) => {
                 return (
                   <div className="productPhoto" key={ind}>
-                    <img src={i.photo} alt="product"></img>
+                    <img
+                      className="selectedPhoto"
+                      src={i.photo}
+                      alt="product"
+                    ></img>
                   </div>
                 );
               })}
           </section>
         </Col>
-        <Col md={5}>
+        <Col sm={12} md={5}>
           <div className="product-info">
             <div className="product-title">
               <p className="product-name">
@@ -93,25 +128,28 @@ export function OpenedShopCard() {
             <div className="product-size">
               <p>SELECT SIZE</p>
               <div className="sizes">
-                <div tabIndex={0} className="selectable">
+                <div
+                  className="selectable selected"
+                  onClick={(e) => handleSizes(e)}
+                >
                   XS
                 </div>
-                <div tabIndex={0} className="selectable">
+                <div className="selectable" onClick={(e) => handleSizes(e)}>
                   S
                 </div>
-                <div tabIndex={0} className="selectable">
+                <div className="selectable" onClick={(e) => handleSizes(e)}>
                   M
                 </div>
-                <div tabIndex={0} className="selectable">
+                <div className="selectable" onClick={(e) => handleSizes(e)}>
                   L
                 </div>
-                <div tabIndex={0} className="selectable">
+                <div className="selectable" onClick={(e) => handleSizes(e)}>
                   XL
                 </div>
-                <div tabIndex={0} className="selectable">
+                <div className="selectable" onClick={(e) => handleSizes(e)}>
                   2XL
                 </div>
-                <div tabIndex={0} className="selectable">
+                <div className="selectable" onClick={(e) => handleSizes(e)}>
                   3XL
                 </div>
               </div>

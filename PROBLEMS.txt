@@ -1,3 +1,5 @@
 REDUX - xeberlere kecid
 Home - photos not shown correctly
-kit page - size seçildikden sonra say deyisile bilinmir
+kit page - size seçildikden sonra say deyisile bilinmir +
+kit page - size hissesine toxunulmadiqda sekile toxunduqda sekil deyismir
+login page - password gorunme
