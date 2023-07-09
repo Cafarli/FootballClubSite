@@ -8,12 +8,17 @@
     padding-bottom: 2%;
     margin-bottom: 7%;
     border-bottom: 3px solid #6a6969;
+    font: 28px WorkSans;
 }
 
 .player-info {
-    margin-top: 8%;
-    background-image: linear-gradient(transparent, rgba(255, 255, 255, .25) 150px, #ca9f04 30px);
-    /* background: linear-gradient(90deg , transparent 10%, #1b00a3 50%, transparent 70%); */
+    padding-top: 5%;
+    background: var(--yellowBg);
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+}
+.player-info .row {
+    display: flex;
+    align-items: center;
 }
 
 .player-img {
@@ -27,35 +32,38 @@
 
 .personal-info {
     margin-top: 27%;
-    width: 80%;
+    width: 90%;
+    border-radius: 15px;
     background-color: rgb(231, 226, 226, 0.5);
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);
 }
 
 .personal-info, .statistics, .honours, .player-history {
     background-color: #fff6d6;
-    padding: 5%;
+    padding: 5% 10%;
     min-height: 30vh;
 }
-
 .statistics, .honours, .player-history {
     margin-top: 10%;
     min-height: 25vh;
+    border-radius: 5px;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);
 }
-
 .history-table thead > tr,
 .history-table tbody tr {
     border: none;
 }
-
 .history-table tbody tr:hover {
     background-color: unset!important;
 }
-
-
 .personal-info ul{
     display: inline-block;
+    font: 17px WorkSans;
+    padding: 0 0 0 5%;
 }
-
+.personal-info ul:last-child{
+    padding: 0 0 0 10%;
+}
 .statistics ul {
     display: inline-block;
 }
@@ -67,4 +75,22 @@
 .honours li,
 .statistics li {
     padding-bottom: 3%;
+}
+
+/* RESPONSIVNESS */
+@media screen and (max-width: 768px) {
+    .player-info {
+        margin: 0 auto;
+    }
+    .player-img {
+        width: 70%;
+        margin: 0 auto;
+    }
+    .personal-info {
+        margin: 8% auto 0 auto;
+    }
+    .playerAddInfo {
+        width: 90%;
+        margin: 0 auto;
+    }
 }

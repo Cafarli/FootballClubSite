@@ -25,7 +25,7 @@ export function Home() {
           <Link to={`news/newsCardTitle/`}>
             <div className="read-more">
               <div className="more-text">READ MORE</div>
-              <div className="icon">
+              <div className="more-icon">
                 <AiOutlineRight />
               </div>
             </div>

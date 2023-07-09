@@ -1,11 +1,13 @@
 .OpenedNewsCard {
     width: 100%;
-    padding: 0 3%;
     margin-top: 6%;
 }
+.OpenedNewsCard .col {
+    padding: 0;
+} 
 
 .opened-card-image {
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -15,24 +17,27 @@
 }
 
 .opened-card-content {
-    padding: 5% 0% 7% 0%;
-    width: 85%;
+    padding: 2% 0% 7% 0%;
+    width: 90%;
     margin: 0 auto;
 }
 .opened-card-title {
     font: bold 30px Assistant;
     color: rgb(85, 85, 85);
-    margin: 0 0 5% 0;
+    margin: 0 0 3% 0;
     text-overflow: ellipsis;
     line-height: 30px;
 }
 .opened-card-date {
     color: rgb(150, 148, 148);
+    display: flex;
+    font: 15px Oswald;
+    align-items: center;
+    margin: 0 0 5% 0;
 }
 
 .opened-card-info {
-    font-family: WorkSans;
-    font-size: 17px;
+    font: 17px WorkSans;
     color: rgb(94, 93, 93);
 }
 

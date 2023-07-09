@@ -23,12 +23,12 @@ export function OpenedNewsCard() {
             <img src={photo} alt="content"></img>
           </div>
           <div className="opened-card-content">
+            <p className="opened-card-date">
+              <FaCalendarAlt style={{fontSize:'15px', marginRight: "1%" }} />
+              November 25, 2015
+            </p>
             <p className="opened-card-title">
               Sed mi magna, malesuada sit amet ipsum
-            </p>
-            <p className="opened-card-date">
-              <FaCalendarAlt style={{ marginRight: "1%" }} />
-              November 25, 2015
             </p>
             <p className="opened-card-info">
               Vivamus hendrerit, tortor sed luctus maximus, nunc urna hendrerit

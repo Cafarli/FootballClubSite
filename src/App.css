@@ -8,6 +8,19 @@ body {
   background-image: linear-gradient(rgba(255,255,255,0.97),rgba(255,255,255,0.97)),url('../src/contact/contactbg.png') ;
 }
 
+:root {
+  --yellowBg: linear-gradient(
+    90deg,
+    rgba(201, 146, 21, 1) 0%,
+    rgba(239, 171, 18, 1) 10%,
+    rgba(240, 179, 43, 1) 30%,
+    rgba(240, 191, 81, 1) 50%,
+    rgba(240, 179, 43, 1) 70%,
+    rgba(239, 171, 18, 1) 90%,
+    rgba(201, 146, 21, 1) 100%
+  );
+  --gray: rgb(113, 113, 113);
+}
 .totalSpinner {
   align-items: center;
   justify-content: center;
@@ -30,10 +43,11 @@ a {
 }
 
 /* color 
-gray 
-color: rgb(113, 113, 113);
+
 orange
-color: #FFB700; */
+color: #FFB700; 
+
+*/
 
 
 a:hover {

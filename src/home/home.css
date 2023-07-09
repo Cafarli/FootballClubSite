@@ -11,32 +11,36 @@
   position: relative;
   width: 100%;
 }
-
+.photos-slider a {
+  width: 100%;
+  display: block;
+}
 .photo {
   width: 100%;
 }
 .read-more {
-  width: 13%;
+  width: 15%;
+  border-radius: 5px;
   border: 1px solid #ca9f04;
   color: white;
   font-size: 12px;
-  padding: 1% 2%;
+  padding: 15px 2%;
   position: absolute;
   bottom: 7%;
   right: 3%;
   background-image: linear-gradient(
-    145deg,
+    150deg,
     #292423 0%,
-    #292423 40%,
-    #ffc800 40%,
-    #ffc800 40%
+    #292423 47%,
+    #ffc800 47%,
+    #ffc800 47%
   );
   background-image: -webkit-linear-gradient(
-    145deg,
+    150deg,
     #292423 0%,
-    #292423 40%,
-    #ffc800 40%,
-    #ffc800 40%
+    #292423 47%,
+    #ffc800 47%,
+    #ffc800 47%
   );
   cursor: pointer;
   transition: background-image 600ms;
@@ -44,19 +48,19 @@
 
 .read-more:hover {
   background-image: linear-gradient(
-    145deg,
+    150deg,
     #ffc800 0%,
-    #ffc800 40%,
-    #292423 40%,
-    #292423 40%
+    #ffc800 47%,
+    #292423 47%,
+    #292423 47%
   );
 
   background-image: -webkit-linear-gradient(
-    145deg,
+    150deg,
     #ffc800 0%,
-    #ffc800 40%,
-    #292423 40%,
-    #292423 40%
+    #ffc800 47%,
+    #292423 47%,
+    #292423 47%
   );
 }
 
@@ -64,12 +68,12 @@
   color: #ffc800;
 }
 
-.read-more:hover .icon {
+.read-more:hover .more-icon {
   color: #292423;
 }
 
 .more-text,
-.icon {
+.more-icon {
   display: inline-block;
 }
 
@@ -78,21 +82,33 @@
   font-weight: bold;
 }
 
-.icon {
+.more-icon {
   color: #ffc800;
-  margin-left: 30%;
+  margin-left: 40%;
+  font-weight: bold;
 }
 
 /* NEXT MATCH INFO */
 
 .next-match-info {
   width: 100%;
-  background-color: #ffc800;
+  background: rgb(201, 146, 21);
+  background: linear-gradient(
+    90deg,
+    rgba(201, 146, 21, 1) 0%,
+    rgba(239, 171, 18, 1) 10%,
+    rgba(240, 179, 43, 1) 30%,
+    rgba(240, 191, 81, 1) 50%,
+    rgba(240, 179, 43, 1) 70%,
+    rgba(239, 171, 18, 1) 90%,
+    rgba(201, 146, 21, 1) 100%
+  );
+  /* background-color: #ffc800; */
   padding: 7% 4%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
-
 
 .next-match {
   width: 100%;
@@ -215,8 +231,8 @@
 @media screen and (max-width: 830px) {
   .nmi-standingPart .logo-col {
     width: 26% !important;
-  } 
-  
+  }
+
   .nmi-standingPart .pos-col {
     font-size: 13px;
     width: 2%;
@@ -225,17 +241,17 @@
     width: 14%;
     font-size: 14px;
   }
-  .nmi-standingPart .pts-col, 
-  .nmi-standingPart .p-col, 
-  .nmi-standingPart .win-col, 
+  .nmi-standingPart .pts-col,
+  .nmi-standingPart .p-col,
+  .nmi-standingPart .win-col,
   .nmi-standingPart .draw-col,
-  .nmi-standingPart .los-col, 
+  .nmi-standingPart .los-col,
   .nmi-standingPart .gd-col {
-    width: 8%; 
+    width: 8%;
     font-size: 14px;
   }
 }
-@media screen and (max-width:700px) {
+@media screen and (max-width: 700px) {
   .next-match-info {
     padding: 7% 5%;
     flex-direction: column;
@@ -245,12 +261,15 @@
   }
   .nmi-standingPart .logo-col {
     width: 14% !important;
-  } 
+  }
+  .read-more {
+    width: 25%;
+  }
 }
 
 @media screen and (min-width: 700px) and (max-width: 980px) {
   .container {
-   max-width: 100%;
+    max-width: 100%;
   }
   .nmi-nextMatchPart {
     width: 42%;
@@ -284,9 +303,12 @@
     margin: 0;
     display: inline-block;
   }
+  .read-more {
+    width: 20%;
+  }
 }
 
-@media screen and (min-width: 370px) and (max-width: 450px) {
+@media screen and (min-width: 370px) and (max-width: 500px) {
   .container {
     max-width: 100%;
   }
@@ -304,8 +326,8 @@
   }
   .nmi-standingPart .logo-col {
     width: 50% !important;
-  } 
-  
+  }
+
   .nmi-standingPart .pos-col {
     font-size: 9px;
     width: 2%;
@@ -314,13 +336,18 @@
     width: 13%;
     font-size: 11px;
   }
-  .nmi-standingPart .pts-col, 
-  .nmi-standingPart .p-col, 
-  .nmi-standingPart .win-col, 
+  .nmi-standingPart .pts-col,
+  .nmi-standingPart .p-col,
+  .nmi-standingPart .win-col,
   .nmi-standingPart .draw-col,
-  .nmi-standingPart .los-col, 
+  .nmi-standingPart .los-col,
   .nmi-standingPart .gd-col {
-    width: 7%; 
+    width: 7%;
+    font-size: 10px;
+  }
+  .read-more {
+    width: 30%;
+    padding: 10px 2%;
     font-size: 10px;
   }
 }
