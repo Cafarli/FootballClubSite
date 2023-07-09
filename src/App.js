@@ -13,42 +13,92 @@ import { Header } from "./headerFooter/header/header";
 import { OpenedShopCard } from "./shop/openShopCard/openShopCard";
 import { Login } from "./login/login";
 import { Signup } from "./signup/signup";
-import { BrowserRouter , Route, Routes } from "react-router-dom";
+import {
+  Outlet,
+  RouterProvider,
+  createBrowserRouter,
+} from "react-router-dom";
 import { Footer } from "./headerFooter/footer/footer";
 
-function App() {
+function Layout() {
+  return (
+    <>
+      <Header />
+      <Outlet />
+      <Footer />
+    </>
+  );
+}
 
+const router = createBrowserRouter([
+  {
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/squad",
+        element: <Players />,
+      },
+      {
+        path: "/standings",
+        element: <Standings />,
+      },
+      {
+        path: "/matches",
+        element: <Match />,
+      },
+      {
+        path: "/shop",
+        element: <Shop />,
+      },
+      {
+        path: "/news",
+        element: <News />,
+      },
+      {
+        path: "/news/newsCardTitle",
+        element: <OpenedNewsCard />,
+      },
+      {
+        path: "/shop/kit",
+        element: <OpenedShopCard />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+      {
+        path: "/squad/player",
+        element: <Player />,
+      },
+    ],
+  },
+  {
+    path: "/signup",
+    element: <Signup />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+]);
+function App() {
   setTimeout(() => {
     window.scroll({
-        top: 0,
-        left: 0,
-        behavior: 'smooth',
+      top: 0,
+      left: 0,
+      behavior: "smooth",
     });
-}, 0);
+  }, 0);
 
-  return (
-    <BrowserRouter>
-      <div className="App">
-        <Header />
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/about" element={<About />} />
-          <Route exact path="/squad" element={<Players />} />
-          <Route exact path="/standings" element={<Standings />} />
-          <Route exact path="/matches" element={<Match />} />
-          <Route exact path="/shop" element={<Shop />} />
-          <Route exact path="/news" element={<News />} />
-          <Route exact path="/news/newsCardTitle" element={<OpenedNewsCard />} />
-          <Route exact path="/shop/kit" element={<OpenedShopCard />} />
-          <Route exact path="/contact" element={<Contact />} />
-          <Route exact path="/squad/player" element={<Player />} />
-          <Route exact path="/signup" element={<Signup />} />
-          <Route exact path="/login" element={<Login />} />
-        </Routes>
-        <Footer/>
-      </div>
-    </BrowserRouter>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

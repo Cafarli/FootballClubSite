@@ -1,43 +1,95 @@
 .formLogin {
     background-color: white;
-    width: 35%;
+    width: 40%;
     margin: 0 auto;
     padding: 3%;
+}
+.logLogo {
+  display: block;
+  width: 30%;
+  margin: 0 auto 5% auto;
 }
 
 .formLogin>h2 {
     color: #191970;
     text-align: center;
     padding-bottom: 5%;
+    font: 30px Oswald;
 }
-
-.form-input {
-    display: block;
+.log-form-input-pass {
+    display: inline-block;
     width: 100%;
-    padding-left: 2%;
+    line-height: 35px;
+    vertical-align: middle;
+}
+.log-form-input-mail {
+    width: 100%;
+}
+.log-form-input {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    padding: 0 0 0 3%;
     border-radius: 5px;
     background-color: transparent;
-    margin-bottom: 3%;
+    margin: 0 0 3% 0;
     border: 1px solid #191970;
+    line-height: 35px;
 }
-
-.remember-forgot>p>a{
+.logPass {
+    width: 100%;
+    padding: 0 12% 0 3%;
+}
+.logEyeIcon {
+    display: inline-block;
+    margin: 0 0 0 -3%;
+    width: 5%;
+    position: absolute;
+}
+.remember-forgot>p{
     font-size: 14px;
-    color: rgb(0, 0, 0);
-}
-
-.remember-forgot>p:last-child>a{
-    color: rgb(0, 0, 0, 0.5);
+    color: rgb(0, 0, 0);    
 }
 
 .remember-forgot>p>a:hover{
     color: #ffc400;
 }
+.remember-forgot .rf-forgot a{
+    color: rgb(0, 0, 0, 0.5);
+}
+
 
 input[type=checkbox] {
     vertical-align: middle;
     margin-right: 2%;
 }
+
+.loginBtn {
+    margin: 5% 0% 7% 0%;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid rgba(34, 70, 128, 1);
+    color: #191970;
+    height: 42px;
+    font: bold 18px Oswald;
+    background-color: white;
+}
+.loginBtn:hover {
+    background: rgb(247, 255, 249);
+    background: linear-gradient(
+      90deg,
+      rgba(247, 255, 249, 1) 0%,
+      rgba(34, 70, 128, 1) 0%,
+      rgba(32, 78, 134, 1) 20%,
+      rgba(33, 86, 140, 1) 40%,
+      rgba(7, 109, 184, 1) 54%,
+      rgba(33, 86, 140, 1) 74%,
+      rgba(32, 78, 134, 1) 92%,
+      rgba(34, 70, 128, 1) 100%
+    );
+    color: white;
+  }
 
 .signup {
     margin: 5% 0% 3% 0%;
@@ -67,3 +119,23 @@ input[type=checkbox] {
 .log-in>p>a:hover{
     color: #ffc400;
 }
+
+/* RESPONSIVENES */
+
+@media screen and (max-width: 800px) {
+    .formLogin {
+      width: 50%;
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .formLogin {
+      width: 65%;
+    }
+    .logLogo {
+      width: 40%;
+    }
+    .log-form-input {
+      margin: 0 0 5% 0;
+    }
+  }
