@@ -3,14 +3,14 @@
     margin: 0 auto;
 }
 
-.shopBgImg {
+/* .shopBgImg {
     width: 100%;
-    height: 70vh;
+    height: 75vh;
     background-image: url("../images/backgroundImages/teamKits.png");
     background-size: auto;
     background-repeat: no-repeat;
     background-position: top;
-}
+} */
 .shopcards {
     width: 100%;
     padding: 0 2% 5% 2%;

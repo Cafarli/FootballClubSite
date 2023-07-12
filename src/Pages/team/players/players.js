@@ -1,6 +1,6 @@
 import React from "react";
 import "./players.css";
-import data from "../players.json";
+import { con } from  "../../../ConnectDatabase/connect";
 import gk1 from "../players/images/Şahruddin_Məhəmmədəliyev1-203x265.png";
 import gk2 from "../players/images/Şahruddin_Məhəmmədəliyev1-203x265.png";
 import gk3 from "../players/images/Şahruddin_Məhəmmədəliyev1-203x265.png";
@@ -16,6 +16,7 @@ import atc3 from "../players/images/Ramil_Şeydayev1-203x265.png";
 import { PlayerCard } from "../playerCard/playerCard";
 
 export function Players() {
+  console.log(con);
   const players = [
     {
       photo: gk1,

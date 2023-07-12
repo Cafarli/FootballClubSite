@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./openShopCard.css";
-import { ShopCategories } from "../shopCategories/shopCategories";
 import { Container, Row, Col } from "react-bootstrap";
-import data from "../../shopClothing.json";
+import data from "../../data/shopClothing.json";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Navigation,
@@ -12,6 +11,7 @@ import {
   Autoplay,
   Mousewheel,
 } from "swiper";
+import { ShopHeader } from "../shopHeader";
 
 export function OpenedShopCard() {
   const [counter, setCounter] = useState(1);
@@ -59,8 +59,7 @@ export function OpenedShopCard() {
 
   return (
     <Container className="openShopcard">
-      <div className="shopBgImg"></div>
-      <ShopCategories />
+      <ShopHeader />
       <Row>
         <Col id="photos" md={7} style={{ paddingLeft: "2%" }}>
           <section className="section one">

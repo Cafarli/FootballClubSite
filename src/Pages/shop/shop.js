@@ -1,16 +1,15 @@
 import React from "react";
 import "./shop.css";
 import { ShopCard } from "./shopCard/shopCard";
-import { ShopCategories } from "./shopCategories/shopCategories";
-import info from "../shopClothing.json";
+import info from "../data/shopClothing.json";
+import { ShopHeader } from "./shopHeader";
 
 export function Shop() {
   const data = info;
 
   return (
     <div className="Shop">
-      <div className="shopBgImg"></div>
-      <ShopCategories />
+      <ShopHeader />
       <div className="shopcards">
         {data.kits &&
           data.kits.length > 0 && 

@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding: 0 !important;
   min-height: 75vh;
-  background-image: linear-gradient(rgba(255,255,255,0.97),rgba(255,255,255,0.97)),url('../src/contact/contactbg.png') ;
+  background-image: linear-gradient(rgba(255,255,255,0.97),rgba(255,255,255,0.97)),url('../src/Pages/images/backgroundImages/contactbg.png') ;
 }
 
 :root {

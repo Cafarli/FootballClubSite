@@ -1,24 +1,24 @@
 import "./App.css";
-import { About } from "./about/about";
-import { Players } from "./pages/players/players";
-import { Contact } from "./contact/contact";
-import { News } from "./news/news";
-import { OpenedNewsCard } from "./news/opened_news_card/opened_news_card";
-import { Shop } from "./shop/shop";
-import { Player } from "./pages/openedPlayer/player";
-import { Match } from "./matches/mathc/match";
-import { Standings } from "./matches/standings/standings";
-import { Home } from "./home/home";
-import { Header } from "./headerFooter/header/header";
-import { OpenedShopCard } from "./shop/openShopCard/openShopCard";
-import { Login } from "./login/login";
-import { Signup } from "./signup/signup";
+import { About } from "./Pages/about/about";
+import { Players } from "./Pages/team/players/players";
+import { Contact } from "./Pages/contact/contact";
+import { News } from "./Pages/news/news";
+import { OpenedNewsCard } from "./Pages/news/opened_news_card/opened_news_card";
+import { Shop } from "./Pages/shop/shop";
+import { Player } from "./Pages/team/openedPlayer/player";
+import { Match } from "./Pages/matches/mathc/match";
+import { Standings } from "./Pages/matches/standings/standings";
+import { Home } from "./Pages/home/home";
+import { Header } from "./Pages/headerFooter/header/header";
+import { OpenedShopCard } from "./Pages/shop/openShopCard/openShopCard";
+import { Login } from "./Pages/login/login";
+import { Signup } from "./Pages/signup/signup";
 import {
   Outlet,
   RouterProvider,
   createBrowserRouter,
 } from "react-router-dom";
-import { Footer } from "./headerFooter/footer/footer";
+import { Footer } from "./Pages/headerFooter/footer/footer";
 
 function Layout() {
   return (
