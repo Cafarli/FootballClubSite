@@ -1,8 +1,9 @@
 import React from "react";
 import "./shop.css";
 import { ShopCard } from "./shopCard/shopCard";
-import info from "../data/shopClothing.json";
+import info from "../../Data/shopClothing.json";
 import { ShopHeader } from "./shopHeader";
+import { Col, Row } from "react-bootstrap";
 
 export function Shop() {
   const data = info;
@@ -10,28 +11,44 @@ export function Shop() {
   return (
     <div className="Shop">
       <ShopHeader />
-      <div className="shopcards">
+      <Row className="shopcards">
         {data.kits &&
-          data.kits.length > 0 && 
+          data.kits.length > 0 &&
           data.kits.map((item) => {
-            return <ShopCard props={item} key={item.id} width="24%"/>;
+            return (
+              <Col xl={3} lg={3} md={4} sm={6} key={item.id}>
+                <ShopCard props={item} width="100%" minHeight="25vw" />
+              </Col>
+            );
           })}
         {data.tshirts &&
           data.tshirts.length > 0 &&
           data.tshirts.map((item) => {
-            return <ShopCard props={item} key={item.id} width="24%"/>;
+            return (
+              <Col xl={3} lg={3} md={4} sm={6} key={item.id}>
+                <ShopCard props={item} width="100%" minHeight="25vw" />
+              </Col>
+            );
           })}
         {data.bottoms &&
           data.bottoms.length > 0 &&
           data.bottoms.map((item) => {
-            return <ShopCard props={item} key={item.id} width="24%"/>;
+            return (
+              <Col xl={3} lg={3} md={4} sm={6} key={item.id}>
+                <ShopCard props={item} width="100%" minHeight="25vw" />
+              </Col>
+            );
           })}
         {data.jackets &&
           data.jackets.length > 0 &&
           data.jackets.map((item) => {
-            return <ShopCard props={item} key={item.id} width="24%"/>;
+            return (
+              <Col xl={3} lg={3} md={4} sm={6} key={item.id}>
+                <ShopCard props={item} width="100%" minHeight="25vw" />
+              </Col>
+            );
           })}
-      </div>
+      </Row>
     </div>
   );
 }

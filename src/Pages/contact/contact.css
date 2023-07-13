@@ -29,7 +29,7 @@ body {
   height: 250px;
   padding: 10% 0% 3% 3%;
   text-align: left;
-  background-image: url("../images//backgroundImages/photo7.jpg");
+  background-image: url("../../Images/backgroundImages/photo7.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
@@ -57,7 +57,7 @@ body {
 
 /* SOCIAL MEDIAS */
 
-.social-medias {
+.contact-social-medias {
   margin: 5% 0%;
   text-align: center;
   color: rgb(169, 166, 166);

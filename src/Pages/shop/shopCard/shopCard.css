@@ -9,29 +9,25 @@
 }
 
 /* SHOP CARD */
-
 .shop-card-image {
     width: 100%;
-    height: 100%;
+    /* min-height: 25vw; */
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 }
-
 .shop-card-image img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.8s;
 }
-
 .shop-card-image img:hover {
     transform: scale(1.03);
     cursor: pointer;
 }
-
 .value-info { 
     display: flex;
     width: 100%;
@@ -53,7 +49,6 @@
       #292423 50%
     );
 }
-
 .value-info:hover { 
     background-color: #292423;
     background-image: -webkit-linear-gradient(
@@ -71,32 +66,26 @@
       #ffc800 50%
     );
 }
-
 .value-info:hover .price {
     color: #292423;
 }
-
 .value-info:hover .buy {
     color: white;
 }
-
 .price {
     color: white;
     margin-left: 15%;
     margin-right: 50%;
 }
-
 .buy {
     color: #292423;
     font-weight: bold;
     cursor: pointer;
     transition: color 0.8s;
 }
-
 .buy:hover {
     color: white;
 }
-
 
 @media screen and(max-width: 980px) {
     .ShopCard {

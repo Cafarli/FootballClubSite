@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./openShopCard.css";
 import { Container, Row, Col } from "react-bootstrap";
-import data from "../../data/shopClothing.json";
+import data from "../../../Data/shopClothing.json";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Navigation,

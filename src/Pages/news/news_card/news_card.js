@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export function NewsCard(props) {
     return(
-        <div className="NewsCard" style={{width: props.width}}>
+        <div className="NewsCard"  style={{width: props.width}}>
             <div className="card-image">
                 <img src={photo} alt='content'></img>
             </div>

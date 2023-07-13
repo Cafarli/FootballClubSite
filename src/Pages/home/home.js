@@ -6,8 +6,8 @@ import { AiOutlineRight } from "react-icons/ai";
 import photo from "./photo.jpg";
 import logo from "./logo.png";
 import { Container, Row } from "react-bootstrap";
-import data from "../data/shopClothing.json";
-import galery from "../data/galeryPhotos.json";
+import data from "../../Data/shopClothing.json";
+import galery from "../../Data/galeryPhotos.json";
 import { Link } from "react-router-dom";
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -88,7 +88,7 @@ export function Home() {
               370: { slidesPerView: 2 },
               450: { slidesPerView: 3 },
               640: { slidesPerView: 3.5 },
-              980: { slidesPerView: 4.5 },
+              980: { slidesPerView: 4 },
             }}
             slidesPerView={4.5}
           >
@@ -134,6 +134,7 @@ export function Home() {
                       <ShopCard
                         props={filteredItem}
                         key={filteredItem.id}
+                        minHeight="14vw"
                         width="100%"
                       />
                     </SwiperSlide>
@@ -156,9 +157,9 @@ export function Home() {
             spaceBetween={50}
             breakpoints={{
               370: { slidesPerView: 2 },
-              450: { slidesPerView: 3 },
+              450: { slidesPerView: 2 },
               700: { slidesPerView: 3.5, spaceBetween: 30 },
-              980: { slidesPerView: 4 },
+              980: { slidesPerView: 3.5 },
             }}
             slidesPerView={4}
           >

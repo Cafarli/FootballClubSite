@@ -62,9 +62,6 @@
 }
 
 @media screen and (max-width: 1000px) {
-  /* .stnd-table {
-    width: 90%;
-  } */
   .stnd-table th {
     font-size: 16px;
   }
@@ -76,6 +73,9 @@
   }
   .pts-col, .p-col, .win-col, .draw-col, .los-col, .gd-col {
     font-size: 15px;
+  }
+  .logo {
+    width: 100% !important;
   }
 }
 
@@ -90,10 +90,10 @@
     font-size: 13px;
     width: 14%;
   }
-  /* .logo-col {
-    width: 20% !important;
+   .logo-col {
+    width: 16% !important;
   }
-  .logo {
+  /*.logo {
     width: 40px;
   } */
   /* .pts-col, .p-col, .win-col, .draw-col, .los-col, .gd-col {
@@ -106,24 +106,22 @@
   .stnd-table th {
     font-size: 12px;
   }
-  /* .stnd-table {
-    width: 70% !important;
-  } */
-  /* .pos-col {
+  .logo-col {
+    width: 22% !important;
+  }
+  .pos-col {
     font-size: 10px; 
     width: 3%;
   }
   .name-col {
     font-size: 12px;
-  } */
-  /* .logo-col {
-    width: 22% !important;
   }
+  
   .logo {
-    width: 30px;
-  } */
-  /* .pts-col, .p-col, .win-col, .draw-col, .los-col, .gd-col {
+    width: 30px !important;
+  }
+  .pts-col, .p-col, .win-col, .draw-col, .los-col, .gd-col {
     width: 8%; 
     font-size: 11px;
-  } */
+  }
 }

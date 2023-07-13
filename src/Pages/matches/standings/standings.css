@@ -1,10 +1,8 @@
 .Standings {
   padding-top: 10%;
-  background-image: url("../standings/background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+  background: url("../standings/background.jpg") no-repeat center/cover ;
 
+}
 .leagues {
   margin: 0% 10% 5% 10%;
 }
@@ -19,7 +17,13 @@
   padding: 3% !important;
 
 }
-
 .standing-all {
   padding: 5% 0% 15% 0%;
+}
+
+@media screen and (max-width: 1000px) {
+  .leagues-select {
+    width: 40%;
+    font-size: 14px;
+  }
 }

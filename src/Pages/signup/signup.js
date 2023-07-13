@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { AiFillApple, AiOutlineGoogle } from "react-icons/ai";
 import { TiSocialFacebook } from "react-icons/ti";
-import logo from "../images/logo.png";
+import logo from "../../Images/logo.png";
 import "./signup.css";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 

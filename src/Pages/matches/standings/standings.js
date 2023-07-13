@@ -14,7 +14,7 @@ export function Standings() {
           <option>Champions League</option>
         </select>
       </div>
-      <StandingTable teamSize={league==="Premyer Liq"?5:14} width={'80%'} logoColWdt={'10%'} wdt={'55%'} />
+      <StandingTable teamSize={league==="Premyer Liq"? 5 : 14} width={'70%'} logoColWdt={'10%'} wdt={'80%'} />
       </div>
 
     </div>

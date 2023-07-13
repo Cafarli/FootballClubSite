@@ -1,5 +1,5 @@
 .Footer {
-    background-image: linear-gradient(rgba(0,0,0, .90), rgba(0,0,0, 0.90)) ,url('./footer-background.jpg');
+    background-image: linear-gradient(rgba(0,0,0, .94), rgba(0,0,0, 0.94)) ,url('./footer-background.jpg');
     padding: 3% 3%;
     color: rgb(169, 166, 166);
     bottom: 0;

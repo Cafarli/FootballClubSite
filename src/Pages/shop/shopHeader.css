@@ -4,9 +4,6 @@
 }
 .shopHeaderBgImg {
     width: 100%;
-    height: 70vh;
-    background-image: url("../images/backgroundImages/teamKits.png");
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-position: top;
+    min-height: 70vh;
+    background: url("../../Images/backgroundImages/teamKits.png") no-repeat top/cover;
 }

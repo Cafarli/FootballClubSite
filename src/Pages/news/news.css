@@ -1,6 +1,5 @@
 body {
     width: 100%;
-    padding-top: 5%;
     margin: 0 auto;
 }
 
@@ -19,21 +18,26 @@ body {
     width: 100%;
     padding: 10% 0% 3% 3%;
     text-align: left;
-    background-image: url("../images/backgroundImages/photo7.jpg");
+    background-image: url("../../Images/backgroundImages/photo7.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
 }
 .all-news {
+    width: 95%;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start;
+    align-items: center; 
+    /* column-gap: 3%; */
 }
 
-.all-news > a {
+.all-news > .an-card {
     flex: 1 1 200px;
     flex-grow: 0;
-    width: 23%;
-    margin: 0% 1% 5% 1%;
+    /* width: 22%; */
+    margin: 0% 0% 4% 0%;
+}
+.all-news > .an-card >a {
+    width: 100%;
 }

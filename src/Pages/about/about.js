@@ -1,8 +1,8 @@
 import React from "react";
 import "./about.css";
 import { Awards } from "./awards";
-import headingImage from "../images/about-background.jpg";
-import aboutImage from "../images/aboutimage.png";
+import headingImage from "../../Images/about-background.jpg";
+import aboutImage from "../../Images/aboutimage.png";
 
 export function About() {
   return (

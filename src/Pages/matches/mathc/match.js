@@ -2,7 +2,6 @@ import React from "react";
 import './match.css';
 import { Table } from "react-bootstrap";
 import { MdLocationOn } from 'react-icons/md';
-import { Footer } from "../../headerFooter/footer/footer";
 
 export function Match() {
     return(

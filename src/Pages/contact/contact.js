@@ -70,7 +70,7 @@ export function Contact() {
       </Row>
       <Row>
         <Col>
-          <div className="social-medias">
+          <div className="contact-social-medias">
             <ul>
               <li className="smedias-li">
                 <a href="/">

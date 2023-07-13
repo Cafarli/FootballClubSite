@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
-import logo from "../images/logo.png";
+import logo from "../../Images/logo.png";
 import "./login.css";
 
 export function Login() {
