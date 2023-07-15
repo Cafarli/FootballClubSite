@@ -1,21 +1,20 @@
 .Shop {
-    width: 100%;
-    margin: 0 auto;
+  width: 100%;
+  margin: 0 auto;
 }
 .shopcards {
-    width: 96%;
-    margin: 5% auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+  width: 96%;
+  margin: 3% auto 5% auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 @media screen and (max-width: 1000px) {
-    .shopcards {
-        padding: 0 3% 5% 3%;
+  .shopcards {
+    padding: 0 3% 5% 3%;
     margin: 5% auto;
-
-        justify-content: space-around;
-    }
+    justify-content: space-around;
+  }
 }

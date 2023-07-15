@@ -1,7 +1,7 @@
 .ShopCard {
   width: 100%;
   border: 1px solid rgb(223, 222, 222);
-  border-radius: 5px;
+  border-radius: 10px;
   margin: 2% auto 10% auto;
   display: block;
   background-color: white;
@@ -17,41 +17,38 @@
 .shop-card-image {
   position: relative;
   width: 100%;
-  border-radius: 5px;
+  border-radius: 10px;
   min-height: 26vw;
   margin: 0 auto;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   overflow: hidden;
   transform-style: preserve-3d;
 }
 .firstImg {
-    background-color: white;
-    z-index: 1;
-    transform: rotateY(-180deg);
+  background-color: white;
+  z-index: 1;
+  transform: rotateY(-180deg);
 }
 .secondImg {
-    background-color: white;
-    z-index: 2;
-    transform: rotateY(0deg);
+  background-color: white;
+  z-index: 2;
+  transform: rotateY(0deg);
 }
 .shop-card-img-container:hover .secondImg {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 .shop-card-img-container:hover .firstImg {
-    transform: rotateY(0deg);
+  transform: rotateY(0deg);
 }
 .firstImg,
 .secondImg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
   padding: 2%;
-    -webkit-backface-visibility: hidden; 
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    transition: transform 0.8s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
 }
 .firstImg img,
 .secondImg img {
@@ -60,65 +57,24 @@
   object-fit: cover;
 }
 
-.value-info {
-  display: flex;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+/* INFO */
+.sc-info {
+  font: 15px "Libre Baskerville";
+  text-transform: capitalize;
+  display: block;
   width: 100%;
-  height: 45px;
-  line-height: 45px;
-  background-color: #ffc800;
-  background-image: -webkit-linear-gradient(
-    -50deg,
-    #ffc800 0%,
-    #ffc800 50%,
-    #292423 50%,
-    #292423 50%
-  );
-  background-image: linear-gradient(
-    -50deg,
-    #ffc800 0%,
-    #ffc800 50%,
-    #292423 50%,
-    #292423 50%
-  );
+  padding: 2% 0;
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: black;
 }
-.value-info:hover {
-  background-color: #292423;
-  background-image: -webkit-linear-gradient(
-    -50deg,
-    #292423 0%,
-    #292423 50%,
-    #ffc800 50%,
-    #ffc800 50%
-  );
-  background-image: linear-gradient(
-    -50deg,
-    #292423 0%,
-    #292423 50%,
-    #ffc800 50%,
-    #ffc800 50%
-  );
+.sc-info p:first-child {
+  margin: 0% auto 5% auto;
 }
-.value-info:hover .price {
+
+.sc-info .sc-price {
   color: #292423;
-}
-.value-info:hover .buy {
-  color: white;
-}
-.price {
-  color: white;
-  margin-left: 15%;
-  margin-right: 50%;
-}
-.buy {
-  color: #292423;
-  font-weight: bold;
-  cursor: pointer;
-  transition: color 1s;
-}
-.buy:hover {
-  color: white;
 }
 
 @media screen and (max-width: 576px) {

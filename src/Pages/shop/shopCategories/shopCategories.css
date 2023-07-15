@@ -1,5 +1,6 @@
 /* CATEGORIES */
 .shop-categories {
+  font: 20px Oswald;
   border-top: 1px solid rgb(220, 219, 219);
   border-bottom: 1px solid rgb(220, 219, 219);
   transition: all 0.3s ease-out 0s !important;

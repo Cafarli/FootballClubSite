@@ -1,0 +1,62 @@
+.ShopFilter {
+    width: 96%;
+    margin: 0 auto;
+}
+.sf-allCategories {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    border: 1px solid rgb(220, 220, 220);
+    border-radius: 5px;
+    background-color: var(--skyBlue);
+    color: white;
+}
+.sf-allCategories p {
+    margin: 1.5% auto;
+    font: 18px Oswald;
+    cursor: pointer;
+}
+.sf-category  {
+    width: 100%;
+    padding: 1% 0;
+    column-count: 3;
+    background-color: var(--lightGray);
+}
+.sfc-choice {
+    font: 17px Oswald;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sfc-choice input {
+    width: 15px;
+    height: 15px;
+}
+.sfc-choice label {
+    margin: 0;
+}
+
+.sort {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 5;
+    width: 30%;
+    right: 2%;
+    padding: 0;
+    background-color: white;
+    box-shadow: 0 4px 54px rgba(0,0,0,.1);
+}
+.sort .sfc-choice {
+
+}
+.sort .sfc-choice p {
+    margin: 0;
+    padding: 3% 0;
+}
+.sort .sfc-choice:hover {
+    background-color: var(--borderGray);
+    cursor: pointer;
+}

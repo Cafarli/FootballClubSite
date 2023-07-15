@@ -8,7 +8,7 @@ export function HomeShopCard(props){
         <div className="HomeShopCard">
             <Link to={`/shop/kit`}>
             <div className="hsc-image">
-                <img src={props.props.photo} alt="clothes"></img>
+                <img src={props.props.photo[1]} alt="clothes"></img>
             </div>
             <div className="hsc-title">
                 <p title={props.props.title} >{props.props.title}</p>

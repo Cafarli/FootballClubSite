@@ -23,6 +23,7 @@ body {
   --skyBlue: #191970;
   --gray: rgb(113, 113, 113);
   --lightGray: rgb(235, 235, 235);
+  --borderGray: rgb(220, 220, 220);
 }
 .totalSpinner {
   align-items: center;
