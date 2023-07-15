@@ -1,17 +1,20 @@
-.form {
+.formContainer {
   background-color: white;
   width: 40%;
   margin: 0 auto;
   padding-top: 4%;
   min-height: 40vh;
 }
+.signForm {
+  width: 100%;
+}
 .signLogo {
   display: block;
   width: 30%;
-  margin: 0 auto 5% auto;
+  margin: 0 auto 3% auto;
 }
 
-.form > h2 {
+.formContainer > h2 {
   color: #191970;
   text-align: center;
   padding-bottom: 5%;
@@ -21,25 +24,23 @@
 .sign-form-input {
   display: inline-block;
   width: 100%;
-  padding: 0 0 0 3%;
-  border-radius: 5px;
   background-color: transparent;
   margin-bottom: 3%;
-  border: 1px solid #191970;
-  line-height: 35px;
+  line-height: 40px;
+  vertical-align: middle;
 }
-.sign-form-input-pass,
-.sign-form-input-passAgain {
-    width: 100%;
-    display: inline-block;
-    line-height: 35px;
-    vertical-align: middle;
-}
-.signPass,
-.signPassAgain {
+
+.sign-form-input > input {
   display: inline-block;
+  border-radius: 10px;
+  border: 1px solid #191970;
   width: 100%;
   padding: 0 12% 0 3%;
+}
+.error {
+  color: red;
+  font: 12px Oswald;
+  padding: 0 0 0 2%;
 }
 .signEyeIcon {
   display: inline-block;
@@ -69,7 +70,7 @@ input[type="checkbox"] {
   margin: 5% 0% 7% 0%;
   width: 100%;
   outline: none;
-  border-radius: 5px;
+  border-radius: 25px;
   border: 2px solid rgba(34, 70, 128, 1);
   color: #191970;
   height: 42px;
@@ -94,11 +95,11 @@ input[type="checkbox"] {
 }
 
 .log-in {
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .otherConnect {
-  width: 40%;
+  width: 50%;
   font-size: 40px;
 }
 .otherConnect a {
@@ -106,13 +107,13 @@ input[type="checkbox"] {
 }
 /* RESPONSIVENES */
 @media screen and (max-width: 800px) {
-  .form {
+  .formContainer {
     width: 50%;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .form {
+  .formContainer {
     width: 65%;
   }
   .signLogo {

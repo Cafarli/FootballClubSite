@@ -1,94 +1,133 @@
 .ShopCard {
-    flex: 1 1 280px;
-    /* width: 25%; */
-    flex-grow: 0;
-    border: 1px solid rgb(223, 222, 222);
-    margin: 2% 0% 5% 0%;
-    display: inline-block;
-
+  width: 100%;
+  border: 1px solid rgb(223, 222, 222);
+  border-radius: 5px;
+  margin: 2% auto 10% auto;
+  display: block;
+  background-color: white;
+  transition: all 1s;
 }
 
-/* SHOP CARD */
+/* IMAGES */
+.shop-card-img-container {
+  width: 100%;
+  display: inline-block;
+  background: transparent;
+}
 .shop-card-image {
-    width: 100%;
-    /* min-height: 25vw; */
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  border-radius: 5px;
+  min-height: 26vw;
+  margin: 0 auto;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  overflow: hidden;
+  transform-style: preserve-3d;
 }
-.shop-card-image img{
+.firstImg {
+    background-color: white;
+    z-index: 1;
+    transform: rotateY(-180deg);
+}
+.secondImg {
+    background-color: white;
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+.shop-card-img-container:hover .secondImg {
+    transform: rotateY(180deg);
+}
+.shop-card-img-container:hover .firstImg {
+    transform: rotateY(0deg);
+}
+.firstImg,
+.secondImg {
+    position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+  padding: 2%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
     transition: transform 0.8s;
 }
-.shop-card-image img:hover {
-    transform: scale(1.03);
-    cursor: pointer;
-}
-.value-info { 
-    display: flex;
-    width: 100%;
-    height: 45px;
-    line-height: 45px;
-    background-color: #ffc800;
-    background-image: -webkit-linear-gradient(
-      -50deg,
-      #ffc800 0%,
-      #ffc800 50%,
-      #292423 50%,
-      #292423 50%
-    );
-    background-image: linear-gradient(
-      -50deg,
-      #ffc800 0%,
-      #ffc800 50%,
-      #292423 50%,
-      #292423 50%
-    );
-}
-.value-info:hover { 
-    background-color: #292423;
-    background-image: -webkit-linear-gradient(
-      -50deg,
-      #292423 0%,
-      #292423 50%,
-      #ffc800 50%,
-      #ffc800 50%
-    );
-    background-image: linear-gradient(
-      -50deg,
-      #292423 0%,
-      #292423 50%,
-      #ffc800 50%,
-      #ffc800 50%
-    );
-}
-.value-info:hover .price {
-    color: #292423;
-}
-.value-info:hover .buy {
-    color: white;
-}
-.price {
-    color: white;
-    margin-left: 15%;
-    margin-right: 50%;
-}
-.buy {
-    color: #292423;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.8s;
-}
-.buy:hover {
-    color: white;
+.firstImg img,
+.secondImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-@media screen and(max-width: 980px) {
-    .ShopCard {
-        flex: 1 1 250px !important;
-    }
+.value-info {
+  display: flex;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  background-color: #ffc800;
+  background-image: -webkit-linear-gradient(
+    -50deg,
+    #ffc800 0%,
+    #ffc800 50%,
+    #292423 50%,
+    #292423 50%
+  );
+  background-image: linear-gradient(
+    -50deg,
+    #ffc800 0%,
+    #ffc800 50%,
+    #292423 50%,
+    #292423 50%
+  );
+}
+.value-info:hover {
+  background-color: #292423;
+  background-image: -webkit-linear-gradient(
+    -50deg,
+    #292423 0%,
+    #292423 50%,
+    #ffc800 50%,
+    #ffc800 50%
+  );
+  background-image: linear-gradient(
+    -50deg,
+    #292423 0%,
+    #292423 50%,
+    #ffc800 50%,
+    #ffc800 50%
+  );
+}
+.value-info:hover .price {
+  color: #292423;
+}
+.value-info:hover .buy {
+  color: white;
+}
+.price {
+  color: white;
+  margin-left: 15%;
+  margin-right: 50%;
+}
+.buy {
+  color: #292423;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 1s;
+}
+.buy:hover {
+  color: white;
+}
+
+@media screen and (max-width: 576px) {
+  .ShopCard {
+    width: 70% !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .shop-card-image {
+    min-height: 41vw;
+  }
 }

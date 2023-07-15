@@ -11,7 +11,7 @@
 }
 
 .formLogin>h2 {
-    color: #191970;
+    color: var(--skyBlue);
     text-align: center;
     padding-bottom: 5%;
     font: 30px Oswald;
@@ -33,7 +33,7 @@
     border-radius: 5px;
     background-color: transparent;
     margin: 0 0 3% 0;
-    border: 1px solid #191970;
+    border: 1px solid var(--skyBlue);
     line-height: 35px;
 }
 .logPass {
@@ -70,7 +70,7 @@ input[type=checkbox] {
     outline: none;
     border-radius: 5px;
     border: 2px solid rgba(34, 70, 128, 1);
-    color: #191970;
+    color: var(--skyBlue);
     height: 42px;
     font: bold 18px Oswald;
     background-color: white;
@@ -96,15 +96,15 @@ input[type=checkbox] {
     width: 100%;
     outline: none;
     border-radius: 5px;
-    border: 2px solid #191970;
-    color: #191970;
+    border: 2px solid var(--skyBlue);
+    color: var(--skyBlue);
     height: 35px;
     font-weight: bold;
     background-color: white;
 }
 
 .signup:hover {
-    background-color: #191970;
+    background-color: var(--skyBlue);
     color: white;
 }
 
@@ -113,7 +113,7 @@ input[type=checkbox] {
 }
 
 .log-in>p>a{
-    color: #0000ff;
+    color: #0505dfd5;
 }
 
 .log-in>p>a:hover{

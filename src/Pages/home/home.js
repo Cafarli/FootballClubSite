@@ -1,13 +1,13 @@
 import "./home.css";
 import { NewsCard } from "../news/news_card/news_card";
-import { StandingTable } from "../table/table";
-import { ShopCard } from "../shop/shopCard/shopCard";
+import { StandingTable } from "../../Components/table/table";
 import { AiOutlineRight } from "react-icons/ai";
 import photo from "./photo.jpg";
 import logo from "./logo.png";
-import { Container, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import data from "../../Data/shopClothing.json";
 import galery from "../../Data/galeryPhotos.json";
+import newsData from "../../Data/news.json";
 import { Link } from "react-router-dom";
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -15,11 +15,12 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css";
+import { HomeShopCard } from "./homeShopCard/homeShopCard";
 
 export function Home() {
   return (
-    <Container className="Home">
-      <Row>
+    <div className="Home">
+      <div className="home-part">
         <div className="photos-slider">
           <img className="photo" src={photo} alt="newsphoto"></img>
           <Link to={`news/newsCardTitle/`}>
@@ -31,156 +32,120 @@ export function Home() {
             </div>
           </Link>
         </div>
-      </Row>
+      </div>
 
-      <Row>
+      <div>
         <div className="next-match-info">
-            <div className="nmi-nextMatchPart">
-              <div className="next-match">
-                <h1>
-                  NEXT <span>MATCH</span>
-                </h1>
-                <div className="clubs">
-                  <div className="club first">
-                    <img
-                      style={{ width: "27%", marginRight: "10%" }}
-                      src={logo}
-                      alt="logo"
-                    ></img>
-                    <p>FC JABRAYIL</p>
-                  </div>
-                  <div className="club vs">vs</div>
-                  <div className="club second">
-                    FC JABRAYIL
-                    <img
-                      style={{ width: "27%", marginLeft: "10%" }}
-                      src={logo}
-                      alt="logo"
-                    ></img>
-                  </div>
+          <div className="nmi-nextMatchPart">
+            <div className="next-match">
+              <h1>
+                NEXT <span>MATCH</span>
+              </h1>
+              <div className="clubs">
+                <div className="club first">
+                  <img
+                    style={{ width: "27%", marginRight: "10%" }}
+                    src={logo}
+                    alt="logo"
+                  ></img>
+                  <p>FC JABRAYIL</p>
                 </div>
-                <div className="next-date-info">
-                  <p className="next-date">November 14, 2015 | 12:00 am</p>
-                  <p className="next-location">Cambridgeshire UK</p>
+                <div className="club vs">vs</div>
+                <div className="club second">
+                  FC JABRAYIL
+                  <img
+                    style={{ width: "27%", marginLeft: "10%" }}
+                    src={logo}
+                    alt="logo"
+                  ></img>
                 </div>
-                <div className="all-matches">See calendar</div>
               </div>
+              <div className="next-date-info">
+                <p className="next-date">November 14, 2015 | 12:00 am</p>
+                <p className="next-location">Cambridgeshire UK</p>
+              </div>
+              <div className="all-matches">See calendar</div>
             </div>
+          </div>
 
-            <div className="nmi-standingPart">
-              <StandingTable width={"100%"} teamSize={5}  wdt={"100%"} logoColWdt={"14%"}/>
-            </div>
+          <div className="nmi-standingPart">
+            <StandingTable
+              width={"100%"}
+              teamSize={5}
+              wdt={"100%"}
+              logoColWdt={"14%"}
+            />
+          </div>
         </div>
-      </Row>
+      </div>
 
-      <Row>
+      <div className="home-part">
         <div className="homeNews">
-          <div className="Hpart-title" style={{ display: "block" }}>
+          {/* <div className="Hpart-title" style={{ display: "block" }}>
             <h1>NEWS</h1>
-          </div>
-          <Swiper
-            loop={true}
-            grabCursor={true}
-            modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-            autoplay={{ delay: 3000 }}
-            spaceBetween={25}
-            breakpoints={{
-              370: { slidesPerView: 2 },
-              450: { slidesPerView: 3 },
-              640: { slidesPerView: 3.5 },
-              980: { slidesPerView: 4 },
-            }}
-            slidesPerView={4.5}
-          >
-            {data.kits &&
-              data.kits.length > 0 &&
-              data.kits.map((filteredItem) => {
-                return (
-                  <SwiperSlide>
-                    <NewsCard width={"100%"} key={filteredItem.id} />
-                  </SwiperSlide>
-                );
-              })}
-          </Swiper>
+          </div> */}
+          <Row className="hn-allNews">
+            {newsData.news &&
+              newsData.news.length > 0 &&
+              newsData.news
+                .filter((n, i) => i < 7)
+                .map((news, index) => {
+                  return (
+                    <Col xs={12} sm={12} md={6}>
+                      <NewsCard width={"90%"} key={index} data={news} />
+                    </Col>
+                  );
+                })}
+          </Row>
         </div>
-      </Row>
+      </div>
 
-      <Row>
-        <div className="homeShop">
-          <div className="Hpart-title" style={{ display: "block" }}>
+      <div className="home-part">
+        <Row className="homeShop">
+          {/* <div className="Hpart-title" style={{ display: "block" }}>
             <h1>SHOP</h1>
-          </div>
-          <Swiper
-            loop={true}
-            grabCursor={true}
-            autoplay={{ delay: 3000 }}
-            modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-            spaceBetween={50}
-            breakpoints={{
-              370: { slidesPerView: 2 },
-              450: { slidesPerView: 3 },
-              700: { slidesPerView: 3.5, spaceBetween: 30 },
-              980: { slidesPerView: 4 },
-            }}
-            slidesPerView={4}
-          >
+          </div> */}
             {data.kits &&
               data.kits.length > 0 &&
               data.kits
-                .filter((item, index) => index < 5)
+                .filter((item, index) => index < 3)
                 .map((filteredItem) => {
                   return (
-                    <SwiperSlide>
-                      <ShopCard
+                    <Col xs={12} sm={12} md={4} xl={4} lg={4} >
+                      <HomeShopCard
                         props={filteredItem}
                         key={filteredItem.id}
-                        minHeight="14vw"
-                        width="100%"
                       />
-                    </SwiperSlide>
+                    </Col>
                   );
                 })}
-          </Swiper>
-        </div>
-      </Row>
+        </Row>
+      </div>
 
-      <Row>
-        <div className="galery">
-          <div className="Hpart-title" style={{ display: "block" }}>
+      <div className="home-part galery">
+        <Row className="hpg-row">
+          {/* <div className="Hpart-title" style={{ display: "block" }}>
             <h1>PHOTOS</h1>
-          </div>
-          <Swiper
-            loop={true}
-            grabCursor={true}
-            autoplay={{ delay: 3000 }}
-            modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-            spaceBetween={50}
-            breakpoints={{
-              370: { slidesPerView: 2 },
-              450: { slidesPerView: 2 },
-              700: { slidesPerView: 3.5, spaceBetween: 30 },
-              980: { slidesPerView: 3.5 },
-            }}
-            slidesPerView={4}
-          >
-            {galery.images &&
-              galery.images.length > 0 &&
-              galery.images
-                .filter((item, index) => index < 5)
-                .map((filteredItem) => {
-                  return (
-                    <SwiperSlide>
+          </div> */}
+
+          {galery.images &&
+            galery.images.length > 0 &&
+            galery.images
+              .map((filteredItem) => {
+                return (
+                  <Col className="hpgr-imgcol" xs={12} sm={6} md={6} xl={4}>
+                    <Link>
                       <img
                         className="slideImage"
                         src={filteredItem.photo}
                         alt="slides"
                       ></img>
-                    </SwiperSlide>
-                  );
-                })}
-          </Swiper>
-        </div>
-      </Row>
-    </Container>
+                    </Link>
+                  </Col>
+                );
+              })}
+        </Row>
+      </div>
+    </div>
   );
 }

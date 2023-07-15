@@ -1,6 +1,6 @@
 import React, {  useState } from "react";
 import "./standings.css";
-import { StandingTable } from "../../table/table";
+import { StandingTable } from "../../../Components/table/table";
 
 export function Standings() {
   const [league, setLeague] = useState('Premyer Liq')

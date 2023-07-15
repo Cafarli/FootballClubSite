@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
 }
-.Home > .row {
+.Home > .home-part {
   padding: 0 0 2% 0;
   display: block;
 }
@@ -183,6 +183,13 @@
   margin: 1% 0% 5% 0;
   text-align: center;
 }
+.hn-allNews {
+  display: flex;
+  width: 100%;
+}
+.hn-allNews .col {
+  border-radius: 5px;
+}
 
 /* SHOP */
 
@@ -203,17 +210,17 @@
 /* Galery */
 .galery {
   width: 95%;
-  margin: 0 auto;
+  margin: 2% auto 0 auto;
+}
+.hpgr-imgcol {
+  margin: 0 0 3% 0;
+  width: 100%;
 }
 
 .galery .slideImage {
   object-fit: cover;
   width: 100%;
   height: 100%;
-}
-.galery .swiper-slide  {
-  min-height: 300px;
-  margin: 0;
 }
 
 

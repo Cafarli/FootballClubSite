@@ -2,6 +2,7 @@ import React from "react";
 import "./news.css";
 import { NewsCard } from "./news_card/news_card";
 import { NewsCategories } from "./NewsCategories/NewsCategories";
+import newsData from "../../Data/news.json";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
@@ -17,36 +18,19 @@ export function News() {
         {/* <Col lg={4} md={3} ms={2}>
                     <NewsCategories />
                 </Col> */}
-        <Col className="an-card" sm={6} lg={3} md={4}>
-          <Link to={`newsCardTitle/`}>
-            <NewsCard width={"100%"} />
-          </Link>
-        </Col>
 
-        <Col className="an-card" sm={6} lg={3} md={4}>
-          <Link to={`newsCardTitle/`}>
-            <NewsCard width={"100%"} />
-          </Link>
-        </Col>
-
-        <Col className="an-card" sm={6} lg={3} md={4}>
-          <Link to={`newsCardTitle/`}>
-            <NewsCard width={"100%"} />
-          </Link>
-        </Col>
-
-        <Col className="an-card" sm={6} lg={3} md={4}>
-          <Link to={`newsCardTitle/`}>
-            <NewsCard width={"100%"} />
-          </Link>
-        </Col>
-
-        <Col className="an-card" sm={6} lg={3} md={4}>
-          <Link to={`newsCardTitle/`}>
-            <NewsCard width={"100%"} />
-          </Link>
-        </Col>
-        
+        {newsData.news &&
+          newsData.news.length > 0 &&
+          newsData.news
+            .map((news, index) => {
+              return (
+                <Col className="an-card" xs={12} sm={6} md={4} lg={4} xl={4}>
+                  <Link to={`newsCardTitle/`}>
+                    <NewsCard width={"100%"} key={index} data={news} />
+                  </Link>
+                </Col>
+              );
+            })}
       </Row>
     </Container>
   );

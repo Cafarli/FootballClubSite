@@ -17,7 +17,7 @@ export function Shop() {
           data.kits.map((item) => {
             return (
               <Col xl={3} lg={3} md={4} sm={6} key={item.id}>
-                <ShopCard props={item} width="100%" minHeight="25vw" />
+                <ShopCard props={item} />
               </Col>
             );
           })}
@@ -26,7 +26,7 @@ export function Shop() {
           data.tshirts.map((item) => {
             return (
               <Col xl={3} lg={3} md={4} sm={6} key={item.id}>
-                <ShopCard props={item} width="100%" minHeight="25vw" />
+                <ShopCard props={item} />
               </Col>
             );
           })}
@@ -35,7 +35,7 @@ export function Shop() {
           data.bottoms.map((item) => {
             return (
               <Col xl={3} lg={3} md={4} sm={6} key={item.id}>
-                <ShopCard props={item} width="100%" minHeight="25vw" />
+                <ShopCard props={item} />
               </Col>
             );
           })}
@@ -44,7 +44,7 @@ export function Shop() {
           data.jackets.map((item) => {
             return (
               <Col xl={3} lg={3} md={4} sm={6} key={item.id}>
-                <ShopCard props={item} width="100%" minHeight="25vw" />
+                <ShopCard props={item} />
               </Col>
             );
           })}

@@ -1,27 +1,32 @@
 import React from "react";
 import "../news_card/news_card.css";
-import { AiOutlineRight }  from 'react-icons/ai';
-import photo from '../images/photo.jpg';
+import { AiOutlineRight } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 export function NewsCard(props) {
-    return(
-        <div className="NewsCard"  style={{width: props.width}}>
-            <div className="card-image">
-                <img src={photo} alt='content'></img>
-            </div>
-            <div className="card-content">
-                <p className="card-date">November 25, 2023</p>
-                <Link to={`newsCardTitle/`}><p className="card-title" title="Sed mi magna, malesuada sit amet ipsum">Sed mi magna, malesuada sit amet ipsum</p></Link>
-                <p className="card-info">Vivamus hendrerit, tortor sed luctus maximus, nunc urna hendrerit nibh, sit amet efficitur libero, nunc urna hendrerit nibh, sit amet efficitur libero</p>
-            </div>
-            <div className="card-more">
-            <Link style={{display:"flex", width:"100%"}} to={`newsCardTitle/`}>
-                <div className="card-read-more-text">READ MORE</div>
-                <div className="card-read-more-arrow"> <AiOutlineRight /></div>
-                </Link>
-            </div>
-
-        </div>
-);
+  return (
+    <div className="NewsCard" style={{ width: props.width }}>
+      <div className="card-image">
+        <img src={props.data.image} alt="content"></img>
+      </div>
+      <div className="card-content">
+        <p className="card-date">{props.data.date}</p>
+        <Link to={`newsCardTitle/`}>
+          <p className="card-title" title={props.data.title}>
+            {props.data.title}
+          </p>
+        </Link>
+        <p className="card-info">{props.data.content}</p>
+      </div>
+      <div className="card-more">
+        <Link style={{ display: "flex", width: "100%" }} to={`newsCardTitle/`}>
+          <div className="card-read-more-text">READ MORE</div>
+          <div className="card-read-more-arrow">
+            {" "}
+            <AiOutlineRight />
+          </div>
+        </Link>
+      </div>
+    </div>
+  );
 }

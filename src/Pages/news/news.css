@@ -33,10 +33,9 @@ body {
 }
 
 .all-news > .an-card {
-    flex: 1 1 200px;
-    flex-grow: 0;
-    /* width: 22%; */
+    width: 100%;
     margin: 0% 0% 4% 0%;
+    border-radius: 5px;
 }
 .all-news > .an-card >a {
     width: 100%;
