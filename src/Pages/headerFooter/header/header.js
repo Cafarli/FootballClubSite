@@ -33,7 +33,7 @@ export function Header() {
     }
 
   return (
-    <Navbar onMouseEnter={(e)=> e.preventDefault()} className="header" expanded={expand} fixed="top" expand="md">
+    <Navbar onMouseEnter={(e)=> e.preventDefault()} className="header" expanded={expand} expand="md">
       <Container>
         <Navbar.Brand
           href="/"
