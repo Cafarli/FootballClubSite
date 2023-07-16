@@ -1,8 +1,0 @@
-REDUX - xeberlere kecid
-Home - photos not shown correctly
-kit page - size seçildikden sonra say deyisile bilinmir +
-kit page - size hissesine toxunulmadiqda sekile toxunduqda sekil deyismir +
-login page - password gorunme +
-login, sign up - duzgunluyu yoxlama
-forgot page - yoxdur
-shop category page - size hissesine toxunulmadiqda adlara toxunduqda reng deyismir +
