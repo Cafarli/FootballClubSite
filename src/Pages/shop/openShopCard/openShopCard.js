@@ -69,8 +69,10 @@ export function OpenedShopCard() {
               grabCursor={true}
               autoplay={{ delay: 3000 }}
               slidesPerView={2}
-              breakpoints={{ 450: { width: 450, slidesPerView: 2 } ,
-              700: { width: 700, slidesPerView: 2 }}}
+              breakpoints={{
+                450: { width: 450, slidesPerView: 2 },
+                700: { width: 700, slidesPerView: 2 },
+              }}
               spaceBetween={20}
               mousewheel={true}
               modules={[
@@ -83,15 +85,14 @@ export function OpenedShopCard() {
               ]}
               className="productMiniPhotos"
             >
-              {data.kits
-                .filter((item, index) => index < 6)
+              {data.kits[0].photo
                 .map((i, ind) => {
                   return (
                     <SwiperSlide key={ind}>
                       <div className="productPhotos">
                         <img
                           onClick={(e) => handleImg(e)}
-                          src={i.photo}
+                          src={i}
                           alt="product"
                         ></img>
                       </div>
@@ -108,7 +109,7 @@ export function OpenedShopCard() {
                   <div className="productPhoto" key={ind}>
                     <img
                       className="selectedPhoto"
-                      src={i.photo}
+                      src={i.photo[0]}
                       alt="product"
                     ></img>
                   </div>

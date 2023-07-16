@@ -35,6 +35,10 @@ body {
   height: 350px;
 }
 
+.productMiniPhotos .swiper-slide {
+  min-height: 180px;
+}
+
 #photos {
   display: flex;
   align-items: center;

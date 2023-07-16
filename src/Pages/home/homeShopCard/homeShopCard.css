@@ -1,5 +1,5 @@
 .HomeShopCard {
-    width: 100%;
+    width: 90%;
     border-radius: 5px;
     margin: 2% auto 5% auto;
     background-color: white;
@@ -13,8 +13,8 @@
 }
 
 .hsc-image {
-    width: 100%;
-    padding: 8% 6%;
+    width: 90%;
+    padding: 6% 6% 5% 6%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -25,7 +25,6 @@
 }
 .hsc-image img{
     width: 100%;
-    /* height: 100%; */
     min-height: 25vw;
     object-fit: cover;
     transition: transform 0.8s;

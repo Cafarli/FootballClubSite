@@ -1,15 +1,13 @@
 import "./home.css";
 import { NewsCard } from "../news/news_card/news_card";
 import { StandingTable } from "../../Components/table/table";
-import { AiOutlineRight } from "react-icons/ai";
-import photo from "./photo.jpg";
 import logo from "./logo.png";
 import { Col, Row } from "react-bootstrap";
 import data from "../../Data/shopClothing.json";
 import galery from "../../Data/galeryPhotos.json";
 import newsData from "../../Data/news.json";
 import { Link } from "react-router-dom";
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
+import { Navigation, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -21,16 +19,53 @@ export function Home() {
   return (
     <div className="Home">
       <div className="home-part">
-        <div className="photos-slider">
-          <img className="photo" src={photo} alt="newsphoto"></img>
-          <Link to={`news/newsCardTitle/`}>
-            <div className="read-more">
-              <div className="more-text">READ MORE</div>
-              <div className="more-icon">
-                <AiOutlineRight />
-              </div>
-            </div>
-          </Link>
+        <div className="home-mainNews">
+          <Swiper
+            autoplay={true}
+            speed={1000}
+            navigation={true}
+            loop={true}
+            modules={[Navigation, Autoplay]}
+          >
+            {newsData.news &&
+              newsData.news.length > 0 &&
+              newsData.news
+                .filter((n, i) => i < 3)
+                .map((news, index) => {
+                  return (
+                    <SwiperSlide>
+                      <div className="hmn-slide" key={index}>
+                        <img
+                          className="photo"
+                          src={news.image}
+                          alt="newsphoto"
+                        ></img>
+                        <div className="hmns-add">
+                          <Link
+                            className="hmnsa-title"
+                            to={`news/newsCardTitle/`}
+                          >
+                            <div className="hmns-title-text">
+                              <p>{news.title}</p>
+                            </div>
+                          </Link>
+                          {/* <Link
+                            className="hmnsa-more"
+                            to={`news/newsCardTitle/`}
+                          >
+                            <div className="read-more">
+                              <div className="more-text">READ MORE</div>
+                              <div className="more-icon">
+                                <AiOutlineRight />
+                              </div>
+                            </div>
+                          </Link> */}
+                        </div>
+                      </div>
+                    </SwiperSlide>
+                  );
+                })}
+          </Swiper>
         </div>
       </div>
 
@@ -105,25 +140,22 @@ export function Home() {
           {/* <div className="Hpart-title" style={{ display: "block" }}>
             <h1>SHOP</h1>
           </div> */}
-            {data.kits &&
-              data.kits.length > 0 &&
-              data.kits
-                .filter((item, index) => index < 3)
-                .map((filteredItem) => {
-                  return (
-                    <Col xs={12} sm={12} md={4} xl={4} lg={4} >
-                      <HomeShopCard
-                        props={filteredItem}
-                        key={filteredItem.id}
-                      />
-                    </Col>
-                  );
-                })}
+          {data.kits &&
+            data.kits.length > 0 &&
+            data.kits
+              .filter((item, index) => index < 3)
+              .map((filteredItem) => {
+                return (
+                  <Col xs={12} sm={12} md={4} xl={4} lg={4}>
+                    <HomeShopCard props={filteredItem} key={filteredItem.id} />
+                  </Col>
+                );
+              })}
         </Row>
       </div>
 
       <div className="home-part galery">
-        <Row className="hpg-row">
+        <div className="hpg-row">
           {/* <div className="Hpart-title" style={{ display: "block" }}>
             <h1>PHOTOS</h1>
           </div> */}
@@ -131,9 +163,17 @@ export function Home() {
           {galery.images &&
             galery.images.length > 0 &&
             galery.images
+              // .filter((img, i) => i > 4)
               .map((filteredItem) => {
                 return (
-                  <Col className="hpgr-imgcol" xs={12} sm={6} md={6} xl={4}>
+                  <Col
+                    xs={12}
+                    sm={12}
+                    md={4}
+                    xl={4}
+                    lg={4}
+                    className="hpgr-imgcol"
+                  >
                     <Link>
                       <img
                         className="slideImage"
@@ -144,7 +184,7 @@ export function Home() {
                   </Col>
                 );
               })}
-        </Row>
+        </div>
       </div>
     </div>
   );

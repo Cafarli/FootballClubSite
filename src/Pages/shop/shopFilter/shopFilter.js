@@ -12,25 +12,39 @@ export default function ShopFilter() {
   return (
     <div className="ShopFilter">
       <div className="sf-allCategories">
-        <p className="sfac-cat" onClick={(e) => setShow({ type: !show.type })}>
+        <p
+          className="sfac-cat"
+          style={{ color: show.type ? "black" : "white" }}
+          onClick={(e) => setShow({ type: !show.type })}
+        >
           Product Type
         </p>
         <p
           className="sfac-cat"
+          style={{ color: show.gender ? "black" : "white" }}
           onClick={(e) => setShow({ gender: !show.gender })}
         >
           Gender
         </p>
-        <p className="sfac-cat" onClick={(e) => setShow({ size: !show.size })}>
+        <p
+          className="sfac-cat"
+          style={{ color: show.size ? "black" : "white" }}
+          onClick={(e) => setShow({ size: !show.size })}
+        >
           Size
         </p>
         <p
           className="sfac-cat"
+          style={{ color: show.color ? "black" : "white" }}
           onClick={(e) => setShow({ color: !show.color })}
         >
           Color
         </p>
-        <p className="sfac-cat" onClick={(e) => setShow({ sort: !show.sort })}>
+        <p
+          className="sfac-cat"
+          style={{ color: show.sort ? "black" : "white" }}
+          onClick={(e) => setShow({ sort: !show.sort })}
+        >
           Sort
         </p>
       </div>
@@ -108,9 +122,9 @@ export default function ShopFilter() {
       )}
       {show.sort && (
         <div className="sf-category sort">
-        <div className="sfc-choice">
-          <p>Best Seller</p>
-        </div>
+          <div className="sfc-choice">
+            <p>Best Seller</p>
+          </div>
           <div className="sfc-choice">
             <p>Price Low To High</p>
           </div>
