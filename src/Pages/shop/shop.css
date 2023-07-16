@@ -6,7 +6,7 @@
   width: 96%;
   margin: 3% auto 5% auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
 }

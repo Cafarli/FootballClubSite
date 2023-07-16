@@ -1,0 +1,21 @@
+.pagination-container {
+    width: 100%;
+}
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    margin: 5% auto;
+    color: black;
+    padding: 0;
+}
+.pagination li {
+    font: 16px "Roboto";
+    padding: 2% 3%;
+    margin: 0 1%;
+    cursor: pointer;
+}
+.pagination li.active {
+    background-color: var(--borderGray);
+}
