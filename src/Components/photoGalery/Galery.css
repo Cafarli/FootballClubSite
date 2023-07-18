@@ -1,0 +1,40 @@
+.modal.show .modal-dialog {
+  margin: 0;
+  max-width: 100%;
+  min-height: 100%;
+  background-color: white;
+}
+.modal-content {
+  width: 100%;
+  min-height: 100%;
+  border: none;
+}
+.galery-close {
+  width: 100%;
+  padding: 0 3% 0 0;
+  display: flex;
+  justify-content: flex-start;
+}
+.galery-close svg {
+  cursor: pointer;
+  color: gray;
+  font-size: 40px;
+}
+.galeryImg {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.galeryImg img {
+  margin: 0 auto;
+  width: 55%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.galery-body .swiper-button-next,
+.galery-body .swiper-button-prev {
+  color: black !important;
+}

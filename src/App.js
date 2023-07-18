@@ -13,12 +13,9 @@ import { Header } from "./Pages/headerFooter/header/header";
 import { OpenedShopCard } from "./Pages/shop/openShopCard/openShopCard";
 import { Login } from "./Pages/login/login";
 import { Signup } from "./Pages/signup/signup";
-import {
-  Outlet,
-  RouterProvider,
-  createBrowserRouter,
-} from "react-router-dom";
+import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Footer } from "./Pages/headerFooter/footer/footer";
+import Galery from "./Components/photoGalery/Galery";
 
 function Layout() {
   return (
@@ -88,6 +85,10 @@ const router = createBrowserRouter([
     path: "/login",
     element: <Login />,
   },
+  // {
+  //   path: "/galery/:id",
+  //   element: <Galery />,
+  // },
 ]);
 function App() {
   setTimeout(() => {

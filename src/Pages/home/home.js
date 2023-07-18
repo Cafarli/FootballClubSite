@@ -14,17 +14,24 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css";
 import { HomeShopCard } from "./homeShopCard/homeShopCard";
+import { Galery } from "../../Components/photoGalery/Galery";
+import { useState } from "react";
 
 export function Home() {
+  const [open, setOpen] = useState(false);
+  const [id, setId] = useState("0");
+  const [modalShow, setModalShow] = useState(false);
+
   return (
     <div className="Home">
       <div className="home-part">
         <div className="home-mainNews">
           <Swiper
-            autoplay={true}
+            autoplay={{delay: 4000}}
             speed={1000}
             navigation={true}
             loop={true}
+            
             modules={[Navigation, Autoplay]}
           >
             {newsData.news &&
@@ -154,7 +161,7 @@ export function Home() {
         </Row>
       </div>
 
-      <div className="home-part galery">
+      <div className="home-part hgalery">
         <div className="hpg-row">
           {/* <div className="Hpart-title" style={{ display: "block" }}>
             <h1>PHOTOS</h1>
@@ -163,8 +170,7 @@ export function Home() {
           {galery.images &&
             galery.images.length > 0 &&
             galery.images
-              // .filter((img, i) => i > 4)
-              .map((filteredItem) => {
+              .map((filteredItem, ind) => {
                 return (
                   <Col
                     xs={12}
@@ -172,15 +178,25 @@ export function Home() {
                     md={4}
                     xl={4}
                     lg={4}
+                    key={ind}
                     className="hpgr-imgcol"
                   >
-                    <Link>
-                      <img
-                        className="slideImage"
-                        src={filteredItem.photo}
-                        alt="slides"
-                      ></img>
-                    </Link>
+                    <img
+                      className="slideImage"
+                      src={filteredItem.photo[0]}
+                      id={filteredItem.id}
+                      alt="slides"
+                      onClick={(e) => {
+                        setId(e.target.id);
+                        setModalShow(true);
+                      }}
+                    />
+
+                    <Galery
+                      show={modalShow}
+                      id={id}
+                      onHide={() => setModalShow(false)}
+                    />
                   </Col>
                 );
               })}
