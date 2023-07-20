@@ -45,7 +45,7 @@ export function Login() {
           </p>
 
           <p className="rf-forgot">
-            <Link to="/forgot">Forgot password?</Link>
+            <Link to="/forgot-password">Forgot password?</Link>
           </p>
         </div>
 

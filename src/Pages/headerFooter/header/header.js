@@ -42,16 +42,6 @@ export function Header() {
         >
           <img src={logo} className="img-fluid header-logo" alt="brand" />
         </Navbar.Brand>
-        <Navbar.Toggle
-          aria-controls="responsive-navbar-nav"
-          onClick={() => {
-            updateExpanded(expand ? false : "expanded");
-          }}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </Navbar.Toggle>
         <Navbar.Collapse
           id="responsive-navbar-nav justify-content-end"
           className="first-collapse"

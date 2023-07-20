@@ -15,7 +15,7 @@ import { Login } from "./Pages/login/login";
 import { Signup } from "./Pages/signup/signup";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Footer } from "./Pages/headerFooter/footer/footer";
-import Galery from "./Components/photoGalery/Galery";
+import ForgotPage from "./Components/forgot/ForgotPage";
 
 function Layout() {
   return (
@@ -85,10 +85,10 @@ const router = createBrowserRouter([
     path: "/login",
     element: <Login />,
   },
-  // {
-  //   path: "/galery/:id",
-  //   element: <Galery />,
-  // },
+  {
+    path: "/forgot-password",
+    element: <ForgotPage />,
+  },
 ]);
 function App() {
   setTimeout(() => {

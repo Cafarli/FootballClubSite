@@ -1,0 +1,240 @@
+.ForgotPage {
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-family: Assistant;
+}
+.page {
+    margin: 0% auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.bgImg, .page {
+    width: 50%;
+    min-height: 100%;
+}
+.bgImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.lines {
+    width: 40%;
+    margin: 0 0 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    position:fixed;
+    bottom: 0;
+}
+.lines p{
+    width: 20%;
+    height: 10px;
+    background-color: var(--borderGray);
+    border-radius: 10px;
+}
+.backLog {
+    margin: 5% 0 0 0;
+    color: var(--gray);
+    font: bold 14px Assistant;
+}
+.backLog svg {
+    margin: 0 7px 0 0;
+    stroke-width: 1;
+}
+/* FORGOT */
+.ForgotMail {
+    width: 100%;
+}
+.passImg {
+    width: 100%;
+    margin: 0 auto 3% auto;
+    display: flex;
+    justify-content: center;
+}
+.passImg img {
+    width: 10%;
+    object-fit: cover;
+}
+.littleInfo {
+    color: var(--gray);
+}
+.mailContainer {
+    width: 60%;
+    margin: 5% auto 0 auto;
+}
+.mailContainer p,
+.mailContainer input,
+.mailContainer button{
+    display: block;
+}
+.mailContainer p {
+    text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--gray);
+    margin: 0 0 5px 0;
+}
+.mailContainer input {
+    width: 100%;
+    padding: 2% 3%;
+    margin: 0 0 8% 0;
+    border: 1px solid var(--borderGray);
+    border-radius: 7px;
+    font-size: 18px;
+}
+.mailContainer button {
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 2% 3%;
+    background-color: blue;
+}
+.mailContainer button a {
+    color: white;
+}
+.mailContainer button:hover {
+    background-color: rgba(0, 0, 255, 0.8);
+}
+
+/* FORGOT CODE */
+.ForgotCode {
+    width: 100%;
+}
+.codeImg {
+    width: 10%;
+    margin: 0 auto 2% auto;
+    padding: 2% 0;
+    border: 1px solid var(--borderGray);
+    border-radius: 5px;
+}
+.codeImg svg {
+    font-size: 25px;
+}
+.codeContainer {
+    width: 50%;
+    margin: 5% auto 0 auto;
+}
+.inputs {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.inputs input {
+    border: 2px solid var(--borderGray);
+    border-radius: 10px;
+    width: 22%;
+    padding: 4% 0%;
+    font-size: 22px;
+    text-align: center;
+}
+.codeContainer input:focus {
+    border-color: blue;
+}
+.contBtn {
+    width: 100%;
+    background-color: blue;
+    margin: 8% 0 0 0;
+    padding: 3% 0;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+} 
+.contBtn:hover {
+    background-color: rgba(0, 0, 255, 0.8);
+}
+.contBtn a {
+    color: white;
+}
+.codeContainer p {
+    margin: 20px 0 0 0;
+    font-size: 14px;
+    color: var(--gray);
+}
+.codeContainer p span {
+    color: var(--orange);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* FORGOT NEW PASSWORD */
+.ForgotNewPass {
+    width: 100%;
+}
+.npImg {
+    width: 10%;
+    margin: 0 auto 2% auto;
+    padding: 2% 0;
+    border: 1px solid var(--borderGray);
+    border-radius: 5px;
+}
+.npImg svg {
+    font-size: 25px;
+}
+.npContainer {
+    width: 50%;
+    margin: 5% auto 0 auto;
+}
+.npContainer input {
+    width: 100%;
+    padding: 2% 3%;
+    border: 1px solid var(--borderGray);
+    border-radius: 5px;
+    margin: 0 0 5% 0;
+}
+.npContainer p {
+    margin: 0 0 5px 0;
+    text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--gray);
+}
+.npContainer button {
+    width: 100%;
+    margin: 3% 0 0 0;
+    padding: 2% 0;
+    background-color: blue;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.npContainer button:hover {
+    background-color: rgba(0, 0, 255, 0.8);
+}
+.npContainer button a {
+    color: white;
+}
+/* FORGOT DONE */
+.ForgotDone {
+    width: 100%;
+}
+.doneImg {
+    width: 10%;
+    margin: 0 auto 3% auto;
+    padding: 3% 0;
+    border: 1px solid var(--borderGray);
+    border-radius: 50%;
+}
+.doneImg svg {
+    font-size: 25px;
+}
+.ForgotDone button {
+    width: 50%;
+    margin: 5% auto 0 auto;
+    padding: 2% 0;
+    background-color: blue;
+    background-color: blue;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    
+}
+.ForgotDone button:hover {
+    background-color: rgba(0, 0, 255, 0.8);
+}
+.ForgotDone button a {
+    color: white;
+}
