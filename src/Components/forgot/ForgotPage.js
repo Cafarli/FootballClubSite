@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Forgot.css";
 import bg from "../../Images/backgroundImages/password.gif";
 import ForgotMail from "./forgotMail";
 import ForgotCode from "./forgotCode";

@@ -1,5 +1,4 @@
 import React from "react";
-import "./Forgot.css";
 import { GrStatusGood } from "react-icons/gr";
 import { Link } from "react-router-dom";
 

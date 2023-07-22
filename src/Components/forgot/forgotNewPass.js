@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./Forgot.css";
 import { BsArrowLeft } from "react-icons/bs";
 import { RiKeyboardFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
