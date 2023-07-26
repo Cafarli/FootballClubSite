@@ -3,6 +3,7 @@
 }
 
 .stnd-table {
+  width: 100%;
   opacity: 0.95;
   margin: 0 auto;
   background-color: rgb(45, 45, 45);
@@ -69,7 +70,7 @@
     font-size: 14px;
   }
   .name-col {
-    font-size: 17px;
+    font-size: 15px;
   }
   .pts-col, .p-col, .win-col, .draw-col, .los-col, .gd-col {
     font-size: 15px;
@@ -104,7 +105,7 @@
 
 @media screen and (max-width:450px) {
   .stnd-table th {
-    font-size: 12px;
+    font-size: 11px;
   }
   .logo-col {
     width: 22% !important;
@@ -116,12 +117,14 @@
   .name-col {
     font-size: 12px;
   }
-  
   .logo {
     width: 30px !important;
   }
   .pts-col, .p-col, .win-col, .draw-col, .los-col, .gd-col {
     width: 8%; 
     font-size: 11px;
+  }
+  .pos {
+    column-count: 2;
   }
 }

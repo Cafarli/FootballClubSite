@@ -18,7 +18,6 @@ import { Galery } from "../../Components/photoGalery/Galery";
 import { useState } from "react";
 
 export function Home() {
-  const [open, setOpen] = useState(false);
   const [id, setId] = useState("0");
   const [modalShow, setModalShow] = useState(false);
 

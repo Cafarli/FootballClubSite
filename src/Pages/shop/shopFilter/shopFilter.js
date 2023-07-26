@@ -45,7 +45,7 @@ export default function ShopFilter() {
           style={{ color: show.sort ? "black" : "white" }}
           onClick={(e) => setShow({ sort: !show.sort })}
         >
-          Sort
+          Filter
         </p>
       </div>
       {show.type && (

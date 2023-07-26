@@ -16,6 +16,7 @@ import { Signup } from "./Pages/signup/signup";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Footer } from "./Pages/headerFooter/footer/footer";
 import ForgotPage from "./Components/forgot/ForgotPage";
+import BurgerHeader from "./Pages/headerFooter/header/burgerHeader/BurgerHeader";
 
 function Layout() {
   return (
@@ -60,7 +61,7 @@ const router = createBrowserRouter([
         element: <News />,
       },
       {
-        path: "/news/newsCardTitle",
+        path: "newsCardTitle",
         element: <OpenedNewsCard />,
       },
       {
@@ -88,6 +89,10 @@ const router = createBrowserRouter([
   {
     path: "/forgot-password",
     element: <ForgotPage />,
+  },
+  {
+    path: "/header",
+    element: <BurgerHeader />,
   },
 ]);
 function App() {

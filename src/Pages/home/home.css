@@ -136,17 +136,20 @@
     rgba(239, 171, 18, 1) 90%,
     rgba(201, 146, 21, 1) 100%
   );
-  /* background-color: #ffc800; */
   padding: 7% 4%;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: row;
+  /* align-items: center;
+  justify-content: space-between; */
 }
-
+.nmi-nextMatchPart,.nmi-standingPart {
+  width: 50%;
+}
 .next-match {
   width: 100%;
+  height: 100%;
   background-color: white;
-  padding: 10% 7% 5% 7%;
+  padding: 13% 7% 5% 7%;
 }
 
 .next-match > h1 {
@@ -166,9 +169,12 @@
 }
 
 .club img {
+  width: 30% !important;
+  margin: 0 !important;
   display: inline-block;
 }
 .club p {
+  width: 70%;
   display: inline-block;
 }
 .vs {
@@ -198,7 +204,7 @@
 }
 
 .all-matches {
-  margin-top: 8%;
+  margin-top: 10%;
   font-family: "Work Sans";
   font-size: 12px;
   color: rgb(136, 135, 135);
@@ -301,12 +307,6 @@
   .container {
     max-width: 100%;
   }
-  .nmi-nextMatchPart {
-    width: 45%;
-  }
-  .nmi-standingPart {
-    width: 49%;
-  }
   .nmi-standingPart div {
     width: 100%;
   }
@@ -321,7 +321,7 @@
   }
 }
 
-@media screen and (min-width: 700px) and (max-width: 980px) {
+@media screen and (min-width: 801px) and (max-width: 980px) {
   .container {
     max-width: 100%;
   }
@@ -359,7 +359,10 @@
 }
 @media screen and (max-width: 830px) {
   .nmi-standingPart .logo-col {
-    width: 26% !important;
+    width: 100% !important;
+  }
+  .nmi-nextMatchPart,.nmi-standingPart {
+    width: 100%;
   }
 
   .nmi-standingPart .pos-col {
@@ -368,7 +371,10 @@
   }
   .nmi-standingPart .name-col {
     width: 14%;
-    font-size: 14px;
+    font-size: 13px;
+  }
+  .stnd-table th  {
+    font-size: 15px;
   }
   .nmi-standingPart .pts-col,
   .nmi-standingPart .p-col,
@@ -376,20 +382,25 @@
   .nmi-standingPart .draw-col,
   .nmi-standingPart .los-col,
   .nmi-standingPart .gd-col {
-    width: 8%;
-    font-size: 14px;
+    width: 7%;
+    font-size: 13px;
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 801px) {
   .next-match-info {
     padding: 7% 5%;
     flex-direction: column;
   }
+  .next-match {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .nmi-standingPart {
+    width: 90%;
+    margin: 0 auto;
+  }
   .hmns-title-text {
     font-size: 30px;
-  }
-  .nmi-nextMatchPart {
-    margin-bottom: 5%;
   }
   .nmi-standingPart .logo-col {
     width: 14% !important;
@@ -399,6 +410,11 @@
   }
 }
 
+@media screen and (max-width: 426px) {
+  .nmi-standingPart .logo-col{
+    display: none;
+  }
+}
 
 @media screen and (min-width: 370px) and (max-width: 500px) {
   .container {

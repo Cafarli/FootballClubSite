@@ -1,0 +1,97 @@
+.expanded-header {
+  width: 100%;
+  height: 78px;
+  margin: 0;
+  padding: 0;
+  font-family: "Assistant";
+  position: fixed;
+  background-color: rgb(18, 18, 18);
+  z-index: 1000;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.29);
+}
+
+.header-logo {
+  margin-left: 20%;
+  width: 60%;
+}
+
+.img-fluid {
+  width: 55% !important;
+}
+
+.navbar-light .navbar-brand {
+  width: 10% !important;
+}
+
+.first-collapse {
+  width: 10% !important;
+}
+
+.second-collapse {
+  justify-content: flex-end;
+}
+
+.nav-item {
+  margin-right: 5%;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  color: rgb(113, 113, 113);
+  padding: 0.85% 3%;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(255, 255, 255, 0.7) !important;
+  /* color: rgb(113, 113, 113) !important; */
+}
+
+a {
+  color: rgb(255, 255, 255, 0.7);
+  text-decoration: none !important;
+}
+
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-nav .nav-link:focus {
+  color: rgb(255, 255, 255, 0.9);
+  background-color: transparent;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: rgba(255, 204, 0, 0.9) !important;
+}
+
+.item {
+  background-color: rgba(18, 18, 18, 0.8);
+}
+
+.dropdown-item:hover {
+  background-color: rgba(60, 59, 59, 0.8);
+  color: rgba(255, 204, 0, 0.9);
+}
+
+.st,
+.ab {
+  margin-top: 2.5%;
+}
+
+.az {
+  margin-top: 1%;
+}
+
+.dropdown-item:hover a {
+  color: rgba(255, 204, 0, 0.9);
+}
+
+.dropdown-menu {
+  border: none;
+  background-color: transparent;
+}
+
+.dropdown-menu:hover {
+  border: none;
+  background-color: transparent;
+}
+
+.dropdown-toggle::after {
+  content: none;
+}
