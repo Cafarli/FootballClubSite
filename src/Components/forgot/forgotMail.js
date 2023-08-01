@@ -26,7 +26,7 @@ export default function ForgotMail() {
       <div className="mailContainer">
         <p>Email</p>
         <input placeholder="Enter your email" onChange={e=>handleEmailChange(e)} />
-        <button disabled={buttonActive?true:false}><Link to="/">Reset Password</Link></button>
+        <button disabled={buttonActive?true:false}><a href="./ForgotCode.html">Reset Password</a></button>
       </div>
       <Link to="/login">
         <div className="backLog">

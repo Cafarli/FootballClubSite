@@ -15,7 +15,7 @@ export function Footer() {
     <div className="Footer">
       <div className="social-medias">
         <div className="home-logo">
-          <Link to='/'>
+          <Link to="/">
             <img alt="logo" src={logo} />
           </Link>
         </div>
@@ -39,10 +39,12 @@ export function Footer() {
 
       <div className="club-info">
         <p>
-          Contrary to popular belief, Lorem Ipsum is not simply random text. It
-          has roots in a piece of classical Latin literature from 45 BC, making
-          it over 2000 years old.Richard McClintock, a Latin professor at
-          Hampden-Sydney College in Virginia{" "}
+          Proin lacinia venenatis lacus a facilisis. Sed nisl lorem, suscipit
+          non laoreet blandit, hendrerit elementum purus. Vivamus elementum leo
+          urna, quis iaculis lectus mollis vitae.Sed pretium lacinia arcu vitae
+          facilisis. Curabitur eu ligula vel erat tempus tristique sit amet
+          tincidunt nulla. Donec semper condimentum nunc, maximus sollicitudin
+          velit cursus ac. Etiam sagittis est a malesuada tempus.
         </p>
       </div>
 
@@ -57,9 +59,7 @@ export function Footer() {
       </div>
 
       <div className="copy-rights">
-        <p className="copyright">
-        © {new Date().getFullYear()} By JAFARLI
-        </p>
+        <p className="copyright">© {new Date().getFullYear()} By JAFARLI</p>
         <p>All Rights Reserved.</p>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Forgot.css";
 import bg from "../../Images/backgroundImages/password.gif";
 import ForgotMail from "./forgotMail";
@@ -7,29 +7,30 @@ import ForgotNewPass from "./forgotNewPass";
 import ForgotDone from "./forgotDone";
 
 export default function ForgotPage() {
-  // .childNodes[0].className
   const [lineColor, setLineColor] = useState({
     first: false,
     second: false,
     third: false,
     fourth: false,
   });
-  // (function callChild() {
-  //   const child = document.getElementsByClassName("page")[0].children[0]['className'];
-  //   console.log(child);
-  //   if (child === "ForgotMail") {
-  //     setLineColor({ first: true });
-  //   }
-  //   if (child === "ForgotCode") {
-  //     setLineColor({ second: true });
-  //   }
-  //   if (child === "ForgotNewPass") {
-  //     setLineColor({ third: true });
-  //   }
-  //   if (child === "ForgotDone") {
-  //     setLineColor({ fourth: true });
-  //   }
-  // })();
+  
+  useEffect(() => {
+    const child =
+      document.getElementsByClassName("page")[0].children[0]["className"];
+    console.log(child);
+    if (child === "ForgotMail") {
+      setLineColor({ first: true });
+    }
+    if (child === "ForgotCode") {
+      setLineColor({ second: true });
+    }
+    if (child === "ForgotNewPass") {
+      setLineColor({ third: true });
+    }
+    if (child === "ForgotDone") {
+      setLineColor({ fourth: true });
+    }
+  },[]);
 
   return (
     <div className="ForgotPage">

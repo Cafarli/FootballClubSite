@@ -4,7 +4,7 @@
   padding: 78px 0 0 0;
 }
 .Home > .home-part {
-  padding: 0 0 2% 0;
+  padding: 0 0 0% 0;
   display: block;
 }
 /* MAIN NEWS */
@@ -53,73 +53,6 @@
 .hmns-title-text p {
   margin: 0;
 }
-/* .read-more {
-  width: 15%;
-  border-radius: 5px;
-  border: 1px solid #ca9f04;
-  color: white;
-  font-size: 12px;
-  padding: 15px 2%;
-  position: absolute;
-  background-image: linear-gradient(
-    150deg,
-    #292423 0%,
-    #292423 47%,
-    #ffc800 47%,
-    #ffc800 47%
-  );
-  background-image: -webkit-linear-gradient(
-    150deg,
-    #292423 0%,
-    #292423 47%,
-    #ffc800 47%,
-    #ffc800 47%
-  );
-  cursor: pointer;
-  transition: background-image 600ms;
-}
-
-.read-more:hover {
-  background-image: linear-gradient(
-    150deg,
-    #ffc800 0%,
-    #ffc800 47%,
-    #292423 47%,
-    #292423 47%
-  );
-
-  background-image: -webkit-linear-gradient(
-    150deg,
-    #ffc800 0%,
-    #ffc800 47%,
-    #292423 47%,
-    #292423 47%
-  );
-}
-
-.read-more:hover .more-text {
-  color: #ffc800;
-}
-
-.read-more:hover .more-icon {
-  color: #292423;
-}
-
-.more-text,
-.more-icon {
-  display: inline-block;
-}
-
-.more-text {
-  color: #292423;
-  font-weight: bold;
-}
-
-.more-icon {
-  color: #ffc800;
-  margin-left: 40%;
-  font-weight: bold;
-} */
 
 /* NEXT MATCH INFO */
 

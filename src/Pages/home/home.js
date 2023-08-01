@@ -102,8 +102,8 @@ export function Home() {
                 </div>
               </div>
               <div className="next-date-info">
-                <p className="next-date">November 14, 2015 | 12:00 am</p>
-                <p className="next-location">Cambridgeshire UK</p>
+                <p className="next-date">October 04, 2023 | 10:00 pm</p>
+                <p className="next-location">Jabrayil, Azerbaijan</p>
               </div>
               <div className="all-matches">See calendar</div>
             </div>
