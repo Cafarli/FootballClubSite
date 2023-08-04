@@ -1,19 +1,17 @@
 import React from "react";
 import "./playerCard.css";
 import { Link } from "react-router-dom";
+import photo from "../players/images/player.png";
 
 export function PlayerCard(props) {
   return (
     <div className="ply">
       <div className="player-view">
         <div className="ply-num-photo">
-          <div className="ply-num">{props.props.number}</div>
           <div className="ply-img">
-            <img src={props.props.photo} alt="player" />
+            <img src={photo} alt="player" />
+            <div className="ply-num">{props.props.number}</div>
           </div>
-          <Link to={`player/`}>
-            <div className="bio">INFO</div>
-          </Link>
         </div>
         <div className="ply-info">
           <div className="ply-name-pos">

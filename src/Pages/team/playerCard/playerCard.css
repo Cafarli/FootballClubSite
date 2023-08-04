@@ -1,5 +1,6 @@
 .ply {
     border: 1px solid black;
+    border-radius: 3px;
     display: flex;
     flex: 1 1 240px;
     flex-grow: 0;
@@ -26,17 +27,21 @@
     
 .ply-num-photo {
     width: 100%;
+    min-height: 40vh;
     display: flex;
 }
 
 .ply-num-photo img {
     width: 100%;
-    object-fit: cover;
+    padding: 5% 0;
+    vertical-align: middle;
+    object-fit: fit;
 }
 
 .ply-img {
     display: flex;
     width: 100%;
+    position: relative;
 }
 
 .ply-num {
@@ -50,36 +55,12 @@
     padding: 5%;
     width: 30%;
     height: 13vh;
+    position: absolute;
 }
-
 
 .ply-info {
     text-align: left;
     display: flex;
-}
-
-.bio {
-    background: linear-gradient(to right bottom,
-    rgb(255,255,255, 0.00001) 0%,
-    rgb(255,255,255, 0.000001) 50%,
-    #ffc800 50%, #ffc800 100%);
-    cursor: pointer;
-    width: 8vh;
-    height: 13vh;
-    visibility: hidden; 
-    line-height: 22vh;
-    text-align: right;
-    right: 0;
-    top: 70%;
-    padding-right: 5%;
-    vertical-align: top;
-    position: relative;
-    transition: all 0.1s;
-    color: #363533;
-}
-
-.bio:hover {
-    color: white;
 }
 
 .ply-name {

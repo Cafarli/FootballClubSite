@@ -2,7 +2,7 @@ import React from "react";
 import Table from "react-bootstrap/Table";
 import "./player.css";
 import { Container, Col, Row } from "react-bootstrap";
-import gk1 from "../players/images/Şahruddin_Məhəmmədəliyev1-203x265.png";
+import gk1 from "../players/images/player.png";
 
 export function Player() {
   return (
@@ -17,7 +17,7 @@ export function Player() {
 
           <Col lg={7} md={7}>
             <div className="personal-info">
-              <h3>Şahruddin Məhəmmədəliyev</h3>
+              <h3>Player Player</h3>
               <ul>
                 <li>
                   <p>Milliyyət:</p>
@@ -71,8 +71,8 @@ export function Player() {
               </thead>
               <tbody>
                 <tr>
-                  <td>Football FK</td>
-                  <td> 2015-</td>
+                  <td>Jabrayil FC</td>
+                  <td> 2020-</td>
                 </tr>
               </tbody>
             </Table>
