@@ -5,40 +5,23 @@ import { Container } from "react-bootstrap";
 import Navbar from "react-bootstrap/Navbar";
 import { Nav, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { IoLanguageOutline } from "react-icons/io5";
+import { IoLanguageOutline, IoSettingsSharp } from "react-icons/io5";
 import { FiMenu } from "react-icons/fi";
+import { MdOutlineClose } from "react-icons/md";
 import {
   MdOutlineKeyboardArrowDown,
   MdOutlineKeyboardArrowUp,
 } from "react-icons/md";
 
 export function Header() {
-  const [show, setShow] = useState(false);
-  const [showClub, setShowClub] = useState(false);
-  const [showLang, setShowLang] = useState(false);
   const [dropdowns, setDrops] = useState({
     standings: false,
     club: false,
     lang: false,
+    settings: false,
   });
-  const showDropdown = (e) => {
-    setShow(!show);
-  };
-  const hideDropdown = (e) => {
-    setShow(false);
-  };
-  const showDropdownClub = (e) => {
-    setShowClub(!showClub);
-  };
-  const hideDropdownClub = (e) => {
-    setShowClub(false);
-  };
-  const showDropdownLang = (e) => {
-    setShowLang(!showLang);
-  };
-  const hideDropdownLang = (e) => {
-    setShowLang(false);
-  };
+  const [icon, setIcon] = useState(true)
+
   const toggleMenu = () => document.body.classList.toggle("open");
 
   return (
@@ -49,7 +32,8 @@ export function Header() {
     >
       <Container className="headerContainer">
         <Navbar.Brand className="menuBtn" onClick={toggleMenu}>
-          <FiMenu color="white" />
+          {icon ? <FiMenu color="white" onClick={() => setIcon(false)} /> :
+          <MdOutlineClose color="white"   onClick={() => setIcon(true)} />}
         </Navbar.Brand>
         {/* {buger menu */}
         <div className="burgerMenu">
@@ -123,7 +107,10 @@ export function Header() {
         >
           <img src={logo} className="header-logo" alt="brand" />
         </Navbar.Brand>
-        {/* expanded header */}
+
+
+
+        {/* EXPANDED HEADER */}
         <div id="responsive-navbar-nav " className="first-collapse">
           <Nav className="ms-auto fc-items" defaultActiveKey="#home">
             <Nav.Item>
@@ -133,7 +120,13 @@ export function Header() {
             <NavDropdown
               title="STANDINGS"
               className="nav-dropdown nav-item"
-              show={show}
+              show={dropdowns.standings}
+              onMouseEnter={()=>setDrops({
+                standings: !dropdowns.standings,
+              })}
+              onMouseLeave={()=>setDrops({
+                standings: !dropdowns.standings,
+              })}
             >
               <NavDropdown.Item className="item st">
                 <Link to="/standings">STANDINGS</Link>
@@ -154,8 +147,13 @@ export function Header() {
             <NavDropdown
               title="CLUB"
               className="nav-dropdown nav-item show"
-              show={showClub}
-              onClick={showDropdownClub}
+              show={dropdowns.club}
+              onMouseEnter={()=>setDrops({
+                club: !dropdowns.club,
+              })}
+              onMouseLeave={()=>setDrops({
+                club: !dropdowns.club,
+              })}
             >
               <NavDropdown.Item className="item ab">
                 <Link
@@ -180,11 +178,38 @@ export function Header() {
             <Link to="/login">LOGIN</Link>
           </Nav.Item>
           <NavDropdown
+            title={<IoSettingsSharp/>}
+            className="nav-dropdown nav-item setting"
+            show={dropdowns.settings}
+            onMouseEnter={()=>setDrops({
+              settings: !dropdowns.settings,
+            })}
+            onMouseLeave={()=>setDrops({
+              settings: !dropdowns.settings,
+            })}
+          >
+            <NavDropdown.Item className="item">
+              <Link>
+              MY ACCOUNT
+              </Link>
+            </NavDropdown.Item>
+            <NavDropdown.Item className="item">
+              <Link>
+              LEAVE
+              </Link>
+            </NavDropdown.Item>
+            <NavDropdown.Item className="item"></NavDropdown.Item>
+          </NavDropdown>
+          <NavDropdown
             title={<IoLanguageOutline />}
             className="nav-dropdown nav-item lang"
-            show={showLang}
-            onMouseEnter={showDropdownLang}
-            onMouseLeave={hideDropdownLang}
+            show={dropdowns.lang}
+            onMouseEnter={()=>setDrops({
+              lang: !dropdowns.lang,
+            })}
+            onMouseLeave={()=>setDrops({
+              lang: !dropdowns.lang,
+            })}
           >
             <NavDropdown.Item className="item az">
               <Link to="/az" spy={true} smooth={true} offset={0} duration={500}>

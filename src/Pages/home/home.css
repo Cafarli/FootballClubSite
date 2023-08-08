@@ -16,8 +16,9 @@
   width: 100%;
   height: 100%;
 }
-.swiper-button-next, .swiper-button-prev {
-  color: white !important;
+.swiper-button-next,
+.swiper-button-prev {
+  color: black !important;
 }
 .photo {
   width: 100%;
@@ -75,7 +76,8 @@
   /* align-items: center;
   justify-content: space-between; */
 }
-.nmi-nextMatchPart,.nmi-standingPart {
+.nmi-nextMatchPart,
+.nmi-standingPart {
   width: 50%;
 }
 .next-match {
@@ -182,7 +184,7 @@
 /* Galery */
 .hgalery {
   max-width: 95%;
-  margin: 2% auto 0 auto;
+  margin: 3% auto 2% auto;
 }
 .hpg-row {
   display: flex;
@@ -207,7 +209,6 @@
 /* modal  */
 .MuiBox-root {
   padding: 3% 0 0 0;
-  
 }
 .closeGal svg {
   color: gray;
@@ -233,7 +234,6 @@
 .css-i9fmh8-MuiBackdrop-root-MuiModal-backdrop {
   background-color: white !important;
 }
-
 
 /* RESPOSIVENESS */
 @media screen and (min-width: 980px) {
@@ -294,7 +294,8 @@
   .nmi-standingPart .logo-col {
     width: 100% !important;
   }
-  .nmi-nextMatchPart,.nmi-standingPart {
+  .nmi-nextMatchPart,
+  .nmi-standingPart {
     width: 100%;
   }
 
@@ -306,7 +307,7 @@
     width: 14%;
     font-size: 13px;
   }
-  .stnd-table th  {
+  .stnd-table th {
     font-size: 15px;
   }
   .nmi-standingPart .pts-col,
@@ -341,10 +342,16 @@
   .read-more {
     width: 25%;
   }
+  .hgalery {
+    margin: 5% auto 3% auto;
+  }
+  .hpgr-imgcol {
+    margin-bottom: 4%;
+  }
 }
 
 @media screen and (max-width: 426px) {
-  .nmi-standingPart .logo-col{
+  .nmi-standingPart .logo-col {
     display: none;
   }
 }

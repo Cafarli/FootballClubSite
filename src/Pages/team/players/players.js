@@ -15,7 +15,7 @@ export function Players() {
 
         
         {players.players.map((player, index) => {
-          return <PlayerCard props={player} key={index} />;
+          return <PlayerCard show={true} props={player} key={index} />;
         })}</div>
       </div>
 
@@ -25,7 +25,7 @@ export function Players() {
         <div className="coache-list">{players.players
           .filter((pl, ind) => ind < 4)
           .map((player, index) => {
-            return <PlayerCard props={player} key={index} />;
+            return <PlayerCard show={false} props={player} key={index} />;
           })}</div>
       </div>
     </div>

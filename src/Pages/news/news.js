@@ -38,7 +38,7 @@ export function News() {
     <Container className="news" style={{ margin: 0, padding: 0 }}>
       <Row>
         <div className="news-title">
-          <h1>Xəbərlər</h1>
+          <h1>News</h1>
         </div>
       </Row>
       <Row style={{ paddingTop: "5%" }} className="all-news">

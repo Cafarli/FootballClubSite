@@ -5,17 +5,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 25%;
+    width: 15%;
     margin: 5% auto;
-    color: black;
-    padding: 0;
+    color: var(--gray);
+    text-align: center;
 }
 .pagination li {
-    font: 16px "Roboto";
-    padding: 2% 3%;
+    font: bold 17px "Roboto";
+    padding: 5% 5%;
     margin: 0 1%;
     cursor: pointer;
 }
 .pagination li.active {
-    background-color: var(--borderGray);
+    color: var(--orange);
 }

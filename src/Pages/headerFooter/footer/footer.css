@@ -26,12 +26,13 @@ ul{
 }
 
 .medias {
-    width: 70%;
+    width: 80%;
     text-align: right;
 }
 
 .medias-li {
     padding-left: 5%;
+    font-size: 17px;
 }
 
 .medias-li:hover {
@@ -43,7 +44,7 @@ ul{
 }
 
 .home-logo {
-    width: 12%;
+    width: 17%;
 }
 .home-logo a {
     display: inline-block;

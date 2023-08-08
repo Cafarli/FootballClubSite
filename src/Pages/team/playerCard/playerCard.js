@@ -10,7 +10,7 @@ export function PlayerCard(props) {
         <div className="ply-num-photo">
           <div className="ply-img">
             <img src={photo} alt="player" />
-            <div className="ply-num">{props.props.number}</div>
+            {props.show && <div className="ply-num">{props.props.number}</div>}
           </div>
         </div>
         <div className="ply-info">

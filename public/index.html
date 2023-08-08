@@ -58,9 +58,11 @@
       document.onreadystatechange = function () {
         if (document.readyState !== "complete") {
           document.querySelector("body").style.visibility = "hidden";
+          document.querySelector("#root").style.display = "none";
           document.querySelector(".ball-loader").style.visibility = "visible";
         } else {
           document.querySelector(".ball-loader").style.display = "none";
+          document.querySelector("#root").style.display = "block"
           document.querySelector("body").style.visibility = "visible";
         }
       };

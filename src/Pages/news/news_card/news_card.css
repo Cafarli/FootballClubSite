@@ -85,7 +85,7 @@
 }
 
 
-.card-more:hover {
+.NewsCard:hover .card-more {
   background-image: -webkit-linear-gradient(
     -50deg,
     #292423 0%,
@@ -107,11 +107,11 @@
   width: 100%;
 }
 
-.card-more:hover .card-read-more-text {
+.NewsCard:hover .card-more .card-read-more-text {
   color: #292423;
 }
 
-.card-more:hover .card-read-more-arrow {
+.NewsCard:hover .card-more .card-read-more-arrow {
   color: white;
 }
 .card-read-more-text {
@@ -159,7 +159,7 @@ AiOutlineRight {
     font-size: 14px;
   }
   .card-read-more-text {
-    font-size: 12px;
+    font-size: 14px;
     padding-left: 4%;
   }
 }
@@ -169,7 +169,7 @@ AiOutlineRight {
     font-size: 12px;
   }
   .card-read-more-text {
-    font-size: 14px;
+    font-size: 15px;
     padding-left: 4%;
   }
 }

@@ -25,6 +25,10 @@ body.open {
   align-items: center;
   justify-content: center;
   display: none;
+  color: white;
+}
+.menuBtn svg {
+  color: white !important;
 }
 .burgerMenu {
   display: none;
@@ -127,6 +131,7 @@ a {
 @media screen and (max-width: 1000px) {
   .menuBtn {
     display: block;
+    color: white !important;
   }
   .logo-brand {
     margin-left: 60px;
@@ -139,7 +144,8 @@ a {
     padding: 20% 0 0 0;
   }
   .header-logo {
-    width: 80% !important;
+    object-fit: cover;
+    width: 73% !important;
 }
   .first-collapse {
     flex-direction: column !important;

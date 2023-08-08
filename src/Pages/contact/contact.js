@@ -15,7 +15,7 @@ export function Contact() {
       </Row>
       <Row style={{ margin: 0, paddingTop: "3%" }} className="contact-types">
         <Col md={4} sm={6}>
-          <div className="contact">
+          <div className="contactCard">
             <p className="contact-title ">Club Contact</p>
             <p className="phone-num">
               <BsFillTelephoneFill className="icons" />
@@ -33,7 +33,7 @@ export function Contact() {
         </Col>
 
         <Col md={4} sm={6}>
-          <div className="mediaInfo contact">
+          <div className="mediaInfo contactCard">
             <p className="contact-title">Media Contact</p>
             <p className="phone-num">
               <BsFillTelephoneFill className="icons" />
@@ -51,7 +51,7 @@ export function Contact() {
         </Col>
 
         <Col md={4} sm={6}>
-          <div className="head contact">
+          <div className="head contactCard">
             <p className="contact-title">Head Office Contact</p>
             <p className="phone-num">
               <BsFillTelephoneFill className="icons" />
