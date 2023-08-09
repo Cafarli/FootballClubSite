@@ -16,10 +16,10 @@
 }
 
 .pos {
-  width: 12%;
+  width: 40%;
 }
 .pts, .p, .win, .draw, .los, .gd {
-  width:  11%;
+  width:  10%;
   text-align: center;
 }
 
@@ -30,19 +30,19 @@
 
 .pos-col {
   width: 16px;
-  /* width: 3%; */
+  width: 4%;
   text-align: center;
 }
 .logo-col {
   text-align: center;
 }
 .name-col {
-  /* width: 12%; */
+  width: 23%;
   font: 17px Assistant;
 }
 
 .pts-col, .p-col, .win-col, .draw-col, .los-col, .gd-col {
-  /* width:  11%; */
+  width:  12%;
   text-align: center;
   font: 16px Oswald;
 }
@@ -76,14 +76,11 @@
     font-size: 15px;
   }
   .logo {
-    width: 100% !important;
+    width: 45% !important;
   }
 }
 
 @media screen and (max-width:700px) {
-  /* .stnd-table {
-    width: 70% !important;
-  } */
   .pos-col {
     font-size: 12px; 
   }
@@ -91,16 +88,9 @@
     font-size: 13px;
     width: 14%;
   }
-   .logo-col {
-    width: 16% !important;
+  .logo {
+    width: 65% !important;
   }
-  /*.logo {
-    width: 40px;
-  } */
-  /* .pts-col, .p-col, .win-col, .draw-col, .los-col, .gd-col {
-    width:  9%; 
-    font-size: 13px;
-  } */
 }
 
 @media screen and (max-width:450px) {
@@ -118,7 +108,7 @@
     font-size: 12px;
   }
   .logo {
-    width: 30px !important;
+    width: 80% !important;
   }
   .pts-col, .p-col, .win-col, .draw-col, .los-col, .gd-col {
     width: 8%; 

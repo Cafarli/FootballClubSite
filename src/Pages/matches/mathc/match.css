@@ -1,58 +1,111 @@
 .Match {
-    width: 100%;
-    margin: 0 auto;
-    padding-bottom: 3%;
-    /* min-height: 113vh; */
-    background-image: url("../../../Images/backgroundImages/matchFans.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 3%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
-.Match>h1 {
-    padding: 10% 0% 4% 3%;
-    color: #FFB700;
-    font-weight: bold;
-    font-size: 40px;
+.Match > h1 {
+  padding: 10% 0% 4% 3%;
+  color: #ffb700;
+  font-weight: bold;
+  font-size: 40px;
 }
-
-.table th, td {
-    vertical-align: inherit;
-}
-
-.table tr {
-    border: 2px solid #FFB700;
-}
-
 .games {
-    width: 95%;
-    margin: 0 auto;
-    background-color: rgb(45, 45, 45);
-    color: white;
-    backdrop-filter: blur(2px);
-    margin-bottom: 7%;
+  width: 90%;
+  margin: 0 auto 7% auto;
+  background-color: rgb(45, 45, 45);
+  color: white;
+  backdrop-filter: blur(2px);
 }
 
-.date{
-    width: 20%;
-    padding: 0% 5%;
-    margin: 0 auto;
+.games tr {
+  width: 100%;
 }
- .score , .location {
-    width: 30%;
+.games td {
+  border: none !important;
+}
+.match {
+  width: 100%;
+  border: 1px solid #ffb700;
+  border-top-width: 2px;
+  border-bottom-width: 0pxF;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.date {
+  width: 13%;
+  padding: 0% 0% 0% 3% !important;
+}
+.score {
+  width: 47%;
+}
+.location {
+  width: 32%;
+}
+.score img {
+  width: 14%;
+  margin: 0 1%;
+}
+.moreArrow {
+  width: 6%;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
 }
 
 .games tr:hover {
-    background-color: #454545;
+  background-color: #383838;
 }
 
-.games span{
-    color: #ffd027;
+.games span {
+  color: #ffd027;
+  padding: 0 1%;
 }
-
 .day {
-    display: block;
+  display: block;
 }
 
 .icon {
-    color: #ffd027;
+  color: #ffd027;
+}
+.mTitle,
+.mMore {
+  display: block;
+  width: 100%;
+}
+.mMore {
+  text-align: center;
+  padding: 3%;
+  border-top: 1px solid white;
+}
+.mg-title {
+  font-size: 20px;
+}
+.mg-title img {
+  width: 10%;
+}
+.goals {
+  width: 100%;
+  font-size: 16px;
+}
+.goals div {
+  display: inline-block;
+  vertical-align: top;
+  width: 20%;
+}
+@media screen and (max-width: 1000px) {
+  .Match > h1 {
+    padding-top: 17%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .score img {
+    width: 16%;
+  }
 }

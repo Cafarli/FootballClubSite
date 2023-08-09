@@ -10,7 +10,7 @@ export function StandingTable(props) {
       <Table className="stnd-table" style={{width: props.width}}>
         <thead>
           <tr>
-            <th className="pos" colSpan={3}>Pos.</th>
+            <th className="pos" colSpan={2}>Pos.</th>
             <th className="pts">PTS</th>
             <th className="p">P</th>
             <th className="win">W</th>
@@ -24,14 +24,12 @@ export function StandingTable(props) {
             return (
               <tr key={index}>
                 <td className="pos-col">{index+1}</td>
-                <td className="logo-col" style={{width: props.logoColWdt}} >
+                <td className="name-col">
                   <img
                     className="logo" style={{width: props.wdt }}
                     src={logo}
                     alt="logo"
-                  ></img>
-                </td>
-                <td className="name-col">{team.teamName}</td>
+                  />{team.teamName}</td>
                 <td className="pts-col">{team.pts}</td>
                 <td className="p-col">{team.p}</td>
                 <td className="win-col">{team.win}</td>
