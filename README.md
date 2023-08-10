@@ -1,6 +1,6 @@
 # FootballClubSite
 
- 
+ <a href="https://www.figma.com/file/vzvu7JmPMHbLZ38g2tGq1J/Football-Club?type=design&node-id=0%3A1&mode=design&t=jJlwzxNgRDdw6NFU-1">Figma<a/>
  Loqo Cəbrayıl futbol klubuna məxsusdur, sayt nümunə məqsədlidir.
  
 Although the logo belongs to Jabrayıl FC, the site is for illustrative purposes only. 
