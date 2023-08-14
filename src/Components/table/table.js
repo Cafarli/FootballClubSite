@@ -29,7 +29,7 @@ export function StandingTable(props) {
                     className="logo" style={{width: props.wdt }}
                     src={logo}
                     alt="logo"
-                  />{team.teamName}</td>
+                  /><p>{team.teamName}</p></td>
                 <td className="pts-col">{team.pts}</td>
                 <td className="p-col">{team.p}</td>
                 <td className="win-col">{team.win}</td>

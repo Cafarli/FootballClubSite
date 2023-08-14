@@ -167,7 +167,7 @@ export function OpenedShopCard() {
               </div>
             </div>
             <div className="add-cart">
-              <button className="addToCart">ADD TO CARD</button>
+              <button className="addToCart">ADD TO CART</button>
             </div>
           </div>
         </Col>

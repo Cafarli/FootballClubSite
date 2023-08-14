@@ -15,7 +15,7 @@ import { Login } from "./Pages/login/login";
 import { Signup } from "./Pages/signup/signup";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Footer } from "./Pages/headerFooter/footer/footer";
-import ForgotPage from "./Components/forgot/ForgotPage";
+import ForgotPage from "./Pages/forgot/ForgotPage";
 
 function Layout() {
   return (
@@ -60,7 +60,7 @@ const router = createBrowserRouter([
         element: <News />,
       },
       {
-        path: "newsCardTitle",
+        path: "news/newsCardTitle",
         element: <OpenedNewsCard />,
       },
       {

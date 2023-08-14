@@ -3,11 +3,12 @@ import Table from "react-bootstrap/Table";
 import "./player.css";
 import { Container, Col, Row } from "react-bootstrap";
 import gk1 from "../players/images/player.png";
+import bg from "../../../Images/backgroundImages/stadium.png";
 
 export function Player() {
   return (
     <Container className="Player">
-      <div className="player-info">
+      <div className="player-info" style={{backgroundImage:`url('${bg}')`}} >
         <Row style={{ paddingBottom: "7%", marginBottom: "4%" }}>
           <Col lg={5} md={5}>
             <div className="player-img">
@@ -20,25 +21,25 @@ export function Player() {
               <h3>Player Player</h3>
               <ul>
                 <li>
-                  <p>Milliyyət:</p>
+                  <p>Nationality:</p>
                 </li>
                 <li>
-                  <p>Doğum tarixi:</p>
+                  <p>Birth date:</p>
                 </li>
                 <li>
-                  <p>Boy:</p>
+                  <p>Height:</p>
                 </li>
                 <li>
-                  <p>Çəki:</p>
+                  <p>Weight:</p>
                 </li>
                 <li>
-                  <p>Mövqe:</p>
+                  <p>Position:</p>
                 </li>
               </ul>
 
               <ul>
                 <li>
-                  <p>Azərbaycan</p>
+                  <p>Azerbaijan</p>
                 </li>
                 <li>
                   <p>01.01.1994</p>
@@ -47,10 +48,10 @@ export function Player() {
                   <p>1.92 m</p>
                 </li>
                 <li>
-                  <p>65 kq</p>
+                  <p>65 kg</p>
                 </li>
                 <li>
-                  <p>Hücumçu</p>
+                  <p>Attacker</p>
                 </li>
               </ul>
             </div>
@@ -110,13 +111,9 @@ export function Player() {
             <h3>Honours</h3>
             <ul>
               <li>Premier league</li>
-              <li>Premier league </li>
             </ul>
 
             <ul>
-              <li>
-                <span>3</span>
-              </li>
               <li>
                 <span>3</span>
               </li>

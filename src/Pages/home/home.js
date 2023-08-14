@@ -93,7 +93,7 @@ export function Home() {
                 </div>
                 <div className="club vs">vs</div>
                 <div className="club second">
-                  FC JABRAYIL
+                  <p>FC JABRAYIL</p>
                   <img
                     style={{ width: "27%", marginLeft: "10%" }}
                     src={logo}
@@ -113,8 +113,7 @@ export function Home() {
             <StandingTable
               width={"100%"}
               teamSize={5}
-              wdt={"100%"}
-              logoColWdt={"14%"}
+              wdt={"50%"}
             />
           </div>
         </div>

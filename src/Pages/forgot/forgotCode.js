@@ -4,7 +4,7 @@ import { BsArrowLeft } from "react-icons/bs";
 import { IoMailOpenOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
-export default function ForgotCode() {
+export default function ForgotCode(props) {
   return (
     <div className="ForgotCode">
       <div className="codeImg">
@@ -24,7 +24,7 @@ export default function ForgotCode() {
         <p>Didn't receive the email? <span>Resend again</span></p>
       </div>
       <Link to="/login">
-        <div className="backLog">
+        <div className="backLog" >
           <p>
             <BsArrowLeft />
             Back to log in

@@ -13,7 +13,7 @@ export function OtherPosts() {
           </Link>
         </div>
         <div className="other-posts-content">
-          <p className="other-posts-date">November 25, 2015</p>
+          <p className="other-posts-date">August 11, 2023</p>
           <Link className="other-posts-title" to={`newsCardTitle/`}>
             <p title="SUSPENDISSE PURUS ENIM, DICTUM SED LOREM AC, SODALES MAXIMUS EST">
               SUSPENDISSE PURUS ENIM, DICTUM SED LOREM AC, SODALES MAXIMUS EST

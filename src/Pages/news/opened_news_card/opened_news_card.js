@@ -1,7 +1,6 @@
 import React from "react";
 import "./opened_news_card.css";
 import { OtherPosts } from "../other_posts/other_posts";
-import { NewsCategories } from "../NewsCategories/NewsCategories";
 import {
   FaCalendarAlt,
   FaFacebookF,
@@ -15,17 +14,13 @@ export function OpenedNewsCard() {
   return (
     <div className="OpenedNewsCard">
       <Row>
-        {/* <Col md={4}>
-        <NewsCategories />
-        </Col> */}
-        <Col>
           <div className="opened-card-image">
             <img src={photo} alt="content"></img>
           </div>
           <div className="opened-card-content">
             <p className="opened-card-date">
               <FaCalendarAlt style={{fontSize:'15px', marginRight: "1%" }} />
-              November 25, 2015
+              August 11, 2023
             </p>
             <p className="opened-card-title">
               Sed mi magna, malesuada sit amet ipsum
@@ -53,24 +48,23 @@ export function OpenedNewsCard() {
               <li className="share-li" style={{ color: "#ffc800" }}>
                 Share
               </li>
-              <li className="share-li">
+              <li className="share-li smedias">
                 <FaFacebookF />
               </li>
-              <li className="share-li">
+              <li className="share-li smedias">
                 <FaInstagram />
               </li>
-              <li className="share-li">
+              <li className="share-li smedias">
                 <FaTwitter />
               </li>
             </ul>
           </div>
-        </Col>
       </Row>
 
       <Row>
         <div className="other-post-cards">
           <h1>
-            Digər <span>Xəbərlər</span>
+            Other <span>News</span>
           </h1>
           <OtherPosts />
           <OtherPosts />

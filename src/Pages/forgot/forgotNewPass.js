@@ -3,7 +3,7 @@ import { BsArrowLeft } from "react-icons/bs";
 import { RiKeyboardFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 
-export default function ForgotNewPass() {
+export default function ForgotNewPass(props) {
   const [buttonActive, setButtonActive] = useState(false);
   // EMAIL VALIDATION
   function isValidEmail(email) {
@@ -31,7 +31,7 @@ export default function ForgotNewPass() {
         <button disabled={buttonActive?true:false}><Link to="/">Reset Password</Link></button>
       </div>
       <Link to="/login">
-        <div className="backLog">
+        <div className="backLog" >
           <p>
             <BsArrowLeft />
             Back to log in

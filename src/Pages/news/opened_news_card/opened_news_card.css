@@ -6,8 +6,8 @@
 } 
 
 .opened-card-image {
-    width: 90%;
-    margin: 0 auto;
+    width: 60%;
+    margin: 120px auto 0 auto;
 }
 
 .opened-card-image img {
@@ -16,7 +16,7 @@
 }
 
 .opened-card-content {
-    padding: 2% 0% 7% 0%;
+    padding: 4% 0% 7% 0%;
     width: 90%;
     margin: 0 auto;
 }
@@ -58,8 +58,9 @@
     margin-right: 12%;
     font-style: normal;
     font-size: 20px;
+}
+.smedias {
     cursor: pointer;
-
 }
 
 .share-li:hover{

@@ -32,11 +32,13 @@ body {
     rgba(201, 146, 21, 1) 100%
   );
   --skyBlue: #191970;
+  --lightBlue: rgb(0, 102, 204);
   --gray: rgb(113, 113, 113);
   --lightGray: rgb(235, 235, 235);
   --borderGray: rgb(220, 220, 220);
   --orange: #FFB700;
   --headerBlack: #121212;
+  --lightBlack: #353535;
 }
 a {
   text-decoration: none;

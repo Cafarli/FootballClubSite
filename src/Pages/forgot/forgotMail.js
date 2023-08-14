@@ -3,8 +3,9 @@ import pass from "../../Images/forgot/password.png";
 import { BsArrowLeft } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
-export default function ForgotMail() {
+export default function ForgotMail(props) {
   const [buttonActive, setButtonActive] = useState(false);
+  console.log(props);
   // EMAIL VALIDATION
   function isValidEmail(email) {
     return /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email);
@@ -26,10 +27,10 @@ export default function ForgotMail() {
       <div className="mailContainer">
         <p>Email</p>
         <input placeholder="Enter your email" onChange={e=>handleEmailChange(e)} />
-        <button disabled={buttonActive?true:false}><a href="./ForgotCode.html">Reset Password</a></button>
+        <button disabled={buttonActive?true:false}>Reset Password</button>
       </div>
       <Link to="/login">
-        <div className="backLog">
+        <div className="backLog" onClick={()=>props.setLine( {second: true })}>
           <p>
             <BsArrowLeft />
             Back to log in

@@ -4,6 +4,13 @@
 }
 .shopHeaderBgImg {
     width: 100%;
-    min-height: 70vh;
-    background: url("../../Images/backgroundImages/teamKits.png") no-repeat top/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shopHeaderBgImg img {
+    min-width: 100%;
+    margin: 78px auto 0 auto;
+    min-height: 100%;
+    object-fit: cover;
 }

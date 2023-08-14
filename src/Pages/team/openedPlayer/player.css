@@ -13,13 +13,21 @@
 
 .player-info {
     padding-top: 5%;
-    background: var(--yellowBg);
+    /* background: var(--yellowBg); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
 }
 .player-info .row {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
+.player-info .row,
+.player-info .col {
+    background-color: rgba(255, 255, 255, 0.6);
+} 
 
 .player-img {
     width: 100%;
@@ -39,14 +47,15 @@
 }
 
 .personal-info, .statistics, .honours, .player-history {
-    background-color: #fff6d6;
+    /* background-color: #fff6d6; */
+    background-color: #e9fbff;
     padding: 5% 10%;
     min-height: 30vh;
 }
 .statistics, .honours, .player-history {
     margin-top: 10%;
     min-height: 25vh;
-    border-radius: 5px;
+    border-radius: 15px;
     box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);
 }
 .history-table thead > tr,
@@ -56,6 +65,12 @@
 .history-table tbody tr:hover {
     background-color: unset!important;
 }
+.history-table  thead th {
+    border-color: var(--skyBlue) !important;
+}
+.history-table td {
+    border: none !important;
+}
 .personal-info ul{
     display: inline-block;
     font: 17px WorkSans;
@@ -64,17 +79,19 @@
 .personal-info ul:last-child{
     padding: 0 0 0 10%;
 }
-.statistics ul {
+.statistics ul,
+.honours ul {
     display: inline-block;
 }
-
-.honours ul{
-    display: inline-block;
+.statistics ul:first-of-type,
+.honours ul:first-of-type {
+    padding-left: 5%;
 }
 
 .honours li,
 .statistics li {
     padding-bottom: 3%;
+    line-height: 30px;
 }
 
 /* RESPONSIVNESS */

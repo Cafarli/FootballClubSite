@@ -125,7 +125,7 @@
   padding: 2% 3%;
   background-color: blue;
 }
-.mailContainer button a {
+.mailContainer button {
   color: white;
 }
 .mailContainer button:hover {

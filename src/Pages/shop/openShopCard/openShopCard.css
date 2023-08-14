@@ -50,7 +50,7 @@
 
 .product-info {
   width: 90%;
-  margin: 0 auto;
+  margin: 4% auto 0 auto;
 }
 
 .product-title {
@@ -58,7 +58,7 @@
 }
 
 .product-name {
-  font-size: 35px;
+  font-size: 28px;
   font-weight: 500;
 }
 
