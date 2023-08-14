@@ -1,5 +1,7 @@
 # FootballClubSite
-<a href="https://fcj-football-club.netlify.app/" target="_blank"  rel="noopener">Demo</a>
+
+ <a href="https://www.figma.com/file/vzvu7JmPMHbLZ38g2tGq1J/Football-Club?type=design&node-id=0%3A1&mode=design&t=jJlwzxNgRDdw6NFU-1"  target="_blank">Figma<a/>
+
  
  Loqo Cəbrayıl futbol klubuna məxsusdur, sayt nümunə məqsədlidir.
  
