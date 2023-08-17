@@ -7,39 +7,30 @@ import {
   FaInstagram,
   FaTwitter,
 } from "react-icons/fa";
-import { Row, Col } from "react-bootstrap";
-import photo from "../images/photo.jpg";
+import { Row } from "react-bootstrap";
+import newsData from "../../../Data/news.json";
+import { useParams } from "react-router";
 
 export function OpenedNewsCard() {
+  const { title } = useParams();
+  const news = newsData.news.filter(news=> news.title = title)[0];
+
   return (
     <div className="OpenedNewsCard">
       <Row>
           <div className="opened-card-image">
-            <img src={photo} alt="content"></img>
+            <img src={news.image} alt="content"></img>
           </div>
           <div className="opened-card-content">
             <p className="opened-card-date">
               <FaCalendarAlt style={{fontSize:'15px', marginRight: "1%" }} />
-              August 11, 2023
+              {news.date}
             </p>
             <p className="opened-card-title">
-              Sed mi magna, malesuada sit amet ipsum
+            {news.title}
             </p>
             <p className="opened-card-info">
-              Vivamus hendrerit, tortor sed luctus maximus, nunc urna hendrerit
-              nibh, sit amet efficitur libero lorem quis mauris. Nunc a pulvinar
-              lectus. Pellentesque aliquam justo ut rhoncus lobortis. In sed
-              venenatis massa. Sed sodales faucibus odio, eget tempus nibh
-              accumsan ut. Fusce tincidunt semper finibus. Nullam consequat non
-              leo interdum pulvinar. Suspendisse odio erat, suscipit vel aliquam
-              tristique, dapibus at neque. Aliquam lectus tellus, feugiat non
-              sodales nec, rhoncus a est. Etiam hendrerit, eros nec mollis
-              blandit, velit sem aliquet ex, id tristique metus ligula tincidunt
-              nisi. Ut porta augue at molestie feugiat. Donec quis neque
-              molestie, interdum sapien at, dictum diam. Nam aliquam diam vitae
-              purus vestibulum, sit amet rutrum tortor aliquet. Curabitur
-              rhoncus consectetur tempor. Vivamus volutpat, mauris non auctor
-              molestie, est ex auctor eros, vel egestas eros tellus non dui.
+            {news.content}
             </p>
           </div>
 
@@ -62,14 +53,19 @@ export function OpenedNewsCard() {
       </Row>
 
       <Row>
-        <div className="other-post-cards">
+        <div className="other-posts">
           <h1>
             Other <span>News</span>
           </h1>
-          <OtherPosts />
-          <OtherPosts />
-          <OtherPosts />
-          <OtherPosts />
+          <div className="other-posts-cards">
+          {
+            newsData.news.filter(n=> n.id>news.id && n.id<(news.id+4)).map((item,ind)=>{
+              return (
+                <OtherPosts props={item} />
+              );
+            })
+          }</div>
+          
         </div>
       </Row>
     </div>

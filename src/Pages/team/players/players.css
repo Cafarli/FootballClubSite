@@ -13,15 +13,13 @@ body {
   width: 100%;
 }
 .players-list,
-.coache-list {
-    width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
+.coach-list {
+  width: 100%;
+  padding: 0;
+  /* display: inline-block; */
 }
 
-.coache-head {
+.coach-head {
   padding-bottom: 5%;
 }
 

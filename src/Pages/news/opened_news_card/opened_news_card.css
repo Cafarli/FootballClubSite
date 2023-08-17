@@ -68,13 +68,25 @@
 }
 
 /* OTHER POST CARDS */
-
+.other-posts {
+    width: 100%;
+    padding: 10% 3% 5% 3%;
+}
+.other-posts > h1 {
+    padding-left: 2%;
+    text-align: left !important;
+}
 .other-post-cards {
     width: 100%;
-    padding: 10% 0% 5% 0%;
+    display: flex;
+    justify-content: space-around;
 }
 
-.other-post-cards > h1 {
-    text-align: left !important;
-    padding-left: 2%;
+@media screen and (max-width: 576px) {
+    .other-posts {
+        padding-top: 15%;
+    }
+    .other-posts > h1 {
+        margin-bottom: 6%;
+    }
 }

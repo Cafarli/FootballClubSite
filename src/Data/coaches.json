@@ -1,0 +1,7 @@
+{"players" : [
+    {"photo" : "../players/images/player.png",  "name":"Coach Coach", "position":"Coach", "nationality":"Azerbaijan", "birthdate":"01.01.1984", "weight":"60 kg", "height":"1.85 m"},
+    {"photo" : "../players/images/player.png", "name":"Coach Coach", "position":"Assistant coach", "nationality":"Azerbaijan", "birthdate":"01.01.1984", "weight":"60 kg", "height":"1.85 m"},
+    {"photo" : "../players/images/player.png", "name":"Coach Coach", "position":"Assistant coach", "nationality":"Azerbaijan", "birthdate":"01.01.1984", "weight":"60 kg", "height":"1.85 m"},
+    {"photo" : "../players/images/player.png", "name":"Coach Coach", "position":"Fitness coach", "nationality":"Azerbaijan", "birthdate":"01.01.1984", "weight":"60 kg", "height":"1.85 m"},
+    {"photo" : "../players/images/player.png", "name":"Coach Coach", "position":"Recovery specialist", "nationality":"Azerbaijan", "birthdate":"01.01.1984", "weight":"60 kg", "height":"1.85 m"}
+] }

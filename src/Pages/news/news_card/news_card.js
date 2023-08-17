@@ -4,6 +4,7 @@ import { AiOutlineRight } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 export function NewsCard(props) {
+  
   return (
     <div className="NewsCard" style={{ width: props.width }}>
       <div className="card-image">
@@ -11,7 +12,7 @@ export function NewsCard(props) {
       </div>
       <div className="card-content">
         <p className="card-date">{props.data.date}</p>
-        <Link to={`newsCardTitle`}>
+        <Link to={`${props.data.title}`}>
           <p className="card-title" title={props.data.title}>
             {props.data.title}
           </p>
@@ -19,7 +20,7 @@ export function NewsCard(props) {
         <p className="card-info">{props.data.content}</p>
       </div>
       <div className="card-more">
-        <Link style={{ display: "flex", width: "100%" }} to={`newsCardTitle`}>
+        <Link style={{ display: "flex", width: "100%" }} to={`${props.data.title}`}>
           <div className="card-read-more-text">READ MORE</div>
           <div className="card-read-more-arrow">
             {" "}

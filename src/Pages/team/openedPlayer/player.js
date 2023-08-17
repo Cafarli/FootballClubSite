@@ -2,13 +2,24 @@ import React from "react";
 import Table from "react-bootstrap/Table";
 import "./player.css";
 import { Container, Col, Row } from "react-bootstrap";
+import playersdata from "../../../Data/players.json";
+import historyData from "../../../Data/playersCareer.json";
 import gk1 from "../players/images/player.png";
 import bg from "../../../Images/backgroundImages/stadium.png";
+import { useParams } from "react-router";
 
 export function Player() {
+  const { playerName } = useParams();
+  const player = playersdata.players.filter((p) => p.name === playerName)[0];
+  const career = historyData.players.filter((p) => p.fid === player.fid)[0];
+
+  career.clubs.map((c, ind) => {
+    return console.log(c[0]);
+  });
+
   return (
     <Container className="Player">
-      <div className="player-info" style={{backgroundImage:`url('${bg}')`}} >
+      <div className="player-info" style={{ backgroundImage: `url('${bg}')` }}>
         <Row style={{ paddingBottom: "7%", marginBottom: "4%" }}>
           <Col lg={5} md={5}>
             <div className="player-img">
@@ -18,7 +29,7 @@ export function Player() {
 
           <Col lg={7} md={7}>
             <div className="personal-info">
-              <h3>Player Player</h3>
+              <h3>{player.name}</h3>
               <ul>
                 <li>
                   <p>Nationality:</p>
@@ -39,19 +50,19 @@ export function Player() {
 
               <ul>
                 <li>
-                  <p>Azerbaijan</p>
+                  <p>{player.nationality}</p>
                 </li>
                 <li>
-                  <p>01.01.1994</p>
+                  <p>{player.birthdate}</p>
                 </li>
                 <li>
-                  <p>1.92 m</p>
+                  <p>{player.height}</p>
                 </li>
                 <li>
-                  <p>65 kg</p>
+                  <p>{player.weight}</p>
                 </li>
                 <li>
-                  <p>Attacker</p>
+                  <p>{player.position}</p>
                 </li>
               </ul>
             </div>
@@ -71,10 +82,15 @@ export function Player() {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>Jabrayil FC</td>
-                  <td> 2020-</td>
-                </tr>
+                {career &&
+                  career.clubs.map((c, ind) => {
+                    return (
+                      <tr key={ind}>
+                        <td>{c[0]}</td>
+                        <td> {c[1]}</td>
+                      </tr>
+                    );
+                  })}
               </tbody>
             </Table>
           </div>
@@ -87,20 +103,16 @@ export function Player() {
               <li>Games</li>
               <li>Goals</li>
               <li>Passes</li>
-              <li>Minutes</li>
             </ul>
             <ul>
               <li>
-                <span>0</span>
+                <span>{career.games}</span>
               </li>
               <li>
-                <span>0</span>
+                <span>{career.goals}</span>
               </li>
               <li>
-                <span>0</span>
-              </li>
-              <li>
-                <span>0</span>
+                <span>{career.passes}</span>
               </li>
             </ul>
           </div>
@@ -110,13 +122,25 @@ export function Player() {
           <div className="honours">
             <h3>Honours</h3>
             <ul>
-              <li>Premier league</li>
+            {!!career &&
+                career.honours.map((h, ind) => {
+                  return (
+                    <li>
+                      <span>{h[0]}</span>
+                    </li>
+                  );
+                })}
             </ul>
 
             <ul>
-              <li>
-                <span>3</span>
-              </li>
+              {!!career &&
+                career.honours.map((h, ind) => {
+                  return (
+                    <li>
+                      <span>{h[1]}</span>
+                    </li>
+                  );
+                })}
             </ul>
           </div>
         </Col>

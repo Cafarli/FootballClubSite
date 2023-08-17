@@ -1,13 +1,14 @@
 .ply {
-    border: 1px solid black;
+    border: 1px solid var(--borderGray);
     border-radius: 3px;
-    display: flex;
-    flex: 1 1 280px;
-    flex-grow: 0;
-    /* width: 20%; */
-    margin: 0% 1% 3% 1%;
-    flex-direction: column;
+    display: inline-block;
+    margin: 0% 0px 3% 0%;
+    padding: 0;
+    width: 90%;
     transition: all 1s;
+}
+.player-view {
+    width: 100%;
 }
 /* HOVER */
 .ply:hover .bio {
@@ -35,7 +36,7 @@
     width: 100%;
     padding: 5% 0;
     vertical-align: middle;
-    object-fit: fit;
+    object-fit: cover;
 }
 
 .ply-img {
@@ -52,10 +53,11 @@
      rgb(255,255,255, 0.000001) 50%,
       #363533 50%, #363533 100%);
     display: flex;
-    padding: 5%;
-    width: 30%;
-    height: 13vh;
+    padding: 5% 0 5% 7%;
+    width: 40%;
+    height: 17vh;
     position: absolute;
+    font-size: 24px;
 }
 
 .ply-info {
@@ -66,8 +68,7 @@
 .ply-name {
     color: #727272;
 }
-
-.ply-name:hover {
+.ply:hover .ply-name {
     color: #ffc800;
 }
 
@@ -75,6 +76,7 @@
     width: 77%;
     padding-left: 6%;
     padding-top: 5%;
+    font: 22px "Assitant";
 }
 
 .ply-info p {

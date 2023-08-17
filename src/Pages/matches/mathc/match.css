@@ -7,7 +7,6 @@
   background-repeat: no-repeat;
 }
 
-
 /* NEXT MATCH */
 .mNextMatch {
   padding: 10% 0% 3% 3%;
@@ -25,11 +24,10 @@
 }
 .mnm-matchDetails {
   width: 80%;
-  z-index: 2;
   margin: 5% auto;
-  padding: 2% 2% 3% 2%; 
+  padding: 2% 2% 3% 2%;
   text-align: center;
-  font-family: "Assistant", "Oswald", 'Times New Roman', Times, serif;
+  font-family: "Assistant", "Oswald", "Times New Roman", Times, serif;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
 }
@@ -52,7 +50,8 @@
 .mnm-date {
   font-size: 22px;
 }
-.mnm-league, .mnm-location {
+.mnm-league,
+.mnm-location {
   font-size: 17px;
   margin: 0 0 1% 0;
 }
@@ -61,7 +60,8 @@
   width: 80%;
   margin: 7% auto 3% auto;
 }
-.mf-leagues, .mf-month {
+.mf-leagues,
+.mf-month {
   width: 50%;
 }
 .mFilter select {
@@ -151,6 +151,7 @@
 .icon {
   color: #ffd027;
 }
+
 .mTitle,
 .mMore {
   display: block;
@@ -183,6 +184,18 @@
   .mFilter select {
     font-size: 16px;
   }
+  .mnm-teams img {
+    width: 18%;
+  }
+  .mnm-teams p {
+    font-size: 22px;
+  }
+  .mnm-date {
+    font-size: 20px;
+  }
+  .mnm-league, .mnm-location {
+    font-size: 15px;
+  }
 }
 @media screen and (max-width: 600px) {
   .score img {
@@ -190,5 +203,42 @@
   }
   .mNextMatch {
     padding-top: 22%;
+  }
+  .mTitle {
+    font-size: 15px;
+  } .mg-title {
+    font-size: 18px;
+  }
+  .goals {
+    font-size: 14px;
+  }
+  .mFilter {
+    width: 90%;
+  }
+  .games {
+    width: 90%;
+  }
+  .mnm-matchDetails {
+    width: 90%;
+  }
+  .mnm-teams img {
+    width: 16%;
+  }
+  .mnm-teams p {
+    font-size: 18px;
+  }
+  .mnm-date {
+    font-size: 16px;
+  }
+  .mnm-league, .mnm-location {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .score img {
+    width: 18%;
+  } 
+  .mTitle {
+    font-size: 16px;
   }
 }

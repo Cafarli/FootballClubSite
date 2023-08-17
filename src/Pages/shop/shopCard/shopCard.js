@@ -5,7 +5,7 @@ import "./shopCard.css";
 export function ShopCard(props) {
   return (
     <div className="ShopCard">
-      <Link to={`/shop/kit`}>
+      <Link to={`/shop/${props.props.id}`}>
         <div className="shop-card-img-container">
           <div className="shop-card-image">
             <div className="firstImg">

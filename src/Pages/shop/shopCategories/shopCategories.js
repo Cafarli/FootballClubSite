@@ -16,7 +16,6 @@ export function ShopCategories() {
     <div className="shop-categories">
       <ul className="sc-allCtg">
         <li onClick={(e) => handleSelectedCtgr(e)} className="selectedCtgr">KITS</li>
-        <li onClick={(e) => handleSelectedCtgr(e)}>BY PLAYER</li>
         <li onClick={(e) => handleSelectedCtgr(e)}>FASHION</li>
         <li onClick={(e) => handleSelectedCtgr(e)}>TRAINING</li>
         <li onClick={(e) => handleSelectedCtgr(e)}>ACCESSORIES</li>

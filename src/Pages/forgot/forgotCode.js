@@ -1,5 +1,4 @@
 import React from "react";
-import pass from "../../Images/forgot/password.png";
 import { BsArrowLeft } from "react-icons/bs";
 import { IoMailOpenOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";

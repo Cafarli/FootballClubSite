@@ -8,7 +8,7 @@ export default function MatchLine(props) {
 
   return (
     <tr className="match" key={props.index}>
-      <tr className="mtitle">
+      <tr className="mTitle">
         <td className="date">
           <span className="day"> {props.match.date.split(" ")[0]}</span>{" "}
           {props.match.date.split(" ")[1]}

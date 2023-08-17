@@ -16,10 +16,12 @@ import { Signup } from "./Pages/signup/signup";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Footer } from "./Pages/headerFooter/footer/footer";
 import ForgotPage from "./Pages/forgot/ForgotPage";
+import { SmoothScroll } from "./Smooth";
 
 function Layout() {
   return (
     <>
+      <SmoothScroll />
       <Header />
       <Outlet />
       <Footer />
@@ -60,11 +62,11 @@ const router = createBrowserRouter([
         element: <News />,
       },
       {
-        path: "news/newsCardTitle",
+        path: "news/:title",
         element: <OpenedNewsCard />,
       },
       {
-        path: "/shop/kit",
+        path: "/shop/:kId",
         element: <OpenedShopCard />,
       },
       {
@@ -72,7 +74,7 @@ const router = createBrowserRouter([
         element: <Contact />,
       },
       {
-        path: "/squad/player",
+        path: "/squad/:playerName",
         element: <Player />,
       },
     ],
@@ -91,14 +93,6 @@ const router = createBrowserRouter([
   },
 ]);
 function App() {
-  setTimeout(() => {
-    window.scroll({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
-  }, 0);
-
   return <RouterProvider router={router} />;
 }
 

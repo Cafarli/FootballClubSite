@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./openShopCard.css";
+import { useParams } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import data from "../../../Data/shopClothing.json";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -14,6 +15,9 @@ import {
 import { ShopHeader } from "../shopHeader";
 
 export function OpenedShopCard() {
+  const { kId } = useParams();
+  const kit = data["kits"].filter((kit) => kit.id === kId)[0];
+
   const [counter, setCounter] = useState(1);
   const incrementCounter = () => setCounter(counter + 1);
   let decrementCounter = () => setCounter(counter - 1);
@@ -60,9 +64,9 @@ export function OpenedShopCard() {
   return (
     <Container className="openShopcard">
       <ShopHeader />
-      <Row>
+      <Row className="opc-page">
         <Col id="photos" md={7} style={{ paddingLeft: "2%" }}>
-          <section className="section one">
+          <section className="sect one">
             <Swiper
               direction={windowSize[0] > 700 ? "vertical" : "horizontal"}
               loop={true}
@@ -85,73 +89,50 @@ export function OpenedShopCard() {
               ]}
               className="productMiniPhotos"
             >
-              {data.kits[0].photo
-                .map((i, ind) => {
-                  return (
-                    <SwiperSlide key={ind}>
-                      <div className="productPhotos">
-                        <img
-                          onClick={(e) => handleImg(e)}
-                          src={i}
-                          alt="product"
-                        ></img>
-                      </div>
-                    </SwiperSlide>
-                  );
-                })}
-            </Swiper>
-          </section>
-          <section className="section two">
-            {data.kits
-              .filter((item, index) => index < 1)
-              .map((i, ind) => {
+              {kit.photo.map((i, ind) => {
                 return (
-                  <div className="productPhoto" key={ind}>
-                    <img
-                      className="selectedPhoto"
-                      src={i.photo[0]}
-                      alt="product"
-                    ></img>
-                  </div>
+                  <SwiperSlide key={ind}>
+                    <div className="productPhotos">
+                      <img
+                        onClick={(e) => handleImg(e)}
+                        src={i}
+                        alt="product"
+                      ></img>
+                    </div>
+                  </SwiperSlide>
                 );
               })}
+            </Swiper>
+          </section>
+          <section className="sect two">
+            <div className="productPhoto">
+              <img
+                className="selectedPhoto"
+                src={kit.photo[0]}
+                alt="product"
+              ></img>
+            </div>
           </section>
         </Col>
         <Col sm={12} md={5}>
           <div className="product-info">
             <div className="product-title">
-              <p className="product-name">
-                Mens Home Long Sleeve Shirt 22/23 White
-              </p>
-              <p className="product-price">100.00$</p>
+              <p className="product-name">{kit.title}</p>
+              <p className="product-price">{kit.price}$</p>
             </div>
             <div className="product-size">
               <p>SELECT SIZE</p>
               <div className="sizes">
-                <div
-                  className="selectable selected"
-                  onClick={(e) => handleSizes(e)}
-                >
-                  XS
-                </div>
-                <div className="selectable" onClick={(e) => handleSizes(e)}>
-                  S
-                </div>
-                <div className="selectable" onClick={(e) => handleSizes(e)}>
-                  M
-                </div>
-                <div className="selectable" onClick={(e) => handleSizes(e)}>
-                  L
-                </div>
-                <div className="selectable" onClick={(e) => handleSizes(e)}>
-                  XL
-                </div>
-                <div className="selectable" onClick={(e) => handleSizes(e)}>
-                  2XL
-                </div>
-                <div className="selectable" onClick={(e) => handleSizes(e)}>
-                  3XL
-                </div>
+                {kit.sizes.map((size, ind) => {
+                  return (
+                    <div
+                      className="selectable"
+                      onClick={(e) => handleSizes(e)}
+                    >
+                      {size}
+                    </div>
+                  );
+                })}
               </div>
             </div>
             <div className="quantity">

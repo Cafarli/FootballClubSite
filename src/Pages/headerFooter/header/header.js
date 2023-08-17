@@ -5,7 +5,7 @@ import { Container } from "react-bootstrap";
 import Navbar from "react-bootstrap/Navbar";
 import { Nav, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { IoLanguageOutline, IoSettingsSharp } from "react-icons/io5";
+import { IoLanguageOutline } from "react-icons/io5";
 import { FiMenu } from "react-icons/fi";
 import { MdOutlineClose } from "react-icons/md";
 import {
@@ -177,7 +177,8 @@ export function Header() {
           <Nav.Item>
             <Link to="/login">LOGIN</Link>
           </Nav.Item>
-          <NavDropdown
+          {/* AFTER LOGINED */}
+          {/* <NavDropdown
             title={<IoSettingsSharp/>}
             className="nav-dropdown nav-item setting"
             show={dropdowns.settings}
@@ -199,7 +200,7 @@ export function Header() {
               </Link>
             </NavDropdown.Item>
             <NavDropdown.Item className="item"></NavDropdown.Item>
-          </NavDropdown>
+          </NavDropdown> */}
           <NavDropdown
             title={<IoLanguageOutline />}
             className="nav-dropdown nav-item lang"

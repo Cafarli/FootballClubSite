@@ -1,14 +1,14 @@
 {"players" : [
-    {"photo" : "../players/images/player.png", "number":1, "firstname":"Player", "surname": "Player", "position":"Goalkeeper"},
-    {"photo" : "../players/images/player.png", "number":13, "firstname":"Player", "surname": "Player", "position":"Goalkeeper"},
-    {"photo" : "../players/images/player.png", "number":23, "firstname":"Player", "surname": "Player", "position":"Goalkeeper"},
-    {"photo" : "../players/images/player.png", "number":2, "firstname":"Player", "surname":"Player", "position":"Defender"},
-    {"photo" : "../players/images/player.png", "number":4, "firstname":"Player", "surname":"Player", "position":"Defender"},
-    {"photo" : "../players/images/player.png", "number":5, "firstname":"Player", "surname":"Player", "position":"Defender"},
-    {"photo" : "../players/images/player.png", "number":8, "firstname":"Player", "surname":"Player", "position":"Midfielder"},
-    {"photo" : "../players/images/player.png", "number":7, "firstname":"Player", "surname":"Player", "position":"Midfielder"},
-    {"photo" : "../players/images/player.png", "number":12, "firstname": "Player", "surname":"Player", "position":"Midfielder"},
-    {"photo" : "../players/images/player.png", "number":9, "firstname":"Player", "surname":"Player", "position":"Attacker"},
-    {"photo" : "../players/images/player.png", "number":10, "firstname":"Player", "surname":"Player", "position":"Attacker"},
-    {"photo" : "../players/images/player.png", "number":11, "firstname":"Player", "surname":"Player", "position":"Attacker"}
+    {"fid":"1","photo" : "../players/images/player.png", "number":1, "name":"Player Player", "position":"Goalkeeper", "nationality":"Azerbaijan", "birthdate":"01.01.1984", "weight":"60 kg", "height":"1.85 m"},
+    {"fid":"2","photo" : "../players/images/player.png", "number":13, "name":"Player Player", "position":"Goalkeeper", "nationality":"Azerbaijan", "birthdate":"01.01.1984", "weight":"60 kg", "height":"1.85 m"},
+    {"fid":"3","photo" : "../players/images/player.png", "number":23, "name":"Player Player", "position":"Goalkeeper", "nationality":"Azerbaijan", "birthdate":"01.01.1984", "weight":"60 kg", "height":"1.85 m"},
+    {"fid":"4","photo" : "../players/images/player.png", "number":2, "name":"Player Player", "position":"Defender", "nationality":"Azerbaijan", "birthdate":"01.01.1984", "weight":"60 kg", "height":"1.85 m"},
+    {"fid":"5","photo" : "../players/images/player.png", "number":4, "name":"Player Player", "position":"Defender", "nationality":"Azerbaijan", "birthdate":"01.01.1984", "weight":"60 kg", "height":"1.85 m"},
+    {"fid":"6","photo" : "../players/images/player.png", "number":5, "name":"Player Player", "position":"Defender", "nationality":"Azerbaijan", "birthdate":"01.01.1984", "weight":"60 kg", "height":"1.85 m"},
+    {"fid":"7","photo" : "../players/images/player.png", "number":8, "name":"Player Player", "position":"Midfielder", "nationality":"Azerbaijan", "birthdate":"01.01.1984", "weight":"60 kg", "height":"1.85 m"},
+    {"fid":"8","photo" : "../players/images/player.png", "number":7, "name":"Player Player", "position":"Midfielder", "nationality":"Azerbaijan", "birthdate":"01.01.1984", "weight":"60 kg", "height":"1.85 m"},
+    {"fid":"9","photo" : "../players/images/player.png", "number":12, "name": "Player Player", "position":"Midfielder", "nationality":"Azerbaijan", "birthdate":"01.01.1984", "weight":"60 kg", "height":"1.85 m"},
+    {"fid":"10","photo" : "../players/images/player.png", "number":9, "name":"Player Player", "position":"Attacker", "nationality":"Azerbaijan", "birthdate":"01.01.1984", "weight":"60 kg", "height":"1.85 m"},
+    {"fid":"11","photo" : "../players/images/player.png", "number":10, "name":"Player Player", "position":"Attacker", "nationality":"Azerbaijan", "birthdate":"01.01.1984", "weight":"60 kg", "height":"1.85 m"},
+    {"fid":"12","photo" : "../players/images/player.png", "number":11, "name":"Player Player", "position":"Attacker", "nationality":"Azerbaijan", "birthdate":"01.01.1984", "weight":"60 kg", "height":"1.85 m"}
 ] }

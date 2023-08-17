@@ -1,6 +1,6 @@
 .OtherPosts {
-    padding: 3% 1.5% 0% 1.5%;
-    width: 25%;
+    padding: 3% 1% 0% 1%;
+    /* width: 24%; */
     display: inline-block;
 }
 
@@ -52,4 +52,11 @@
 .other-posts-title:hover {
     color: #ffc800;
     cursor: pointer;
+}
+@media screen and (max-width: 576px) {
+    .OtherPosts {
+        width: 75%;
+        margin: 0 auto 5% auto;
+        display: block;
+    }
 }
