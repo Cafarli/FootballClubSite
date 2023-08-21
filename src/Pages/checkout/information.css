@@ -1,0 +1,63 @@
+.information {
+  width: 100%;
+  font-family: "Roboto";
+}
+.infoPart {
+  color: black;
+  width: 100%;
+  margin: 0 0 4% 0;
+}
+/* inputs */
+.infoPart input {
+  padding: 5% 2% 1% 2%;
+  border-radius: 5px;
+  border: 1px solid var(--borderColor);
+}
+
+/* regions */
+.i-region select {
+  width: 100%;
+  font-size: 14px;
+  padding: 5% 3% 1.5% 2%;
+  border-color: var(--borderColor);
+  border-radius: 5px;
+}
+.spLabel {
+  position: absolute;
+  padding: 0.5% 0 0 1.2%;
+}
+.infoPart span {
+  font-size: 12px;
+  color: var(--grayMiddle);
+  font-weight: lighter;
+}
+/* name and surname */
+.nameInput {
+  margin: 0 4% 0 0;
+}
+.nameInput,
+.surnameInput {
+  display: inline-block;
+  width: 48%;
+}
+/* address and apartment and postal*/
+.addressInput,
+.apartmentInput,
+.postalInput {
+  width: 100%;
+}
+/* save info */
+.saveProcess {
+  display: flex;
+  align-items: center;
+  color: black;
+}
+.saveProcess input {
+  margin: 0 2% 0 0;
+  height: 18px;
+  width: 18px;
+}
+.saveProcess label {
+  font-weight: 400;
+  margin: 0;
+}

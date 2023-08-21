@@ -1,0 +1,73 @@
+.checkout {
+    width: 100%;
+    display: flex;
+}
+.checkoutForm {
+    width: 60%;
+    background-color: white;
+    padding: 3% 5%;
+    border-right: 1px solid var(--borderColor);
+}
+.ch-paths p {
+    color: var(--grayMiddle);
+    display: flex;
+    align-items: center;
+    font-family: "Roboto";
+    font-size: 14px;
+}
+.ch-paths p a {
+    color: var(--grayMiddle);
+}
+.ch-paths span {
+    cursor: pointer;
+}
+.ch-paths p svg {
+    margin: 0 2%;
+}
+.ch-sections {
+    margin: 10% 0 0 0;
+}
+.ch-title {
+    color: black;
+    font-family: "Dm Sans";
+    font-size: 17px;
+    font-weight: 500;
+    margin:  0 0 5% 0;
+}
+/* shipping buttons */
+.chckBtns {
+    width: 100%;
+    margin: 10% 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.chckBtns a {
+    width: 45%;
+}
+.cb-returnCart {
+    color: black;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 16px;
+}
+.cb-returnCart svg {
+    margin-right: 10%;
+}
+.cb-contShip {
+    background-color: var(--bg-h);
+    color: white;
+    width: 35%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 3% 0;
+    font-size: 14px;
+}
+.shopDetails {
+    background-color: #f0fff0;
+    width: 40%;
+}

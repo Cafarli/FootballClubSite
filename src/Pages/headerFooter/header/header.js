@@ -12,6 +12,7 @@ import {
   MdOutlineKeyboardArrowDown,
   MdOutlineKeyboardArrowUp,
 } from "react-icons/md";
+import { BiShoppingBag } from "react-icons/bi";
 
 export function Header() {
   const [dropdowns, setDrops] = useState({
@@ -178,6 +179,9 @@ export function Header() {
             <Link to="/login">LOGIN</Link>
           </Nav.Item>
           {/* AFTER LOGINED */}
+          <Nav.Item>
+            <Link to="cart"><BiShoppingBag/></Link>
+          </Nav.Item>
           {/* <NavDropdown
             title={<IoSettingsSharp/>}
             className="nav-dropdown nav-item setting"

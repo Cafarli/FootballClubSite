@@ -15,8 +15,9 @@ import { Login } from "./Pages/login/login";
 import { Signup } from "./Pages/signup/signup";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Footer } from "./Pages/headerFooter/footer/footer";
-import ForgotPage from "./Pages/forgot/ForgotPage";
 import { SmoothScroll } from "./Smooth";
+import Forgot from "./Pages/forgot/Forgot";
+import { Cart } from "./Pages/cartPage/cart";
 
 function Layout() {
   return (
@@ -77,6 +78,10 @@ const router = createBrowserRouter([
         path: "/squad/:playerName",
         element: <Player />,
       },
+      {
+        path: "/cart",
+        element: <Cart/>
+      }
     ],
   },
   {
@@ -89,8 +94,9 @@ const router = createBrowserRouter([
   },
   {
     path: "/forgot-password",
-    element: <ForgotPage />,
+    element: <Forgot />,
   },
+  
 ]);
 function App() {
   return <RouterProvider router={router} />;

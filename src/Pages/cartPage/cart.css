@@ -1,0 +1,97 @@
+.cartPage {
+    width: 100%;
+    padding: 130px 4% 0 4%;
+    margin: 0 auto 5% auto;
+}
+
+.cartDetails {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart {
+    width: 72%;
+    color: black;
+    background-color: white;
+    border-collapse:collapse
+}
+.cart tr {
+    border-top: 1px solid var(--borderColor);
+    margin-bottom: 3%;
+}
+
+.cart tr td{
+    border-top: none !important;
+}
+
+
+.check {
+    background-color: white;
+    color: black;
+    width: 28%;
+    height: min-content;
+    padding: 2%;
+    font-size: 16px;
+    border: 1px solid var(--borderColor);
+}
+
+.check div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.cartTotal p:last-child,
+.cartTax p:last-child {
+    text-align: r;
+}
+.proceed {
+    width: 100%;
+    border-top: 1px solid var(--borderColor);
+}
+.proceed a {
+    width: 100%;
+}
+.proceed a button {
+    color: white;
+    background-color: var(--bg-h);
+    width: 70%;
+    margin: 10% auto 0 auto;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 5% 0;
+    border-radius: 7px;
+    transition: background-color 1s ease-in-out;
+}
+.proceed button:hover {
+    color: white;
+    background-color: var(--green);
+}
+
+.contShop {
+    width: 100%;
+}
+
+.contShop button {
+    width: 25%;
+    font-size: 16px;
+    background-color: var(--green);
+    color: white;
+    border-radius: 5px;
+    padding: 1% 0;
+    transition: background-color 1s ease-in-out;
+}
+
+.contShop button:hover {
+    color: white;
+    background-color: var(--bg-h);
+}
+.backArrow {
+    display: none;
+}
+.contShop button:hover .backArrow {
+    display: inline;
+}

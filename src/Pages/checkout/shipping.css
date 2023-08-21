@@ -1,0 +1,26 @@
+.shipping {
+  width: 100%;
+  font-family: Roboto;
+}
+.shippingMethods {
+  width: 100%;
+}
+.shipMthds {
+  width: 100%;
+  padding: 3%;
+  margin: 0 0 3% 0;
+  font-size: 14px;
+  background-color: var(--grayLighter);
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--darkGray);
+  border-radius: 10px;
+}
+.shipMthds input {
+    margin: 0 3% 0 0;
+}
+.shipMthds label {
+    width: 100%;
+}

@@ -13,16 +13,19 @@ import {
   Mousewheel,
 } from "swiper";
 import { ShopHeader } from "../shopHeader";
+import { useDispatch } from "react-redux";
+import { addCartAction } from "../../../Redux/action/actions";
 
 export function OpenedShopCard() {
+  const dispatch = useDispatch();
   const { kId } = useParams();
   const kit = data["kits"].filter((kit) => kit.id === kId)[0];
 
-  const [counter, setCounter] = useState(1);
-  const incrementCounter = () => setCounter(counter + 1);
-  let decrementCounter = () => setCounter(counter - 1);
-  if (counter === 0) {
-    setCounter(1);
+  const [qty, setQty] = useState(1);
+  const incrementQty = () => setQty(qty + 1);
+  let decrementQty = () => setQty(qty - 1);
+  if (qty === 0) {
+    setQty(1);
   }
 
   // Change sizes
@@ -138,17 +141,17 @@ export function OpenedShopCard() {
             <div className="quantity">
               <p>QUANTITY</p>
               <div className="quantity-num">
-                <button className="minus" onClick={decrementCounter}>
+                <button className="minus" onClick={decrementQty}>
                   -
                 </button>
-                <input className="value" name="value_input" value={counter} />
-                <button className="plus" onClick={incrementCounter}>
+                <input className="value" name="value_input" value={qty} />
+                <button className="plus" onClick={incrementQty}>
                   +
                 </button>
               </div>
             </div>
             <div className="add-cart">
-              <button className="addToCart">ADD TO CART</button>
+              <button onClick={() => dispatch(addCartAction(kit.id, kit.title, kit.price, kit.photo, qty))} className="addToCart">ADD TO CART</button>
             </div>
           </div>
         </Col>

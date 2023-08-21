@@ -1,0 +1,27 @@
+.payment {
+  width: 100%;
+  font-family: Roboto;
+}
+.paymentMethods {
+  width: 100%;
+}
+.payMthds {
+  width: 100%;
+  padding: 3%;
+  margin: 0 0 3% 0;
+  font-size: 14px;
+  background-color: var(--grayLighter);
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--darkGray);
+  border-radius: 10px;
+}
+.payMthds input {
+  margin: 0 3% 0 0;
+  /* width: 10%; */
+}
+.payMthds label {
+    width: 100%;
+}
