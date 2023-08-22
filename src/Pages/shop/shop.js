@@ -4,7 +4,8 @@ import info from "../../Data/shopClothing.json";
 import { ShopHeader } from "./shopHeader";
 import { Col, Row } from "react-bootstrap";
 import { ShopCard } from "./shopCard/shopCard";
-import { Paginate } from "../../Components/pagination/pagination"
+import { Paginate } from "../../Components/pagination/pagination";
+import { useSelector } from "react-redux";
 
 export function Shop() {
   const data = info;
@@ -34,6 +35,10 @@ export function Shop() {
       setCurrentPage(currentPage + 1);
     }
   };
+
+  // const cartItems = useSelector((state) => state.all.products);
+  // console.log(cartItems);
+
   return (
     <div className="Shop">
       <ShopHeader />
@@ -47,7 +52,6 @@ export function Shop() {
               </Col>
             );
           })}
-
       </Row>
       <Paginate
         postsPerPage={postsPerPage}

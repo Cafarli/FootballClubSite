@@ -37,6 +37,8 @@ body {
   --lightGray: rgb(235, 235, 235);
   --borderGray: rgb(220, 220, 220);
   --orange: #FFB700;
+  --lightOrange: rgb(255, 249, 238);
+  --brightBlue: #3097F3;
   --headerBlack: #121212;
   --lightBlack: #353535;
 }

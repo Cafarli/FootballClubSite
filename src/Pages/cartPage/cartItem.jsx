@@ -1,5 +1,5 @@
 import "./cartItem.css";
-import { IoMdTrash } from "react-icons/io";
+import { IoIosClose } from "react-icons/io";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md"
 import { useDispatch } from "react-redux";
 import { increaseQtyAction, decreaseQtyAction, removeCartAction } from "../../Redux/action/actions";
@@ -13,7 +13,7 @@ export function CartItem(props) {
         <img alt="product" src={props.img[0]}></img>
       </td>
       <td className="pName">{props.title}</td>
-      <td className="pPri">{props.price}</td>
+      <td className="pPri">{props.price} &#8380;</td>
       <td className="pBtn">
         <div className="incDec">
           <p className="incDec-value">{props.qty}</p>
@@ -23,9 +23,9 @@ export function CartItem(props) {
           </div>
         </div>
       </td>
-      <td className="pSTotal">{parseFloat(props.price*props.qty).toFixed(2)}</td>
-      <td className="pTrash">
-        <IoMdTrash onClick={() => dispatch(removeCartAction(props.id))} />
+      <td className="pSTotal">{parseFloat(props.price*props.qty).toFixed(2)} &#8380;</td>
+      <td className="pRemove">
+        <IoIosClose onClick={() => dispatch(removeCartAction(props.id))} />
       </td>
     </tr>
   );

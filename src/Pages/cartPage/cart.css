@@ -11,29 +11,21 @@
 }
 
 .cart {
-    width: 72%;
+    width: 70%;
     color: black;
     background-color: white;
     border-collapse:collapse
 }
-.cart tr {
-    border-top: 1px solid var(--borderColor);
-    margin-bottom: 3%;
-}
-
-.cart tr td{
-    border-top: none !important;
-}
-
 
 .check {
-    background-color: white;
+    background-color: rgba( 255, 183, 0, 0.3);
     color: black;
-    width: 28%;
+    width: 27%;
     height: min-content;
     padding: 2%;
-    font-size: 16px;
-    border: 1px solid var(--borderColor);
+    font: 16px Assistant;
+    border: none;
+    border-radius: 5px;
 }
 
 .check div {
@@ -42,20 +34,16 @@
     width: 100%;
 }
 
-.cartTotal p:last-child,
-.cartTax p:last-child {
-    text-align: r;
-}
 .proceed {
     width: 100%;
-    border-top: 1px solid var(--borderColor);
+    border-top: 1px solid black;
 }
 .proceed a {
     width: 100%;
 }
 .proceed a button {
     color: white;
-    background-color: var(--bg-h);
+    background-color: var(--headerBlack);
     width: 70%;
     margin: 10% auto 0 auto;
     display: flex;
@@ -64,34 +52,42 @@
     justify-content: center;
     padding: 5% 0;
     border-radius: 7px;
-    transition: background-color 1s ease-in-out;
+    border: none;
+    transition: background-color 0.6s ease-in-out;
 }
 .proceed button:hover {
     color: white;
-    background-color: var(--green);
+    background-color: var(--orange);
 }
 
 .contShop {
     width: 100%;
-}
 
+}
 .contShop button {
     width: 25%;
     font-size: 16px;
-    background-color: var(--green);
     color: white;
     border-radius: 5px;
+    border: none;
     padding: 1% 0;
-    transition: background-color 1s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
+    background-color: var(--lightBlue);
 }
 
 .contShop button:hover {
     color: white;
-    background-color: var(--bg-h);
+    background-color: var(--headerBlack);
 }
 .backArrow {
     display: none;
 }
 .contShop button:hover .backArrow {
     display: inline;
+}
+/* MESSAGE TO CLIENT */
+.messageToClient {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 50px 0;
 }

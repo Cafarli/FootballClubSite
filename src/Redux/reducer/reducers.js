@@ -34,13 +34,6 @@ export function ShopReducers(state = initialState, action) {
           ...state.products.filter((item) => item.pId !== action.products.pId),
         ],
       };
-    case ACTION_TYPES.REMOVE_ALL_CART:
-      return {
-        ...state,
-        products: [
-          ...state.products.filter((item) => item.pId === action.products.pId),
-        ],
-      };
     case ACTION_TYPES.INCREASE_QTY:
       return {
         ...state,

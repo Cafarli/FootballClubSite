@@ -13,6 +13,7 @@ import {
   MdOutlineKeyboardArrowUp,
 } from "react-icons/md";
 import { BiShoppingBag } from "react-icons/bi";
+import { useSelector } from "react-redux";
 
 export function Header() {
   const [dropdowns, setDrops] = useState({
@@ -21,9 +22,11 @@ export function Header() {
     lang: false,
     settings: false,
   });
-  const [icon, setIcon] = useState(true)
+  const [icon, setIcon] = useState(true);
 
   const toggleMenu = () => document.body.classList.toggle("open");
+
+  const cartCount = useSelector((state) =>state.all.products);
 
   return (
     <Navbar
@@ -33,14 +36,16 @@ export function Header() {
     >
       <Container className="headerContainer">
         <Navbar.Brand className="menuBtn" onClick={toggleMenu}>
-          {icon ? <FiMenu color="white" onClick={() => setIcon(false)} /> :
-          <MdOutlineClose color="white"   onClick={() => setIcon(true)} />}
+          {icon ? (
+            <FiMenu color="white" onClick={() => setIcon(false)} />
+          ) : (
+            <MdOutlineClose color="white" onClick={() => setIcon(true)} />
+          )}
         </Navbar.Brand>
         {/* {buger menu */}
         <div className="burgerMenu">
           <ul className="menuItems">
-            <li
-              className="nav-item">
+            <li className="nav-item">
               <Link to="/squad">SQUAD</Link>
             </li>
             <li
@@ -51,24 +56,29 @@ export function Header() {
                 })
               }
             >
-              CALENDAR {dropdowns.standings?<MdOutlineKeyboardArrowUp/> :<MdOutlineKeyboardArrowDown/>}
+              CALENDAR{" "}
+              {dropdowns.standings ? (
+                <MdOutlineKeyboardArrowUp />
+              ) : (
+                <MdOutlineKeyboardArrowDown />
+              )}
             </li>
-           {dropdowns.standings && <ul>
-              <li className="subitem">
-                <Link to="/standings">STANDINGS</Link>
-              </li>
-              <li className="subitem">
-                <Link to="/matches">MATCHES</Link>
-              </li>
-            </ul>}
+            {dropdowns.standings && (
+              <ul>
+                <li className="subitem">
+                  <Link to="/standings">STANDINGS</Link>
+                </li>
+                <li className="subitem">
+                  <Link to="/matches">MATCHES</Link>
+                </li>
+              </ul>
+            )}
 
-            <li
-              className="nav-item">
+            <li className="nav-item">
               <Link to="/shop">SHOP</Link>
             </li>
 
-            <li
-              className="nav-item">
+            <li className="nav-item">
               <Link to="/news">NEWS</Link>
             </li>
 
@@ -80,20 +90,26 @@ export function Header() {
                 })
               }
             >
-              CLUB{dropdowns.club ?<MdOutlineKeyboardArrowUp/> :<MdOutlineKeyboardArrowDown/>}
+              CLUB
+              {dropdowns.club ? (
+                <MdOutlineKeyboardArrowUp />
+              ) : (
+                <MdOutlineKeyboardArrowDown />
+              )}
             </li>
             {dropdowns.club && (
               <ul>
                 <li className="subitem">
-                <Link
-                  to="/about"
-                  spy={true}
-                  smooth={true}
-                  offset={0}
-                  duration={500}
-                >
-                  ABOUT
-                </Link></li>
+                  <Link
+                    to="/about"
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={500}
+                  >
+                    ABOUT
+                  </Link>
+                </li>
                 <li className="subitem">
                   <Link to="/contact">CONTACT</Link>
                 </li>
@@ -109,8 +125,6 @@ export function Header() {
           <img src={logo} className="header-logo" alt="brand" />
         </Navbar.Brand>
 
-
-
         {/* EXPANDED HEADER */}
         <div id="responsive-navbar-nav " className="first-collapse">
           <Nav className="ms-auto fc-items" defaultActiveKey="#home">
@@ -122,12 +136,16 @@ export function Header() {
               title="STANDINGS"
               className="nav-dropdown nav-item"
               show={dropdowns.standings}
-              onMouseEnter={()=>setDrops({
-                standings: !dropdowns.standings,
-              })}
-              onMouseLeave={()=>setDrops({
-                standings: !dropdowns.standings,
-              })}
+              onMouseEnter={() =>
+                setDrops({
+                  standings: !dropdowns.standings,
+                })
+              }
+              onMouseLeave={() =>
+                setDrops({
+                  standings: !dropdowns.standings,
+                })
+              }
             >
               <NavDropdown.Item className="item st">
                 <Link to="/standings">STANDINGS</Link>
@@ -149,12 +167,16 @@ export function Header() {
               title="CLUB"
               className="nav-dropdown nav-item show"
               show={dropdowns.club}
-              onMouseEnter={()=>setDrops({
-                club: !dropdowns.club,
-              })}
-              onMouseLeave={()=>setDrops({
-                club: !dropdowns.club,
-              })}
+              onMouseEnter={() =>
+                setDrops({
+                  club: !dropdowns.club,
+                })
+              }
+              onMouseLeave={() =>
+                setDrops({
+                  club: !dropdowns.club,
+                })
+              }
             >
               <NavDropdown.Item className="item ab">
                 <Link
@@ -179,8 +201,11 @@ export function Header() {
             <Link to="/login">LOGIN</Link>
           </Nav.Item>
           {/* AFTER LOGINED */}
-          <Nav.Item>
-            <Link to="cart"><BiShoppingBag/></Link>
+          <Nav.Item className="basket">
+            <Link to="cart" >
+              <BiShoppingBag />
+            </Link>
+              <span>{cartCount.length-1 > 0 ? cartCount.length-1 : ""}</span> 
           </Nav.Item>
           {/* <NavDropdown
             title={<IoSettingsSharp/>}
@@ -209,12 +234,16 @@ export function Header() {
             title={<IoLanguageOutline />}
             className="nav-dropdown nav-item lang"
             show={dropdowns.lang}
-            onMouseEnter={()=>setDrops({
-              lang: !dropdowns.lang,
-            })}
-            onMouseLeave={()=>setDrops({
-              lang: !dropdowns.lang,
-            })}
+            onMouseEnter={() =>
+              setDrops({
+                lang: !dropdowns.lang,
+              })
+            }
+            onMouseLeave={() =>
+              setDrops({
+                lang: !dropdowns.lang,
+              })
+            }
           >
             <NavDropdown.Item className="item az">
               <Link to="/az" spy={true} smooth={true} offset={0} duration={500}>

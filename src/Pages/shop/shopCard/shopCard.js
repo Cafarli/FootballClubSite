@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./shopCard.css";
+import { useDispatch } from "react-redux";
+import { addCartAction } from "../../../Redux/action/actions";
 
 export function ShopCard(props) {
+  const dispatch = useDispatch();
   return (
     <div className="ShopCard">
       <Link to={`/shop/${props.props.id}`}>
@@ -21,6 +24,9 @@ export function ShopCard(props) {
           <p className="sc-price">${props.props.price}</p>
         </div>
       </Link>
+        <div className="addCart">
+          <button onClick={()=>dispatch(addCartAction(props.props.id,props.props.title,props.props.price,props.props.photo, 1))}>Add To basket</button>
+        </div>
     </div>
   );
 }

@@ -14,6 +14,12 @@
   display: inline-block;
   background: transparent;
 }
+.ShopCard:hover .sc-info {
+  display: none;
+}
+.ShopCard:hover .addCart{
+  display: block;
+}
 .shop-card-image {
   position: relative;
   width: 100%;
@@ -76,6 +82,26 @@
 .sc-info .sc-price {
   color: #292423;
 }
+
+.addCart {
+  display: none;
+  width: 100%;
+  padding: 5% 0 9% 0;
+}
+.addCart button {
+  width: 70%;
+  padding: 3% 0;
+  display: block;
+  margin: 0 auto;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: var(--brightBlue);
+  color: white;
+  font: 16px Assistant;
+  text-transform: capitalize;
+}
+
 
 @media screen and (max-width: 576px) {
   .ShopCard {

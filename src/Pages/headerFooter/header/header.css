@@ -127,6 +127,18 @@ a {
 .dropdown-toggle::after {
   content: none;
 }
+.basket {
+  position: relative;
+  font-size: 20px;
+  text-align: end;
+  display: block;
+}
+.basket span {
+  font-size: 11px;
+  color: white;
+  position: absolute;
+  top: 55%;
+}
 
 @media screen and (max-width: 1000px) {
   .menuBtn {
